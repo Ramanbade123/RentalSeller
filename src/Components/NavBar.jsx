@@ -1,0 +1,31 @@
+import React from 'react'
+import ProductCategory from './ProductsCategories'
+import { FaSearch, FaUser } from 'react-icons/fa'
+import { FaCartShopping, FaClover } from 'react-icons/fa6'
+
+const NavBar = () => {
+    return (
+        <div className='w-full h-[29dvh]'>
+            <div className='bg-black text-white w-full text-[13px] !py-[5px] text-center'>NEW ARRIVALS - SPRING-SUMMER 25 - PREMIUM LINEN SUMMER COLLECTIONS</div>
+            <div className='relative flex items-center w-full h-[40%]'>
+                <div className='w-full z-1 flex items-center gap-2 sm:gap-4 justify-center'>
+                    <div className=''>
+                        <img src="/logo.svg" alt="logo" className='h-full w-[50px] object-cover ' />
+                    </div>
+                    <h1 className='heading font-semibold font-mono text-5xl'>RenTour</h1>
+                </div>
+                <div className='absolute z-2 right-4 w-[20%] h-full flex top-[50%] -translate-y-[50%] items-center justify-around text-[15px] font-light'>
+                    <FaUser className='text-[15px]' />
+                    <FaSearch />
+                    <FaClover />
+                    <FaCartShopping />
+                </div>
+            </div>
+            <div className='w-full'>
+                <ProductCategory />
+            </div>
+        </div>
+    )
+}
+
+export default NavBar
