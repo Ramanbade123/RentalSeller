@@ -1,15 +1,15 @@
 import React from 'react'
-import CubicBezierCard from './Components/Features'
 import NavBar from './Components/NavBar'
+import HomePage from './Pages/HomePage'
+import Footer from './Components/Footer'
 
 
 const App = () => {
   return (
     <div className='w-full'>
-
       <NavBar />
-      <div className='bg-blue-600 w-full h-[100dvh]' />
-      <CubicBezierCard />
+      <HomePage />
+      <Footer />
     </div>
   )
 }

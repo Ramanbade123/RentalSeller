@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from '../Components/Navbar'
-
+import Navbar from './NavBar'
 export const Notfound = () => {
     return (
         <div className='content'>
