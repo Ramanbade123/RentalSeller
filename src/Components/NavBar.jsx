@@ -2,7 +2,7 @@ import React from 'react'
 import ProductCategory from './ProductsCategories'
 import { Link } from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = ({ toggleCart }) => {
     return (
         <div className='w-full h-[29dvh]'>
             <div className='bg-black text-white w-full text-[13px] !py-[5px] text-center'>NEW ARRIVALS - SPRING-SUMMER 25 - PREMIUM LINEN SUMMER COLLECTIONS</div>
@@ -17,7 +17,9 @@ const NavBar = () => {
                     <img src="/icons/user.svg" alt="" />
                     <img src="/icons/search.svg" alt="" />
                     <img src="/icons/wishlist.svg" alt="" />
-                    <img src="/icons/cart.svg" alt="" />
+                    <div onClick={() => toggleCart()}>
+                        <img src="/icons/cart.svg" alt="" />
+                    </div>
                 </div>
             </div>
             <div className='w-full'>
