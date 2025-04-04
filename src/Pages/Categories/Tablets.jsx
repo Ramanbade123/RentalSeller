@@ -1,9 +1,9 @@
 import React from 'react'
 
-const IPads = () => {
+const Tablets = () => {
     return (
         <div>IPads</div>
     )
 }
 
-export default IPads
+export default Tablets
