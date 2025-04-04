@@ -62,7 +62,7 @@ const NewArrivals = ({ imageCards }) => {
             </div>
 
             <Link
-                to="#"
+                to="collections/new-arrivals"
                 className="mt-10 underline text-sm text-black hover:text-gray-700 transition-all duration-300"
             >
                 See More
