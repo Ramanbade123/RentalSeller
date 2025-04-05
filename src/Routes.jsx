@@ -18,6 +18,9 @@ const Tablets = lazy(() => import("./Pages/Categories/Tablets"));
 const Drones = lazy(() => import("./Pages/Categories/Drones"));
 const Headphones = lazy(() => import("./Pages/Categories/Headphones"));
 
+// Particular ProductDetail
+const ProductDetail = lazy(() => import("./Pages/Product/ProductDetail"));
+
 // Legal & Info Pages
 const FAQs = lazy(() => import("./Pages/Legal/FAQs"));
 const Privacy = lazy(() => import("./Pages/Legal/Privacy"));
@@ -32,6 +35,26 @@ const LazyLoad = (Component) => (
     <Component />
   </Suspense>
 );
+
+// For Product Dynamic Routings
+const productRoutes = [
+  "collections",
+  "new-arrivals",
+  "mobiles",
+  "laptops",
+  "cameras",
+  "ipads",
+  "headphones",
+  "drones",
+];
+
+const dynamicProductRoutes = productRoutes.map((path) => ({
+  path: `${path}/:productId`,
+  element: LazyLoad(ProductDetail),
+  errorElement: <ErrorBoundary />,
+}));
+
+
 
 // Define router
 const Router = createBrowserRouter([
@@ -58,6 +81,9 @@ const Router = createBrowserRouter([
           { path: "drones", element: LazyLoad(Drones) },
         ],
       },
+
+      // This line will inject all product detail routes dynamically
+      ...dynamicProductRoutes,
 
       // Legal Pages
       { path: "faqs", element: LazyLoad(FAQs), errorElement: <ErrorBoundary /> },
