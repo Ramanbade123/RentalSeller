@@ -37,24 +37,23 @@ const ProductDetails = () => {
   };
 
   const handleNextClick = () => {
-    navigate('/upload-image');
+    navigate('/upload-images');
   };
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen font-sans">
+    <div className="flex flex-col lg:flex-row min-h-screen font-sans text-gray-800 bg-white">
       {/* Left Side - Information Panel */}
-      <div className="lg:w-1/3 bg-gray-800 relative">
-        <div className="p-8 text-white h-full flex flex-col justify-center">
+      <div className="lg:w-1/3 bg-gray-900 text-white">
+        <div className="p-8 h-full flex flex-col justify-center">
           <div className="max-w-md mx-auto">
             <h1 className="text-2xl font-bold mb-6">Create Your Listing</h1>
             <div className="space-y-6">
               <p className="text-gray-300 leading-relaxed">
                 Provide accurate details about your product to ensure better visibility and faster transactions. Complete all required fields to proceed.
               </p>
-              
-              <div className="bg-gray-700/50 p-5 rounded-lg border border-gray-600">
+              <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
                 <div className="flex items-start">
-                  <svg className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
@@ -71,11 +70,11 @@ const ProductDetails = () => {
       </div>
 
       {/* Right Side - Form */}
-      <div className="lg:w-2/3 bg-gray-50 p-6 md:p-10">
+      <div className="lg:w-2/3 bg-white p-6 md:p-10">
         <div className="max-w-3xl mx-auto">
           {/* Progress Stepper */}
           <div className="mb-8">
-            <h1 className="text-xl font-bold text-gray-800 mb-4">Product Listing</h1>
+            <h1 className="text-xl font-bold text-gray-900 mb-4">Product Listing</h1>
             <div className="flex items-center justify-between relative">
               <div className="absolute top-3 left-8 right-8 h-1 bg-gray-200 z-0">
                 <div className="h-full bg-gray-700 w-1/3"></div>
@@ -97,7 +96,7 @@ const ProductDetails = () => {
           <div className="space-y-5">
             {/* Product Information */}
             <section className="bg-white p-5 rounded-lg border border-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">Product Information</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">Product Information</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Product Title*</label>
@@ -106,7 +105,7 @@ const ProductDetails = () => {
                     name="title"
                     value={formData.title}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
                     required
                   />
                 </div>
@@ -116,7 +115,7 @@ const ProductDetails = () => {
                     name="category"
                     value={formData.category}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
                     required
                   >
                     <option value="">Select Category</option>
@@ -130,7 +129,7 @@ const ProductDetails = () => {
                       name="customCategory"
                       value={formData.customCategory}
                       onChange={handleChange}
-                      className="w-full mt-2 px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400"
+                      className="w-full mt-2 px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
                       placeholder="Specify your category"
                       required
                     />
@@ -141,7 +140,7 @@ const ProductDetails = () => {
 
             {/* Pricing & Stock */}
             <section className="bg-white p-5 rounded-lg border border-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">Pricing & Stock</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">Pricing & Stock</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Price*</label>
@@ -154,7 +153,7 @@ const ProductDetails = () => {
                       name="price"
                       value={formData.price}
                       onChange={handleChange}
-                      className="pl-8 w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400"
+                      className="pl-8 w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
                       placeholder="0.00"
                       step="0.01"
                       required
@@ -169,7 +168,7 @@ const ProductDetails = () => {
                     min="0"
                     value={formData.quantity}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
                     placeholder="How many in stock?"
                     required
                   />
@@ -179,7 +178,7 @@ const ProductDetails = () => {
 
             {/* Dimensions */}
             <section className="bg-white p-5 rounded-lg border border-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">Dimensions (Optional)</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">Dimensions (Optional)</h2>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[{ name: 'length', label: 'Length (mm)' }, { name: 'width', label: 'Width (mm)' }, { name: 'height', label: 'Height (mm)' }, { name: 'weight', label: 'Weight (kg)' }].map((dim) => (
                   <div key={dim.name}>
@@ -189,7 +188,7 @@ const ProductDetails = () => {
                       name={dim.name}
                       value={formData.dimensions[dim.name]}
                       onChange={handleDimensionChange}
-                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400"
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
                       placeholder="0"
                       step={dim.name === 'weight' ? "0.01" : "1"}
                     />
@@ -201,7 +200,7 @@ const ProductDetails = () => {
             {/* Description */}
             <section className="bg-white p-5 rounded-lg border border-gray-200">
               <div className="flex justify-between items-center mb-3">
-                <h2 className="text-lg font-semibold text-gray-800">Description*</h2>
+                <h2 className="text-lg font-semibold text-gray-900">Description*</h2>
                 <span className="text-sm text-gray-500">
                   {formData.description.length}/1200
                 </span>
@@ -210,7 +209,7 @@ const ProductDetails = () => {
                 name="description"
                 value={formData.description}
                 onChange={handleChange}
-                className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400 min-h-[120px]"
+                className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400 min-h-[120px]"
                 placeholder="Describe your product features, specifications, etc..."
                 maxLength="1200"
                 required
