@@ -49,7 +49,7 @@ const productRoutes = [
 ];
 
 const dynamicProductRoutes = productRoutes.map((path) => ({
-  path: `${path}/:productId`,
+  path: `${path}/:id`,
   element: LazyLoad(ProductDetail),
   errorElement: <ErrorBoundary />,
 }));
