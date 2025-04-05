@@ -132,7 +132,7 @@ const Confirmation = () => {
         {/* Action Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/dashboard')}
             className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             Go to Dashboard
