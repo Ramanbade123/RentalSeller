@@ -9,15 +9,17 @@ import Confirmation from './components/Confirmation';
 import Dashboard from './pages/Dashboard';
 import SellerLogin from './pages/Sellerlogin';
 import SellerRegister from './pages/Sellerregister';
+import AuthLayout from "./Layout/Authlayout";
 
 const App = () => {
   return (
     <Router>
-      <Navbar />
       <Routes>
+        <Route element={<AuthLayout/>}>
         {/* Authentication Routes */}
         <Route path="/login" element={<SellerLogin />} />
-        <Route path="/register" element={<SellerRegister />} />
+        <Route path="/register" element={<SellerRegister />} /></Route>
+
         
         {/* Main form flow routes */}
         <Route path="/description" element={<Description />} />
