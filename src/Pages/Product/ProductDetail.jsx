@@ -1,30 +1,45 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import products from "/src/Data/products.json";
+import { useCart } from "../../GlobalState/CartContext";
 const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true); // track loading
-
+    const { cartItems, setCartItems } = useCart();
     useEffect(() => {
         const found = products.find(p => p.id === Number(id));
         setProduct(found);
         setLoading(false); // done loading
     }, [id])
 
+
+
     const handleAddToCart = () => {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        const alreadyInCart = cart.find(item => item.id === product.id);
-
-        if (!alreadyInCart) {
-            cart.push({ ...product, quantity: 1 });
+        const updated = [...cartItems];
+        const exists = updated.find(item => item.id === product.id);
+        if (exists) {
+            exists.quantity += 1;
         } else {
-            alreadyInCart.quantity += 1;
+            updated.push({ ...product, quantity: 1 });
         }
-
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert("Added to cart!");
+        setCartItems(updated);
     };
+
+
+    // const handleAddToCart = () => {
+    //     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    //     const alreadyInCart = cart.find(item => item.id === product.id);
+
+    //     if (!alreadyInCart) {
+    //         cart.push({ ...product, quantity: 1 });
+    //     } else {
+    //         alreadyInCart.quantity += 1;
+    //     }
+
+    //     localStorage.setItem("cart", JSON.stringify(cart));
+    //     alert("Added to cart!");
+    // };
 
     if (loading) return <div className="p-6 text-center">Loading product...</div>;
     if (!product) return <div className="p-6 text-center text-red-500">Product not found.</div>;

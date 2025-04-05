@@ -4,6 +4,7 @@ import App from "./App";
 import { Notfound } from "./Components/NotFound";
 import ErrorBoundary from "./Components/ErrorBoundary"; // Import the Error Boundary
 import HomePage from "./Pages/HomePage";
+import { CartProvider } from "./GlobalState/CartContext";
 
 // Lazy load all secondary pages
 const Collections = lazy(() => import("./Pages/Collections/Collections"));
@@ -60,7 +61,9 @@ const dynamicProductRoutes = productRoutes.map((path) => ({
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <CartProvider>
+      <App />
+    </CartProvider>,
     errorElement: <ErrorBoundary />, // Added Error Boundary
     children: [
       { index: true, element: <HomePage /> },

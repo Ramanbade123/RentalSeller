@@ -1,8 +1,10 @@
 import React from 'react'
 import ProductCategory from './ProductsCategories'
 import { Link } from 'react-router-dom'
-
+import { useCart } from '../GlobalState/CartContext';
 const NavBar = ({ toggleCart }) => {
+    const { cartItems } = useCart();
+    const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
     return (
         <div className='w-full h-[29dvh]'>
             <div className='bg-black text-white w-full text-[13px] !py-[5px] text-center'>NEW ARRIVALS - SPRING-SUMMER 25 - PREMIUM LINEN SUMMER COLLECTIONS</div>
@@ -17,8 +19,13 @@ const NavBar = ({ toggleCart }) => {
                     <img src="/icons/user.svg" alt="" />
                     <img src="/icons/search.svg" alt="" />
                     <img src="/icons/wishlist.svg" alt="" />
-                    <div onClick={() => toggleCart()}>
+                    <div onClick={() => toggleCart()} className='relative'>
                         <img src="/icons/cart.svg" alt="" />
+                        {itemCount > 0 && (
+                            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                                {itemCount}
+                            </span>
+                        )}
                     </div>
                 </div>
             </div>
