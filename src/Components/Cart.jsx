@@ -36,7 +36,7 @@ const Cart = ({ isOpen, toggleCart }) => {
   return (
     <div
       className={`fixed top-0 right-0 h-full 
-        w-full sm:w-[90%] md:w-[60%] lg:w-[30%] xl:w-[25%]
+        w-full sm:w-[90%] md:w-[60%] lg:w-[40%] xl:w-[30%]
         bg-white border-l border-gray-300 p-4 shadow-lg z-50
         transform transition-transform duration-500 ease-in-out 
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
@@ -60,9 +60,9 @@ const Cart = ({ isOpen, toggleCart }) => {
               className="flex items-center justify-between p-2 border-b"
             >
               <img
-                src={item.profileImg}
+                src={item.productAvatar}
                 alt={item.name}
-                className="w-16 h-16 object-cover rounded"
+                className="w-16 h-16 object-contain "
               />
               <div className="flex-1 px-3">
                 <h3 className="text-sm font-medium">{item.name}</h3>

@@ -7,8 +7,10 @@ import { BsSearch } from "react-icons/bs";
 import { GiSelfLove } from "react-icons/gi";
 import { BsCart4 } from "react-icons/bs";
 const NavBar = ({ toggleCart }) => {
-    const { cartItems } = useCart();
-    const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+    const { cartItems, wishlistItems } = useCart();
+    const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+    const wishListItemCount = wishlistItems.length;
+
     return (
         <div className='w-full h-[25dvh] bg-white'>
             <div className='bg-black text-white w-full h-[20%] text-[13px] !py-[5px] text-center'>NEW ARRIVALS - SPRING-SUMMER 25 - PREMIUM LINEN SUMMER COLLECTIONS</div>
@@ -23,12 +25,19 @@ const NavBar = ({ toggleCart }) => {
                 <div className='absolute z-2 right-4 w-fit h-full flex top-[50%] -translate-y-[50%] items-center justify-end gap-4 sm:gap-x-8 text-[16px] sm:text-[24px]'>
                     <FaUser />
                     <BsSearch />
-                    <GiSelfLove />
+                    <Link to={"/wishlist"} className='relative'>
+                        <GiSelfLove />
+                        {wishListItemCount > 0 && (
+                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                                {wishListItemCount}
+                            </span>
+                        )}
+                    </Link>
                     <div onClick={() => toggleCart()} className='relative cursor-pointer'>
                         <BsCart4 className='text-[16px] sm:text-[26px]' />
-                        {itemCount > 0 && (
+                        {cartItemCount > 0 && (
                             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-                                {itemCount}
+                                {cartItemCount}
                             </span>
                         )}
                     </div>

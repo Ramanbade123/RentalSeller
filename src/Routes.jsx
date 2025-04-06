@@ -4,7 +4,9 @@ import App from "./App";
 import { Notfound } from "./Components/NotFound";
 import ErrorBoundary from "./Components/ErrorBoundary"; // Import the Error Boundary
 import HomePage from "./Pages/HomePage";
-import { CartProvider } from "./GlobalState/CartContext";
+
+// Wishlist page
+const Wishlist = lazy(() => import('./Components/Wishlist'));
 
 // Lazy load all secondary pages
 const Collections = lazy(() => import("./Pages/Collections/Collections"));
@@ -65,6 +67,7 @@ const Router = createBrowserRouter([
     errorElement: <ErrorBoundary />, // Added Error Boundary
     children: [
       { index: true, element: <HomePage /> },
+      { path: "wishlist", element: LazyLoad(Wishlist) },
 
       // Collections & Products Routes
       {
