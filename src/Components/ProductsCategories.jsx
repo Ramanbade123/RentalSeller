@@ -10,13 +10,12 @@ const ProductCategory = () => {
         { name: "Headphones", icon: "/featureproducts/headphone.svg", path: "/collections/headphones" },
         { name: "Drones", icon: "/featureproducts/drone.svg", path: "/collections/drones" },
     ];
-
     return (
-        <div className="h-[13dvh] rounded-md flex shrink-0 flex-nowrap  items-center justify-center w-full">
+        <div className="h-full flex shrink-0 items-center justify-center w-full gap-x-4 sm:gap-x-7">
             {productCategories.map((product, index) => (
-                <Link to={product.path} key={index} className="flex h-full w-[15%] flex-col items-center justify-center ">
-                    <img src={product.icon} alt={product.name} className="w-full h-[60%] object-contain" />
-                    <span className="text-[16px] font-mono font-medium">{product.name}</span>
+                <Link to={product.path} key={index} className="flex h-full flex-col items-center justify-center ">
+                    {/* <img src={product.icon} alt={product.name} className="w-full h-[60%] object-contain" /> */}
+                    <h2 className="text-[16px] tracking-wide uppercase roboto-condensed-medium hover:text-gray-500">{product.name}</h2>
                 </Link>
             ))}
         </div>

@@ -15,7 +15,7 @@ const CollectionCard = () => {
     }, []);
 
     return (
-        <div className="w-full flex flex-col gap-8 py-10 bg-gray-100">
+        <div className="w-full flex flex-col gap-8 py-10">
             {filteredProducts.map((product, index) => {
                 const isEven = index % 2 === 1;
                 const layoutClass = isEven ? "lg:flex-row-reverse" : "lg:flex-row";

@@ -1,2 +1,23 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
 
+
+body {
+    background: linear-gradient(to right,#dbe7ff,#bddefa);
+    background-repeat: no-repeat;
+    scroll-behavior: smooth;
+}
+
+.roboto-condensed-medium {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:500;
+    font-style: normal;
+}
+
+.meow-script-regular {
+    font-family: "Meow Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
