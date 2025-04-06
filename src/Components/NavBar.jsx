@@ -23,7 +23,9 @@ const NavBar = ({ toggleCart }) => {
                     <h1 className='meow-script-regular text-2xl sm:text-3xl md:text-5xl'>RenTour</h1>
                 </Link>
                 <div className='absolute z-2 right-4 w-fit h-full flex top-[50%] -translate-y-[50%] items-center justify-end gap-4 sm:gap-x-8 text-[16px] sm:text-[24px]'>
-                    <FaUser />
+                    <Link to={"/auth"}>
+                        <FaUser />
+                    </Link>
                     <BsSearch />
                     <Link to={"/wishlist"} className='relative'>
                         <GiSelfLove />

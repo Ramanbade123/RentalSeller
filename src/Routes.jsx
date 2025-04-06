@@ -5,6 +5,10 @@ import { Notfound } from "./Components/NotFound";
 import ErrorBoundary from "./Components/ErrorBoundary"; // Import the Error Boundary
 import HomePage from "./Pages/HomePage";
 
+// Auth Forms
+const AuthForm = lazy(() => import("./Auth/AuthForm"));
+
+
 // Wishlist page
 const Wishlist = lazy(() => import('./Components/Wishlist'));
 
@@ -68,7 +72,7 @@ const Router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "wishlist", element: LazyLoad(Wishlist) },
-
+      { path: "auth", element: LazyLoad(AuthForm) },
       // Collections & Products Routes
       {
         path: "collections",
