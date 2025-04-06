@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import products from "/src/Data/products.json";
 import { useCart } from "../../GlobalState/CartContext";
+import { IoIosStar } from "react-icons/io";
+
 const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
@@ -30,21 +32,21 @@ const ProductDetail = () => {
     if (!product) return <div className="p-6 text-center text-red-500">Product not found.</div>;
 
     return (
-        <div className="max-w-5xl mx-auto p-6 grid md:grid-cols-2 gap-8">
+        <div className="w-[80%] mx-auto p-6 grid md:grid-cols-2 gap-8 bg-white my-[1%] rounded-lg">
             {/* Product Image + Thumbnails */}
             <div>
                 <img
-                    src={product.profileImg}
+                    src={product.productAvatar}
                     alt={product.name}
-                    className="w-full h-96 object-cover rounded-lg shadow"
+                    className="w-full h-96 object-contain rounded-lg shadow"
                 />
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-5 mt-4">
                     {product.images?.map((img, i) => (
                         <img
                             key={i}
                             src={img}
                             alt={`Product thumbnail ${i}`}
-                            className="w-20 h-20 object-cover border rounded"
+                            className="w-25 h-25 p-[1px] object-contain border-[1px] border-gray-400 rounded-sm"
                         />
                     ))}
                 </div>
@@ -62,15 +64,24 @@ const ProductDetail = () => {
 
                 <p className="text-sm text-gray-500">Stock: {product.stock}</p>
 
-                <button
-                    onClick={handleAddToCart}
-                    className="mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-                >
-                    Add to Cart
-                </button>
+                <div className="mt-4 flex gap-4 sm:gap-7">
+                    <button
+                        onClick={handleAddToCart}
+                        className="text-[13px] sm:text-[14px] cursor-pointer px-6 py-1 border border-black bg-black text-white hover:bg-white hover:text-black transition-all duration-300"
+                    >
+                        Add to Cart
+                    </button>
+
+                    {/* <button
+                        onClick={handleAddToCart}
+                        className="text-[13px] sm:text-[14px] cursor-pointer  px-6 py-1 border border-black bg-black text-white hover:bg-white hover:text-black transition-all duration-300"
+                    >
+                        Wishlist
+                    </button> */}
+                </div>
 
                 {/* Reviews */}
-                <div className="mt-8">
+                <div className="mt-4">
                     <h3 className="text-xl font-semibold mb-2">Reviews</h3>
                     {product.reviews?.length > 0 ? (
                         product.reviews.map((review, idx) => (
@@ -79,11 +90,19 @@ const ProductDetail = () => {
                                     <img
                                         src={review.profileImg}
                                         alt="user"
-                                        className="w-8 h-8 rounded-full"
+                                        className="w-8 h-8 object-contain rounded-full"
                                     />
                                     <p className="font-medium">{review.user}</p>
                                 </div>
-                                <p className="text-yellow-500">⭐ {review.rating}</p>
+                                <p className="flex items-center gap-1">
+                                    {Array.from({ length: review.rating }, (_, i) => (
+                                        <IoIosStar key={i} className="text-yellow-500" />
+                                    ))}
+                                    {Array.from({ length: 5 - review.rating }, (_, i) => (
+                                        <span key={i} className="text-gray-300 text-lg">★</span>
+                                    ))}
+                                </p>
+
                                 <p>{review.comment}</p>
                             </div>
                         ))
