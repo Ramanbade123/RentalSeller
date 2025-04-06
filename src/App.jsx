@@ -13,7 +13,7 @@ const App = () => {
   };
 
   return (
-    <div className={`w-full overflow-hidden relative transition-all duration-500 ease-in-out 
+    <div className={`w-full bg-blue-100 overflow-hidden relative transition-all duration-500 ease-in-out 
         ${isCartOpen ? "pr-[25%]" : "pr-0"}`}>
       <NavBar toggleCart={toggleCart} />
       <Cart isOpen={isCartOpen} toggleCart={toggleCart} />

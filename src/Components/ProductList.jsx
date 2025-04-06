@@ -11,7 +11,7 @@ const ProductList = ({ category }) => {
     }, [category]);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+        <div className="flex shrink-0 flex-wrap justify-center gap-3 sm:gap-7 px-[2%] py-[1%]">
             {filteredProducts.length > 0 ? (
                 filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)
             ) : (

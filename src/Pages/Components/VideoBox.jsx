@@ -14,19 +14,20 @@ const VideoBox = () => {
         setIsLoading(false);
     };
 
+    const VideoSrc = "/images/video/Footage1.mp4"
     return (
         <div className="bg-blue-600 w-full h-[100dvh] flex items-center justify-center">
             <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
                 {/* Show Loading Skeleton */}
                 {isLoading && !isError && (
-                    <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gray-400 animate-pulse flex items-center justify-center">
                         <p className="text-white text-lg">Loading Video...</p>
                     </div>
                 )}
 
                 {/* Show Error Fallback */}
                 {isError && (
-                    <div className="absolute inset-0 bg-red-600 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
                         <p className="text-white font-bold">Failed to Load Video</p>
                     </div>
                 )}
@@ -42,7 +43,7 @@ const VideoBox = () => {
                         onLoadedData={handleLoadedData}
                         onError={handleError}
                     >
-                        <source src="/bgvideo.mp4" type="video/mp4" />
+                        <source src={VideoSrc} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 )}

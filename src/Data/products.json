@@ -1,4273 +1,636 @@
 [
   {
-    "id": 0,
-    "name": "Open-source value-added installation",
-    "category": "drones",
-    "description": "Gun rich understand contain hit six response. Service special air each present. Daughter represent memory she glass together.",
-    "stock": 75,
-    "profileImg": "https://placekitten.com/225/70",
-    "images": [
-      "https://placekitten.com/225/70",
-      "https://placeimg.com/424/693/any",
-      "https://placeimg.com/264/289/any",
-      "https://dummyimage.com/705x246",
-      "https://placekitten.com/25/184"
-    ],
-    "originalPrice": 1519.66,
-    "offeredPrice": 1016.69,
-    "rating": 5.0,
-    "reviews": [
-      {
-        "user": "John Boyle",
-        "rating": 5,
-        "comment": "According upon sing natural happen most usually.",
-        "profileImg": "https://dummyimage.com/707x859"
-      },
-      {
-        "user": "Bradley Terry",
-        "rating": 5,
-        "comment": "Budget race some hospital well.",
-        "profileImg": "https://placekitten.com/249/487"
-      }
-    ],
-    "features": [
-      "Carry senior tax year.",
-      "Such us act prove million along.",
-      "Choice dog suggest dinner."
-    ]
-  },
-  {
     "id": 1,
-    "name": "Realigned optimizing Internet solution",
-    "category": "mobiles",
-    "description": "Receive while PM live. Prepare plan report four. Economy water strategy late new decide peace wrong.",
-    "stock": 59,
-    "profileImg": "https://dummyimage.com/418x254",
+    "name": "Aerial Phantom Drone",
+    "category": "Drones",
+    "publisher": "skyflyr99",
+    "description": "High-performance drone with 4K camera and long flight time.",
+    "stock": 50,
+    "sold": 22,
+    "productAvatar": "/images/Drones/drone1.png",
     "images": [
-      "https://dummyimage.com/418x254",
-      "https://placeimg.com/423/702/any",
-      "https://placekitten.com/215/946"
+      "/images/Drones/drone1.png",
+      "/images/Drones/drone2.png",
+      "/images/Drones/drone3.png",
+      "/images/Drones/drone4.png",
+      "/images/Drones/drone5.png"
     ],
-    "originalPrice": 656.69,
-    "offeredPrice": 479.12,
-    "rating": 5.0,
+    "originalPrice": 1499,
+    "offeredPrice": 1199,
+    "rating": 4.8,
+    "createdAt": "2025-04-01",
     "reviews": [
       {
-        "user": "Nichole Howard",
+        "user": "droneGuru",
+        "comment": "Amazing flight control and stable footage!",
         "rating": 5,
-        "comment": "Near sell size budget win lawyer.",
-        "profileImg": "https://placeimg.com/752/770/any"
-      },
-      {
-        "user": "Nicholas Hammond",
-        "rating": 5,
-        "comment": "Social Mr answer call.",
-        "profileImg": "https://dummyimage.com/456x56"
+        "profileImg": "/images/Drones/drone2.png"
       }
     ],
-    "features": [
-      "Rather for tax.",
-      "Miss particularly paper ok letter.",
-      "Save have present particularly."
-    ]
+    "features": ["4K Camera", "GPS", "30 min Flight", "Stabilization", "Auto Return"]
   },
   {
     "id": 2,
-    "name": "Centralized didactic migration",
-    "category": "mobiles",
-    "description": "White plant begin fish story find. Enjoy cold boy.",
-    "stock": 32,
-    "profileImg": "https://dummyimage.com/690x572",
+    "name": "SkyPro X4",
+    "category": "Drones",
+    "publisher": "aero_camz",
+    "description": "Compact drone with live streaming and HD recording.",
+    "stock": 35,
+    "sold": 17,
+    "productAvatar": "/images/Drones/drone2.png",
     "images": [
-      "https://dummyimage.com/690x572",
-      "https://dummyimage.com/39x500",
-      "https://dummyimage.com/227x560",
-      "https://placeimg.com/836/874/any"
+      "/images/Drones/drone1.png",
+      "/images/Drones/drone2.png",
+      "/images/Drones/drone3.png",
+      "/images/Drones/drone4.png",
+      "/images/Drones/drone5.png"
     ],
-    "originalPrice": 1359.96,
-    "offeredPrice": 1266.9,
-    "rating": 2.0,
+    "originalPrice": 1099,
+    "offeredPrice": 849,
+    "rating": 4.5,
+    "createdAt": "2025-04-05",
     "reviews": [
       {
-        "user": "Richard Williams",
-        "rating": 2,
-        "comment": "Right dinner whole bad could type leave history.",
-        "profileImg": "https://placekitten.com/336/35"
-      },
-      {
-        "user": "Gina Hall",
-        "rating": 2,
-        "comment": "Tend eat know alone available.",
-        "profileImg": "https://dummyimage.com/638x920"
-      },
-      {
-        "user": "Zachary Skinner",
-        "rating": 2,
-        "comment": "Local role want effect.",
-        "profileImg": "https://www.lorempixel.com/942/699"
+        "user": "hoverKid",
+        "comment": "Best drone under budget!",
+        "rating": 4,
+        "profileImg": "/images/Drones/drone3.png"
       }
     ],
-    "features": [
-      "Program color establish score soon hit.",
-      "State understand successful collection prove car.",
-      "Citizen per exactly education."
-    ]
+    "features": ["HD Camera", "Gesture Control", "Foldable", "One Key Return"]
   },
   {
     "id": 3,
-    "name": "Implemented high-level application",
-    "category": "laptops",
-    "description": "Trial possible size particular energy tell. Dark board answer most. Capital moment win moment simply environmental find.",
-    "stock": 52,
-    "profileImg": "https://placekitten.com/221/551",
+    "name": "FlyLite Drone",
+    "category": "Drones",
+    "publisher": "lightvision",
+    "description": "Beginner-friendly drone with easy controls and safety features.",
+    "stock": 70,
+    "sold": 33,
+    "productAvatar": "/images/Drones/drone3.png",
     "images": [
-      "https://placekitten.com/221/551",
-      "https://www.lorempixel.com/953/36",
-      "https://www.lorempixel.com/50/391"
+      "/images/Drones/drone1.png",
+      "/images/Drones/drone2.png",
+      "/images/Drones/drone3.png",
+      "/images/Drones/drone4.png",
+      "/images/Drones/drone5.png"
     ],
-    "originalPrice": 433.02,
-    "offeredPrice": 330.58,
-    "rating": 4.7,
+    "originalPrice": 799,
+    "offeredPrice": 699,
+    "rating": 4.3,
+    "createdAt": "2025-04-04",
     "reviews": [
       {
-        "user": "Debra Johnson",
-        "rating": 5,
-        "comment": "Specific agreement light north crime example.",
-        "profileImg": "https://placekitten.com/444/873"
-      },
-      {
-        "user": "Erik Vang",
+        "user": "starterDrone",
+        "comment": "Great for learning, very stable.",
         "rating": 4,
-        "comment": "Produce society bring shoulder exactly modern.",
-        "profileImg": "https://dummyimage.com/817x83"
-      },
-      {
-        "user": "Nicole Hayes",
-        "rating": 5,
-        "comment": "Create partner result office.",
-        "profileImg": "https://placeimg.com/396/649/any"
+        "profileImg": "/images/Drones/drone5.png"
       }
     ],
-    "features": [
-      "White ever act system area up high.",
-      "Study his beat especially across read.",
-      "Tree simple reality."
-    ]
+    "features": ["Altitude Hold", "Headless Mode", "Beginner Mode", "Safety Blades"]
   },
   {
     "id": 4,
-    "name": "Virtual stable open system",
-    "category": "drones",
-    "description": "Consider year condition modern social few research owner. Agree not candidate include left reveal.",
-    "stock": 20,
-    "profileImg": "https://www.lorempixel.com/781/1005",
+    "name": "Zoom Falcon Pro",
+    "category": "Drones",
+    "publisher": "falconeer",
+    "description": "Premium drone with zoom lens and AI tracking.",
+    "stock": 25,
+    "sold": 12,
+    "productAvatar": "/images/Drones/drone4.png",
     "images": [
-      "https://www.lorempixel.com/781/1005",
-      "https://placeimg.com/768/161/any",
-      "https://placeimg.com/228/789/any"
+      "/images/Drones/drone1.png",
+      "/images/Drones/drone2.png",
+      "/images/Drones/drone3.png",
+      "/images/Drones/drone4.png",
+      "/images/Drones/drone5.png"
     ],
-    "originalPrice": 1498.52,
-    "offeredPrice": 1301.07,
-    "rating": 3.0,
+    "originalPrice": 1999,
+    "offeredPrice": 1649,
+    "rating": 4.9,
+    "createdAt": "2025-04-03",
     "reviews": [
       {
-        "user": "Benjamin French",
-        "rating": 3,
-        "comment": "Never others safe.",
-        "profileImg": "https://placekitten.com/700/6"
-      },
-      {
-        "user": "Lori Dunn",
-        "rating": 3,
-        "comment": "Base up product approach suddenly.",
-        "profileImg": "https://placeimg.com/273/618/any"
+        "user": "tracknZoom",
+        "comment": "AI tracking is surprisingly accurate.",
+        "rating": 5,
+        "profileImg": "/images/Drones/drone1.png"
       }
     ],
-    "features": [
-      "Notice collection ever similar attack affect walk.",
-      "Man catch rest statement.",
-      "Job body describe question."
-    ]
+    "features": ["Zoom Lens", "Obstacle Avoidance", "AI Object Tracking"]
   },
   {
     "id": 5,
-    "name": "Adaptive local Graphic Interface",
-    "category": "drones",
-    "description": "Pm company teach better area wrong market. Room myself year.",
-    "stock": 35,
-    "profileImg": "https://dummyimage.com/826x488",
+    "name": "HoverEye Scout",
+    "category": "Drones",
+    "publisher": "vidvoyager",
+    "description": "Mini drone with dual camera and mobile app control.",
+    "stock": 60,
+    "sold": 44,
+    "productAvatar": "/images/Drones/drone5.png",
     "images": [
-      "https://dummyimage.com/826x488",
-      "https://placeimg.com/266/816/any",
-      "https://dummyimage.com/547x1012",
-      "https://dummyimage.com/195x671",
-      "https://dummyimage.com/328x372"
+      "/images/Drones/drone1.png",
+      "/images/Drones/drone2.png",
+      "/images/Drones/drone3.png",
+      "/images/Drones/drone4.png",
+      "/images/Drones/drone5.png"
     ],
-    "originalPrice": 771.96,
-    "offeredPrice": 686.64,
-    "rating": 3.8,
+    "originalPrice": 699,
+    "offeredPrice": 549,
+    "rating": 4.1,
+    "createdAt": "2025-04-02",
     "reviews": [
       {
-        "user": "Brian Wilcox",
-        "rating": 3,
-        "comment": "Approach when heavy simple.",
-        "profileImg": "https://dummyimage.com/853x816"
-      },
-      {
-        "user": "Lauren Gardner",
-        "rating": 3,
-        "comment": "Approach painting who mouth.",
-        "profileImg": "https://www.lorempixel.com/646/112"
-      },
-      {
-        "user": "Chad Williams MD",
-        "rating": 5,
-        "comment": "Our glass point firm I.",
-        "profileImg": "https://www.lorempixel.com/505/1022"
-      },
-      {
-        "user": "Timothy Mercado",
+        "user": "tinyflier",
+        "comment": "Small but powerful!",
         "rating": 4,
-        "comment": "Check game choice series.",
-        "profileImg": "https://placekitten.com/521/421"
+        "profileImg": "/images/Drones/drone4.png"
       }
     ],
-    "features": [
-      "Wind take scientist name.",
-      "Section according join hotel.",
-      "Remain meet human city figure."
-    ]
+    "features": ["Dual Camera", "Remote App", "360 Flip", "LED Lights"]
   },
   {
     "id": 6,
-    "name": "Cloned radical groupware",
-    "category": "mobiles",
-    "description": "Fly military model school responsibility leader. Song leg cultural. Large development structure.",
-    "stock": 61,
-    "profileImg": "https://www.lorempixel.com/829/820",
+    "name": "SnapShot Pro 12",
+    "category": "cameras",
+    "publisher": "shuttermax",
+    "description": "DSLR camera with 24MP resolution and fast autofocus.",
+    "stock": 45,
+    "sold": 29,
+    "productAvatar": "/images/Camera/camera2.png",
     "images": [
-      "https://www.lorempixel.com/829/820",
-      "https://dummyimage.com/592x505",
-      "https://dummyimage.com/128x108",
-      "https://placeimg.com/650/840/any"
+      "/images/Camera/camera2.png",
+      "/images/Camera/camera3.png",
+      "/images/Camera/camera4.png"
     ],
-    "originalPrice": 1867.77,
-    "offeredPrice": 1326.27,
-    "rating": 4.0,
+    "originalPrice": 1299,
+    "offeredPrice": 1049,
+    "rating": 4.6,
+    "createdAt": "2025-04-01",
     "reviews": [
       {
-        "user": "Rodney Williams",
-        "rating": 2,
-        "comment": "Wife claim property significant subject year.",
-        "profileImg": "https://www.lorempixel.com/206/336"
-      },
-      {
-        "user": "Linda Gilbert",
+        "user": "lensmaster",
+        "comment": "Fast shutter and great image clarity!",
         "rating": 5,
-        "comment": "Authority those central almost democratic respond.",
-        "profileImg": "https://www.lorempixel.com/776/230"
-      },
-      {
-        "user": "Daniel Hawkins",
-        "rating": 5,
-        "comment": "National itself citizen various full budget.",
-        "profileImg": "https://dummyimage.com/356x28"
+        "profileImg": "/images/Camera/camera4.png"
       }
     ],
-    "features": [
-      "Training option order strong set.",
-      "Discussion year deep although oil professor administration.",
-      "Mind somebody low."
-    ]
+    "features": ["24MP", "Autofocus", "HDR", "WiFi"]
   },
   {
     "id": 7,
-    "name": "Horizontal neutral monitoring",
-    "category": "drones",
-    "description": "Plan though analysis fire civil table every. Word there garden gas hand read. Candidate provide effect. Foot property job note.",
-    "stock": 7,
-    "profileImg": "https://placekitten.com/1009/127",
+    "name": "PixelZoom A7",
+    "category": "cameras",
+    "publisher": "visionguru",
+    "description": "Mirrorless camera with compact body and 4K video support.",
+    "stock": 30,
+    "sold": 18,
+    "productAvatar": "/images/Camera/camera3.png",
     "images": [
-      "https://placekitten.com/1009/127",
-      "https://www.lorempixel.com/514/68",
-      "https://placekitten.com/132/62",
-      "https://placeimg.com/815/772/any",
-      "https://placeimg.com/572/81/any"
+      "/images/Camera/camera2.png",
+      "/images/Camera/camera3.png",
+      "/images/Camera/camera4.png"
     ],
-    "originalPrice": 835.88,
-    "offeredPrice": 698.91,
-    "rating": 3.8,
+    "originalPrice": 1499,
+    "offeredPrice": 1250,
+    "rating": 4.7,
+    "createdAt": "2025-03-30",
     "reviews": [
       {
-        "user": "Katie Stewart",
-        "rating": 2,
-        "comment": "Under woman go health.",
-        "profileImg": "https://placekitten.com/394/585"
-      },
-      {
-        "user": "Courtney Martinez",
-        "rating": 3,
-        "comment": "Important response far pass likely budget because.",
-        "profileImg": "https://dummyimage.com/653x730"
-      },
-      {
-        "user": "Tammy Allen",
+        "user": "proCapture",
+        "comment": "Perfect for travel vlogs!",
         "rating": 5,
-        "comment": "Town down consider focus wide.",
-        "profileImg": "https://placeimg.com/346/621/any"
-      },
-      {
-        "user": "Angela Oliver",
-        "rating": 5,
-        "comment": "Choose attorney range tonight scientist.",
-        "profileImg": "https://www.lorempixel.com/330/637"
+        "profileImg": "/images/Camera/camera2.png"
       }
     ],
-    "features": [
-      "Live training place tonight class.",
-      "Generation several nearly part daughter owner of.",
-      "His world result edge."
-    ]
+    "features": ["Mirrorless", "4K Video", "Interchangeable Lens"]
   },
   {
     "id": 8,
-    "name": "Enhanced solution-oriented moratorium",
-    "category": "ipads",
-    "description": "Suddenly ever official pressure night tell left. Fire stand lead away.",
-    "stock": 39,
-    "profileImg": "https://dummyimage.com/362x10",
+    "name": "ZoomFlex Z10",
+    "category": "cameras",
+    "publisher": "camplus",
+    "description": "Point-and-shoot camera with optical zoom and image stabilization.",
+    "stock": 60,
+    "sold": 37,
+    "productAvatar": "/images/Camera/camera4.png",
     "images": [
-      "https://dummyimage.com/362x10",
-      "https://placeimg.com/82/515/any",
-      "https://www.lorempixel.com/808/60"
+      "/images/Camera/camera2.png",
+      "/images/Camera/camera3.png",
+      "/images/Camera/camera4.png"
     ],
-    "originalPrice": 1551.85,
-    "offeredPrice": 1458.95,
-    "rating": 4.5,
+    "originalPrice": 699,
+    "offeredPrice": 549,
+    "rating": 4.2,
+    "createdAt": "2025-03-28",
     "reviews": [
       {
-        "user": "Katrina Mendoza",
-        "rating": 5,
-        "comment": "Shoulder just day spend amount.",
-        "profileImg": "https://www.lorempixel.com/558/225"
-      },
-      {
-        "user": "Jill Acevedo",
+        "user": "snapwiz",
+        "comment": "Best compact camera for the price.",
         "rating": 4,
-        "comment": "Policy up read wear couple maybe.",
-        "profileImg": "https://placeimg.com/286/1007/any"
+        "profileImg": "/images/Camera/camera3.png"
       }
     ],
-    "features": [
-      "Kind order kitchen represent future.",
-      "Trial national what while meeting receive.",
-      "Exist mouth party writer TV."
-    ]
+    "features": ["Optical Zoom", "Image Stabilization", "Portable"]
   },
   {
     "id": 9,
-    "name": "Fully-configurable global service-desk",
-    "category": "drones",
-    "description": "Soon fight mean religious action enough. Budget upon religious determine tax hold. Experience even reflect perhaps pressure.",
-    "stock": 31,
-    "profileImg": "https://www.lorempixel.com/647/609",
+    "name": "iTab Air 11",
+    "category": "ipads",
+    "publisher": "tabtopia",
+    "description": "Lightweight iPad with A13 chip and Retina display.",
+    "stock": 40,
+    "sold": 21,
+    "productAvatar": "/images/Ipad/ipad1.png",
     "images": [
-      "https://www.lorempixel.com/647/609",
-      "https://dummyimage.com/702x273",
-      "https://placeimg.com/156/358/any",
-      "https://placekitten.com/276/863"
+      "/images/Ipad/ipad1.png",
+      "/images/Ipad/ipad2.png",
+      "/images/Ipad/ipad3.png"
     ],
-    "originalPrice": 1230.56,
-    "offeredPrice": 1104.02,
-    "rating": 2.0,
+    "originalPrice": 899,
+    "offeredPrice": 749,
+    "rating": 4.5,
+    "createdAt": "2025-03-25",
     "reviews": [
       {
-        "user": "Sheri Lopez",
-        "rating": 1,
-        "comment": "Loss event cup amount why.",
-        "profileImg": "https://placekitten.com/364/728"
-      },
-      {
-        "user": "James Giles",
-        "rating": 3,
-        "comment": "Indicate rich create reflect smile he amount.",
-        "profileImg": "https://www.lorempixel.com/419/665"
+        "user": "applehead",
+        "comment": "Super smooth and portable.",
+        "rating": 5,
+        "profileImg": "/images/Ipad/ipad2.png"
       }
     ],
-    "features": [
-      "Region heart game financial who.",
-      "Allow evidence smile model pressure popular significant.",
-      "Special the dog child all everyone of."
-    ]
+    "features": ["A13 Bionic", "Retina Display", "iOS 17"]
   },
   {
     "id": 10,
-    "name": "Open-architected value-added challenge",
+    "name": "iNote Pro 12.9",
     "category": "ipads",
-    "description": "Represent citizen glass central design adult.",
-    "stock": 99,
-    "profileImg": "https://www.lorempixel.com/501/684",
+    "publisher": "drawmagic",
+    "description": "Professional-grade iPad with Apple Pencil support.",
+    "stock": 25,
+    "sold": 11,
+    "productAvatar": "/images/Ipad/ipad2.png",
     "images": [
-      "https://www.lorempixel.com/501/684",
-      "https://placekitten.com/461/897"
+      "/images/Ipad/ipad1.png",
+      "/images/Ipad/ipad2.png",
+      "/images/Ipad/ipad3.png"
     ],
-    "originalPrice": 250.64,
-    "offeredPrice": 155.71,
-    "rating": 2.8,
+    "originalPrice": 1099,
+    "offeredPrice": 979,
+    "rating": 4.8,
+    "createdAt": "2025-03-22",
     "reviews": [
       {
-        "user": "Stacy Mcconnell",
-        "rating": 2,
-        "comment": "Staff onto range final her world protect.",
-        "profileImg": "https://dummyimage.com/624x182"
-      },
-      {
-        "user": "Edward Werner",
-        "rating": 4,
-        "comment": "Machine else probably article hair school us.",
-        "profileImg": "https://www.lorempixel.com/123/937"
-      },
-      {
-        "user": "Shawn Watson",
-        "rating": 2,
-        "comment": "Avoid these remain draw its action.",
-        "profileImg": "https://placeimg.com/40/1002/any"
-      },
-      {
-        "user": "Rebecca Stevens",
-        "rating": 3,
-        "comment": "Relate significant accept decide.",
-        "profileImg": "https://www.lorempixel.com/184/272"
+        "user": "prosketch",
+        "comment": "Great for digital art and productivity.",
+        "rating": 5,
+        "profileImg": "/images/Ipad/ipad1.png"
       }
     ],
-    "features": [
-      "Water use similar approach direction gas.",
-      "Crime serve go.",
-      "American smile have will operation."
-    ]
+    "features": ["Apple Pencil 2", "ProMotion", "USB-C"]
   },
   {
     "id": 11,
-    "name": "Fully-configurable tertiary architecture",
-    "category": "best-sellers",
-    "description": "Player age school new. Them price least meeting population kitchen fish form.",
-    "stock": 91,
-    "profileImg": "https://dummyimage.com/387x699",
+    "name": "iRead Mini",
+    "category": "ipads",
+    "publisher": "readplus",
+    "description": "Compact iPad perfect for reading and note-taking.",
+    "stock": 70,
+    "sold": 46,
+    "productAvatar": "/images/Ipad/ipad3.png",
     "images": [
-      "https://dummyimage.com/387x699",
-      "https://www.lorempixel.com/223/611",
-      "https://placeimg.com/860/496/any",
-      "https://dummyimage.com/1000x509"
+      "/images/Ipad/ipad1.png",
+      "/images/Ipad/ipad2.png",
+      "/images/Ipad/ipad3.png"
     ],
-    "originalPrice": 686.1,
-    "offeredPrice": 499.71,
-    "rating": 3.0,
+    "originalPrice": 599,
+    "offeredPrice": 499,
+    "rating": 4.4,
+    "createdAt": "2025-03-20",
     "reviews": [
       {
-        "user": "Dr. Mary Jones",
-        "rating": 5,
-        "comment": "Attack play me evidence sometimes Democrat answer.",
-        "profileImg": "https://placekitten.com/689/989"
-      },
-      {
-        "user": "Samantha Mason",
-        "rating": 1,
-        "comment": "Sell those detail him partner should.",
-        "profileImg": "https://dummyimage.com/260x434"
-      },
-      {
-        "user": "Meagan Baker",
-        "rating": 3,
-        "comment": "Respond hit wind old stuff natural parent economy.",
-        "profileImg": "https://www.lorempixel.com/692/289"
+        "user": "lightreader",
+        "comment": "Perfect for ebooks and notes.",
+        "rating": 4,
+        "profileImg": "/images/Ipad/ipad2.png"
       }
     ],
-    "features": [
-      "Certain add religious.",
-      "Music benefit project institution civil young language.",
-      "Another class table learn employee."
-    ]
+    "features": ["Compact Size", "Long Battery", "Smart Keyboard Support"]
   },
   {
     "id": 12,
-    "name": "Innovative client-driven function",
-    "category": "cameras",
-    "description": "True head history art knowledge pretty call present. Those cut art over teach base.",
-    "stock": 99,
-    "profileImg": "https://placeimg.com/539/749/any",
+    "name": "Nova X1 Pro",
+    "category": "mobiles",
+    "publisher": "techgeekz",
+    "description": "Flagship smartphone with AMOLED display and quad camera setup.",
+    "stock": 80,
+    "sold": 60,
+    "badge":"New",
+    "productAvatar": "/images/Smartphones/mobile1.png",
     "images": [
-      "https://placeimg.com/539/749/any",
-      "https://www.lorempixel.com/467/928",
-      "https://placeimg.com/463/969/any",
-      "https://placekitten.com/716/891"
+      "/images/Smartphones/mobile1.png",
+      "/images/Smartphones/mobile2.png",
+      "/images/Smartphones/mobile3.png",
+      "/images/Smartphones/mobile4.png"
     ],
-    "originalPrice": 1060.44,
-    "offeredPrice": 918.76,
-    "rating": 2.0,
+    "originalPrice": 999,
+    "offeredPrice": 849,
+    "rating": 4.7,
+    "createdAt": "2025-04-06",
     "reviews": [
       {
-        "user": "Kyle Guzman",
-        "rating": 1,
-        "comment": "Example past bed something score claim bit.",
-        "profileImg": "https://placeimg.com/989/404/any"
-      },
-      {
-        "user": "Nathan Leon",
-        "rating": 2,
-        "comment": "Particularly similar care building seem.",
-        "profileImg": "https://dummyimage.com/524x16"
-      },
-      {
-        "user": "Joseph Farley",
-        "rating": 1,
-        "comment": "Foreign keep share out usually.",
-        "profileImg": "https://www.lorempixel.com/81/469"
-      },
-      {
-        "user": "Jennifer Gill",
+        "user": "xuser007",
+        "comment": "Beast performance and stunning camera!",
         "rating": 5,
-        "comment": "Training feeling single note site campaign coach.",
-        "profileImg": "https://www.lorempixel.com/623/544"
-      },
-      {
-        "user": "Chloe Tucker",
-        "rating": 1,
-        "comment": "Hard candidate there white ask discover.",
-        "profileImg": "https://placekitten.com/406/693"
+        "profileImg": "/images/Smartphones/mobile2.png"
       }
     ],
-    "features": [
-      "Check model degree woman include.",
-      "American receive not media.",
-      "Shake Mrs full authority toward idea source."
-    ]
+    "features": ["AMOLED", "Quad Camera", "Fast Charging", "5G"]
   },
   {
     "id": 13,
-    "name": "Reactive global neural-net",
-    "category": "new-arrivals",
-    "description": "Environmental season book brother. Simply respond same director knowledge item effort. Hot name yes.",
-    "stock": 97,
-    "profileImg": "https://placeimg.com/332/903/any",
+    "name": "Edge Lite 6",
+    "category": "mobiles",
+    "publisher": "mobiplus",
+    "description": "Slim and sleek smartphone with powerful battery backup.",
+    "stock": 65,
+    "sold": 43,
+    "badge":"Sale",
+    "productAvatar": "/images/Smartphones/mobile2.png",
     "images": [
-      "https://placeimg.com/332/903/any",
-      "https://placeimg.com/1011/640/any",
-      "https://www.lorempixel.com/127/849",
-      "https://www.lorempixel.com/1002/305",
-      "https://placeimg.com/57/237/any"
+      "/images/Smartphones/mobile1.png",
+      "/images/Smartphones/mobile2.png",
+      "/images/Smartphones/mobile3.png",
+      "/images/Smartphones/mobile4.png"
     ],
-    "originalPrice": 1618.46,
-    "offeredPrice": 1493.71,
-    "rating": 3.0,
+    "originalPrice": 749,
+    "offeredPrice": 659,
+    "rating": 4.4,
+    "createdAt": "2025-03-29",
     "reviews": [
       {
-        "user": "James Torres",
-        "rating": 3,
-        "comment": "Consumer end rise everyone.",
-        "profileImg": "https://placeimg.com/745/695/any"
-      },
-      {
-        "user": "Christine Sweeney",
-        "rating": 3,
-        "comment": "Society same watch.",
-        "profileImg": "https://www.lorempixel.com/813/827"
+        "user": "mobilefreak",
+        "comment": "Solid battery and lightweight.",
+        "rating": 4,
+        "profileImg": "/images/Smartphones/mobile4.png"
       }
     ],
-    "features": [
-      "Term end world human break down.",
-      "Ago child professor subject research history discuss.",
-      "Medical establish size level evening interesting hour red."
-    ]
+    "features": ["Lightweight", "Long Battery", "Face Unlock"]
   },
   {
     "id": 14,
-    "name": "Automated composite interface",
-    "category": "cameras",
-    "description": "Back each suddenly key. Level year way energy test. Write different door sport national city trial.",
-    "stock": 40,
-    "profileImg": "https://www.lorempixel.com/101/489",
+    "name": "Galaxy Neo 5",
+    "category": "mobiles",
+    "publisher": "neomobile",
+    "description": "Mid-range device with excellent camera and storage.",
+    "stock": 90,
+    "sold": 58,
+    "badge":"New",
+    "productAvatar": "/images/Smartphones/mobile3.png",
     "images": [
-      "https://www.lorempixel.com/101/489",
-      "https://dummyimage.com/471x437",
-      "https://www.lorempixel.com/650/409",
-      "https://dummyimage.com/969x604"
+      "/images/Smartphones/mobile1.png",
+      "/images/Smartphones/mobile2.png",
+      "/images/Smartphones/mobile3.png",
+      "/images/Smartphones/mobile4.png"
     ],
-    "originalPrice": 1907.09,
-    "offeredPrice": 1530.76,
-    "rating": 2.3,
+    "originalPrice": 599,
+    "offeredPrice": 499,
+    "rating": 4.3,
+    "createdAt": "2025-03-26",
     "reviews": [
       {
-        "user": "Shannon Davis",
-        "rating": 1,
-        "comment": "His line teach also need.",
-        "profileImg": "https://dummyimage.com/880x731"
-      },
-      {
-        "user": "Diamond Martin",
-        "rating": 3,
-        "comment": "Against small those more.",
-        "profileImg": "https://placeimg.com/300/460/any"
-      },
-      {
-        "user": "Jessica Foster",
-        "rating": 3,
-        "comment": "Inside how worker else back board.",
-        "profileImg": "https://www.lorempixel.com/803/192"
+        "user": "camerakid",
+        "comment": "Camera performance exceeded my expectations.",
+        "rating": 4,
+        "profileImg": "/images/Smartphones/mobile1.png"
       }
     ],
-    "features": [
-      "Degree agent single inside.",
-      "Maybe enough her industry.",
-      "Live none family interesting herself put."
-    ]
+    "features": ["64MP Camera", "128GB Storage", "Fingerprint Sensor"]
   },
   {
     "id": 15,
-    "name": "Switchable national help-desk",
-    "category": "ipads",
-    "description": "Employee series speak gun cut institution ever. Quite say know between party.",
-    "stock": 9,
-    "profileImg": "https://www.lorempixel.com/256/157",
+    "name": "Pixel Spark 3",
+    "category": "mobiles",
+    "publisher": "sparkmobile",
+    "description": "Compact phone with pure Android and fast updates.",
+    "stock": 55,
+    "sold": 39,
+    "badge":"Sale",
+    "productAvatar": "/images/Smartphones/mobile4.png",
     "images": [
-      "https://www.lorempixel.com/256/157",
-      "https://dummyimage.com/498x838"
+      "/images/Smartphones/mobile1.png",
+      "/images/Smartphones/mobile2.png",
+      "/images/Smartphones/mobile3.png",
+      "/images/Smartphones/mobile4.png"
     ],
-    "originalPrice": 1008.53,
-    "offeredPrice": 721.76,
-    "rating": 4.3,
+    "originalPrice": 499,
+    "offeredPrice": 429,
+    "rating": 4.2,
+    "createdAt": "2025-03-23",
     "reviews": [
       {
-        "user": "Jared Miles",
-        "rating": 5,
-        "comment": "Condition side though real eat you.",
-        "profileImg": "https://placeimg.com/260/487/any"
-      },
-      {
-        "user": "Heidi Smith",
+        "user": "droidfan",
+        "comment": "Clean UI and great compact feel.",
         "rating": 4,
-        "comment": "Put second training nice wonder deep eat.",
-        "profileImg": "https://dummyimage.com/277x671"
-      },
-      {
-        "user": "Dana Taylor PhD",
-        "rating": 4,
-        "comment": "Under way player.",
-        "profileImg": "https://www.lorempixel.com/477/386"
+        "profileImg": "/images/Smartphones/mobile3.png"
       }
     ],
-    "features": [
-      "Wear foot enter animal go line.",
-      "Anything pay free father actually actually drug.",
-      "Off stage line chance."
-    ]
+    "features": ["Pure Android", "Compact", "Fast Updates"]
   },
   {
     "id": 16,
-    "name": "Monitored multi-tasking array",
-    "category": "laptops",
-    "description": "Serve ask better those between since down significant. Why charge service talk across avoid certain.",
-    "stock": 76,
-    "profileImg": "https://placeimg.com/1002/63/any",
+    "name": "TimeTrack S1",
+    "category": "headphones",
+    "publisher": "fitorbit",
+    "description": "Smartwatch with heart-rate monitor and AMOLED screen.",
+    "stock": 50,
+    "sold": 33,
+    "productAvatar": "/images/Smartwatch/watch1.png",
     "images": [
-      "https://placeimg.com/1002/63/any",
-      "https://dummyimage.com/681x697",
-      "https://www.lorempixel.com/451/294",
-      "https://www.lorempixel.com/63/617",
-      "https://placeimg.com/431/813/any"
+      "/images/Smartwatch/watch1.png",
+      "/images/Smartwatch/watch2.png",
+      "/images/Smartwatch/watch3.png"
     ],
-    "originalPrice": 1921.22,
-    "offeredPrice": 1735.54,
-    "rating": 1.8,
+    "originalPrice": 299,
+    "offeredPrice": 249,
+    "rating": 4.4,
+    "createdAt": "2025-03-21",
     "reviews": [
       {
-        "user": "Paul Bean",
-        "rating": 1,
-        "comment": "Fund amount tell successful strategy rest suffer.",
-        "profileImg": "https://www.lorempixel.com/894/944"
-      },
-      {
-        "user": "Nathan Wilkinson",
-        "rating": 3,
-        "comment": "Understand moment break city door.",
-        "profileImg": "https://placekitten.com/734/509"
-      },
-      {
-        "user": "Miss Brandy Banks",
-        "rating": 1,
-        "comment": "Perhaps region store join rise.",
-        "profileImg": "https://placeimg.com/813/707/any"
-      },
-      {
-        "user": "Jill Ho",
-        "rating": 1,
-        "comment": "Allow face I into rest energy.",
-        "profileImg": "https://www.lorempixel.com/0/1021"
-      },
-      {
-        "user": "Shannon Baker",
-        "rating": 3,
-        "comment": "Truth too same ten such believe service research.",
-        "profileImg": "https://dummyimage.com/688x75"
+        "user": "healthguru",
+        "comment": "Excellent fitness tracking and battery.",
+        "rating": 5,
+        "profileImg": "/images/Smartwatch/watch2.png"
       }
     ],
-    "features": [
-      "National fly election imagine.",
-      "Would notice than compare however gas strategy.",
-      "Young particular detail medical old."
-    ]
+    "features": ["Heart Rate", "AMOLED", "Fitness Modes"]
   },
   {
     "id": 17,
-    "name": "Inverse bandwidth-monitored knowledgebase",
-    "category": "new-arrivals",
-    "description": "Road partner send toward people shake thought chance. From another explain cause wall million institution.",
-    "stock": 86,
-    "profileImg": "https://www.lorempixel.com/407/621",
+    "name": "ZenTime 360",
+    "category": "headphones",
+    "publisher": "wristtech",
+    "description": "Premium smartwatch with metal body and wireless charging.",
+    "stock": 38,
+    "sold": 25,
+    "productAvatar": "/images/Smartwatch/watch2.png",
     "images": [
-      "https://www.lorempixel.com/407/621",
-      "https://dummyimage.com/445x567",
-      "https://www.lorempixel.com/461/541"
+      "/images/Smartwatch/watch1.png",
+      "/images/Smartwatch/watch2.png",
+      "/images/Smartwatch/watch3.png"
     ],
-    "originalPrice": 1993.46,
-    "offeredPrice": 1796.08,
-    "rating": 4.0,
+    "originalPrice": 349,
+    "offeredPrice": 289,
+    "rating": 4.5,
+    "createdAt": "2025-03-19",
     "reviews": [
       {
-        "user": "Marcus Cummings",
-        "rating": 4,
-        "comment": "Draw fact choice most.",
-        "profileImg": "https://placekitten.com/743/227"
-      },
-      {
-        "user": "Susan Johnson",
-        "rating": 4,
-        "comment": "Television public still accept arm during.",
-        "profileImg": "https://placekitten.com/220/307"
-      },
-      {
-        "user": "Karen Bruce",
-        "rating": 4,
-        "comment": "Brother part house join song pass opportunity.",
-        "profileImg": "https://dummyimage.com/486x368"
+        "user": "classytech",
+        "comment": "Feels and looks like a premium watch.",
+        "rating": 5,
+        "profileImg": "/images/Smartwatch/watch3.png"
       }
     ],
-    "features": [
-      "Vote ground small sister necessary drive.",
-      "Throw this generation only understand.",
-      "Go often whatever commercial beat seek city."
-    ]
+    "features": ["Wireless Charging", "Metal Body", "Waterproof"]
   },
   {
     "id": 18,
-    "name": "Adaptive interactive artificial intelligence",
-    "category": "new-arrivals",
-    "description": "Company stock fact hard test or. Director music agent feeling building others child.",
-    "stock": 92,
-    "profileImg": "https://www.lorempixel.com/279/806",
+    "name": "PulseFit Mini",
+    "category": "headphones",
+    "publisher": "fitzone",
+    "description": "Compact smart band with sleep tracking and step counter.",
+    "stock": 70,
+    "sold": 41,
+    "productAvatar": "/images/Smartwatch/watch3.png",
     "images": [
-      "https://www.lorempixel.com/279/806",
-      "https://placeimg.com/403/6/any"
+      "/images/Smartwatch/watch1.png",
+      "/images/Smartwatch/watch2.png",
+      "/images/Smartwatch/watch3.png"
     ],
-    "originalPrice": 577.42,
-    "offeredPrice": 475.81,
-    "rating": 1.5,
+    "originalPrice": 199,
+    "offeredPrice": 159,
+    "rating": 4.1,
+    "createdAt": "2025-04-06",
     "reviews": [
       {
-        "user": "Heather Fisher",
-        "rating": 2,
-        "comment": "Health represent hair action fight surface.",
-        "profileImg": "https://placekitten.com/373/221"
-      },
-      {
-        "user": "Ryan Lewis",
-        "rating": 1,
-        "comment": "Where top foreign trip.",
-        "profileImg": "https://www.lorempixel.com/934/452"
+        "user": "stepmaster",
+        "comment": "Light and accurate, great for daily use.",
+        "rating": 4,
+        "profileImg": "/images/Smartwatch/watch1.png"
       }
     ],
-    "features": [
-      "Live street more week stand employee.",
-      "Boy increase his but tree.",
-      "Treatment various over myself."
-    ]
+    "features": ["Sleep Tracking", "Step Counter", "Water Resistant"]
   },
   {
     "id": 19,
-    "name": "Progressive homogeneous artificial intelligence",
-    "category": "best-sellers",
-    "description": "Threat anyone result walk art large they. Street some across receive teacher sound form.",
-    "stock": 1,
-    "profileImg": "https://placeimg.com/250/89/any",
+    "name": "PulseFit Mini",
+    "category": "laptops",
+    "publisher": "fitzone",
+    "description": "Compact smart band with sleep tracking and step counter.",
+    "stock": 70,
+    "sold": 41,
+    "productAvatar": "/images/Laptop/laptop1.png",
     "images": [
-      "https://placeimg.com/250/89/any",
-      "https://placeimg.com/974/879/any",
-      "https://dummyimage.com/606x880",
-      "https://www.lorempixel.com/39/840"
+      "/images/Smartwatch/laptop4.png",
+      "/images/Smartwatch/laptop3.png",
+      "/images/Smartwatch/laptop2.png"
     ],
-    "originalPrice": 1797.5,
-    "offeredPrice": 1177.31,
-    "rating": 3.8,
+    "originalPrice": 199,
+    "offeredPrice": 159,
+    "rating": 4.1,
+    "createdAt": "2025-04-06",
     "reviews": [
       {
-        "user": "William Glass",
-        "rating": 3,
-        "comment": "Already government increase career my.",
-        "profileImg": "https://placeimg.com/441/869/any"
-      },
-      {
-        "user": "Steven Collins",
+        "user": "stepmaster",
+        "comment": "Light and accurate, great for daily use.",
         "rating": 4,
-        "comment": "Over father each no alone.",
-        "profileImg": "https://www.lorempixel.com/832/107"
-      },
-      {
-        "user": "Christine White",
-        "rating": 5,
-        "comment": "Letter run form official under avoid nature.",
-        "profileImg": "https://placekitten.com/487/194"
-      },
-      {
-        "user": "Michael Arnold",
-        "rating": 3,
-        "comment": "Travel program industry name consumer quality.",
-        "profileImg": "https://placeimg.com/19/7/any"
+        "profileImg": "/images/Smartwatch/watch1.png"
       }
     ],
-    "features": [
-      "Wait base so run worry.",
-      "Science phone industry fill exactly.",
-      "Science ago power pretty."
-    ]
+    "features": ["Sleep Tracking", "Step Counter", "Water Resistant"]
   },
   {
     "id": 20,
-    "name": "Phased didactic software",
-    "category": "cameras",
-    "description": "Unit heavy cup house hit again change. Miss spring open wonder break religious. Local in little people check small.",
-    "stock": 20,
-    "profileImg": "https://www.lorempixel.com/6/219",
+    "name": "PulseFit Mini",
+    "category": "laptops",
+    "publisher": "fitzone",
+    "description": "Compact smart band with sleep tracking and step counter.",
+    "stock": 70,
+    "sold": 41,
+    "productAvatar": "/images/Laptop/laptop2.png",
     "images": [
-      "https://www.lorempixel.com/6/219",
-      "https://placekitten.com/597/212",
-      "https://placekitten.com/895/1011",
-      "https://placeimg.com/233/694/any",
-      "https://placeimg.com/627/731/any"
+      "/images/Smartwatch/laptop4.png",
+      "/images/Smartwatch/laptop3.png",
+      "/images/Smartwatch/laptop2.png"
     ],
-    "originalPrice": 817.82,
-    "offeredPrice": 570.45,
-    "rating": 2.8,
+    "originalPrice": 199,
+    "offeredPrice": 159,
+    "rating": 4.1,
+    "createdAt": "2025-03-16",
     "reviews": [
       {
-        "user": "Mark Wallace",
-        "rating": 3,
-        "comment": "Yourself real control husband win could sometimes.",
-        "profileImg": "https://www.lorempixel.com/564/11"
-      },
-      {
-        "user": "Laurie Case",
-        "rating": 2,
-        "comment": "Degree artist result us realize.",
-        "profileImg": "https://dummyimage.com/507x672"
-      },
-      {
-        "user": "Robert Pugh",
+        "user": "stepmaster",
+        "comment": "Light and accurate, great for daily use.",
         "rating": 4,
-        "comment": "Whatever medical author as.",
-        "profileImg": "https://dummyimage.com/946x571"
-      },
-      {
-        "user": "Stephen Roth",
-        "rating": 1,
-        "comment": "Will moment culture indicate kind.",
-        "profileImg": "https://placeimg.com/1023/508/any"
-      },
-      {
-        "user": "Angela Anderson",
-        "rating": 4,
-        "comment": "Understand police issue left check reveal.",
-        "profileImg": "https://placekitten.com/677/240"
+        "profileImg": "/images/Smartwatch/watch1.png"
       }
     ],
-    "features": [
-      "Miss full series.",
-      "Street five employee.",
-      "Tell person claim recent base wife factor approach."
-    ]
+    "features": ["Sleep Tracking", "Step Counter", "Water Resistant"]
   },
   {
     "id": 21,
-    "name": "Fundamental high-level task-force",
-    "category": "cameras",
-    "description": "Beat you despite affect. Score game production financial appear bill.",
-    "stock": 2,
-    "profileImg": "https://www.lorempixel.com/94/651",
+    "name": "PulseFit Mini",
+    "category": "laptops",
+    "publisher": "fitzone",
+    "description": "Compact smart band with sleep tracking and step counter.",
+    "stock": 70,
+    "sold": 41,
+    "productAvatar": "/images/Laptop/laptop3.png",
     "images": [
-      "https://www.lorempixel.com/94/651",
-      "https://www.lorempixel.com/755/856",
-      "https://dummyimage.com/880x659",
-      "https://dummyimage.com/79x334",
-      "https://dummyimage.com/368x749"
+      "/images/Smartwatch/laptop4.png",
+      "/images/Smartwatch/laptop3.png",
+      "/images/Smartwatch/laptop2.png"
     ],
-    "originalPrice": 1501.79,
-    "offeredPrice": 903.15,
-    "rating": 3.4,
+    "originalPrice": 199,
+    "offeredPrice": 159,
+    "rating": 4.1,
+    "createdAt": "2025-03-16",
     "reviews": [
       {
-        "user": "Amanda Gonzalez",
-        "rating": 5,
-        "comment": "Story much head either likely floor.",
-        "profileImg": "https://placeimg.com/366/258/any"
-      },
-      {
-        "user": "Derrick Lyons",
-        "rating": 2,
-        "comment": "Seek garden parent hundred.",
-        "profileImg": "https://www.lorempixel.com/633/178"
-      },
-      {
-        "user": "Rodney Taylor",
-        "rating": 3,
-        "comment": "During outside enter enough.",
-        "profileImg": "https://placekitten.com/665/185"
-      },
-      {
-        "user": "Megan Peters",
+        "user": "stepmaster",
+        "comment": "Light and accurate, great for daily use.",
         "rating": 4,
-        "comment": "Thought born local decide month.",
-        "profileImg": "https://dummyimage.com/990x28"
-      },
-      {
-        "user": "Steven Miranda",
-        "rating": 3,
-        "comment": "Clear section important outside national rate manager.",
-        "profileImg": "https://placekitten.com/200/676"
+        "profileImg": "/images/Smartwatch/watch1.png"
       }
     ],
-    "features": [
-      "Economic police guy reflect light.",
-      "Since recently theory recent major still painting.",
-      "Ahead those on catch wish your."
-    ]
+    "features": ["Sleep Tracking", "Step Counter", "Water Resistant"]
   },
   {
     "id": 22,
-    "name": "Reactive directional ability",
+    "name": "PulseFit Mini",
     "category": "laptops",
-    "description": "Few necessary air forward right. Church exist take hair well local. Research artist best piece with side.",
-    "stock": 1,
-    "profileImg": "https://placekitten.com/823/550",
+    "publisher": "fitzone",
+    "description": "Compact smart band with sleep tracking and step counter.",
+    "stock": 70,
+    "sold": 41,
+    "productAvatar": "/images/Laptop/laptop4.png",
     "images": [
-      "https://placekitten.com/823/550",
-      "https://placekitten.com/110/85",
-      "https://dummyimage.com/246x1001"
+      "/images/Smartwatch/laptop4.png",
+      "/images/Smartwatch/laptop3.png",
+      "/images/Smartwatch/laptop2.png"
     ],
-    "originalPrice": 361.64,
-    "offeredPrice": 243.84,
-    "rating": 4.0,
+    "originalPrice": 199,
+    "offeredPrice": 159,
+    "rating": 4.1,
+    "createdAt": "2025-03-16",
     "reviews": [
       {
-        "user": "Maria Lee MD",
-        "rating": 3,
-        "comment": "Old listen town interview each listen ok.",
-        "profileImg": "https://placekitten.com/40/126"
-      },
-      {
-        "user": "Tiffany Smith",
-        "rating": 5,
-        "comment": "During history discussion must help.",
-        "profileImg": "https://dummyimage.com/43x824"
-      },
-      {
-        "user": "Melissa Gallagher",
-        "rating": 4,
-        "comment": "Rich finally entire chair.",
-        "profileImg": "https://placeimg.com/552/877/any"
-      }
-    ],
-    "features": [
-      "Suggest majority behavior skin.",
-      "Blood reason out reach building support.",
-      "Value building best purpose."
-    ]
-  },
-  {
-    "id": 23,
-    "name": "De-engineered global throughput",
-    "category": "laptops",
-    "description": "Education sport wish action set step trip. Before cut somebody. Deal happen side word property option seem little.",
-    "stock": 41,
-    "profileImg": "https://placeimg.com/1019/25/any",
-    "images": [
-      "https://placeimg.com/1019/25/any",
-      "https://placekitten.com/490/468"
-    ],
-    "originalPrice": 798.53,
-    "offeredPrice": 729.28,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Michael Peterson",
-        "rating": 2,
-        "comment": "Reason truth spring.",
-        "profileImg": "https://placeimg.com/603/655/any"
-      },
-      {
-        "user": "Jonathan Dominguez",
-        "rating": 2,
-        "comment": "Rich spring either loss rest prove.",
-        "profileImg": "https://placeimg.com/457/1013/any"
-      },
-      {
-        "user": "Pamela Brown",
-        "rating": 3,
-        "comment": "Method point cell agreement how our.",
-        "profileImg": "https://placekitten.com/944/901"
-      },
-      {
-        "user": "Pamela Jones",
-        "rating": 4,
-        "comment": "Face so move around.",
-        "profileImg": "https://placekitten.com/563/471"
-      },
-      {
-        "user": "Eric Jackson",
-        "rating": 4,
-        "comment": "Modern factor head least figure wear past.",
-        "profileImg": "https://placekitten.com/149/178"
-      }
-    ],
-    "features": [
-      "Population figure everybody impact.",
-      "Put both possible.",
-      "Together available seek must."
-    ]
-  },
-  {
-    "id": 24,
-    "name": "Progressive 3rdgeneration attitude",
-    "category": "laptops",
-    "description": "Street just ground radio owner. Ask election third fine product message. Example place as positive investment dream.",
-    "stock": 13,
-    "profileImg": "https://dummyimage.com/646x668",
-    "images": [
-      "https://dummyimage.com/646x668",
-      "https://placekitten.com/230/477",
-      "https://dummyimage.com/638x756"
-    ],
-    "originalPrice": 1069.99,
-    "offeredPrice": 893.53,
-    "rating": 4.3,
-    "reviews": [
-      {
-        "user": "Harold Baird",
-        "rating": 4,
-        "comment": "Prevent worry area just should.",
-        "profileImg": "https://placekitten.com/771/36"
-      },
-      {
-        "user": "Shannon Richardson",
-        "rating": 5,
-        "comment": "By modern two what.",
-        "profileImg": "https://www.lorempixel.com/186/229"
-      },
-      {
-        "user": "Walter Brooks",
-        "rating": 4,
-        "comment": "Church gas nor trouble resource.",
-        "profileImg": "https://dummyimage.com/825x475"
-      }
-    ],
-    "features": [
-      "Standard summer them compare TV.",
-      "What provide plan action glass world.",
-      "Mission southern agency thank building general better."
-    ]
-  },
-  {
-    "id": 25,
-    "name": "Managed empowering Internet solution",
-    "category": "cameras",
-    "description": "Save every middle artist improve. Attack reason morning send bit.",
-    "stock": 93,
-    "profileImg": "https://placeimg.com/759/487/any",
-    "images": [
-      "https://placeimg.com/759/487/any",
-      "https://placekitten.com/201/480"
-    ],
-    "originalPrice": 1625.27,
-    "offeredPrice": 1532.31,
-    "rating": 3.6,
-    "reviews": [
-      {
-        "user": "John Coleman",
-        "rating": 4,
-        "comment": "Relate floor pull.",
-        "profileImg": "https://dummyimage.com/576x747"
-      },
-      {
-        "user": "Melanie Kennedy",
-        "rating": 5,
-        "comment": "Source for behavior PM operation total.",
-        "profileImg": "https://dummyimage.com/23x0"
-      },
-      {
-        "user": "Nicole Stein",
-        "rating": 2,
-        "comment": "Believe response even it son main man artist.",
-        "profileImg": "https://www.lorempixel.com/895/788"
-      },
-      {
-        "user": "Stephanie Smith",
-        "rating": 2,
-        "comment": "Inside try ten.",
-        "profileImg": "https://dummyimage.com/8x534"
-      },
-      {
-        "user": "Karen Hines",
-        "rating": 5,
-        "comment": "Image born little yes sport whatever.",
-        "profileImg": "https://placeimg.com/171/83/any"
-      }
-    ],
-    "features": [
-      "Computer city staff draw.",
-      "Central form industry particular hospital.",
-      "Star the move type yes pressure civil."
-    ]
-  },
-  {
-    "id": 26,
-    "name": "Advanced bottom-line implementation",
-    "category": "new-arrivals",
-    "description": "Hear deal nearly me score. Senior test key second oil box whom. Represent through black meeting. Drive simply election thank front.",
-    "stock": 66,
-    "profileImg": "https://dummyimage.com/962x332",
-    "images": [
-      "https://dummyimage.com/962x332",
-      "https://www.lorempixel.com/820/669",
-      "https://placekitten.com/573/826"
-    ],
-    "originalPrice": 1400.82,
-    "offeredPrice": 1080.2,
-    "rating": 2.8,
-    "reviews": [
-      {
-        "user": "Antonio Brown",
-        "rating": 1,
-        "comment": "He scientist box relationship amount career day.",
-        "profileImg": "https://dummyimage.com/548x160"
-      },
-      {
-        "user": "Lindsay Smith",
-        "rating": 4,
-        "comment": "Organization analysis cost way forward four field claim.",
-        "profileImg": "https://dummyimage.com/182x934"
-      },
-      {
-        "user": "Hayley Murphy",
-        "rating": 5,
-        "comment": "On read challenge war office simply.",
-        "profileImg": "https://placekitten.com/521/1001"
-      },
-      {
-        "user": "Christie Robinson",
-        "rating": 1,
-        "comment": "Huge sign owner.",
-        "profileImg": "https://dummyimage.com/500x57"
-      }
-    ],
-    "features": [
-      "West score finally.",
-      "Federal check future high draw consumer.",
-      "Make represent data public nor sense finish."
-    ]
-  },
-  {
-    "id": 27,
-    "name": "Persevering coherent architecture",
-    "category": "ipads",
-    "description": "Political election six chance responsibility.",
-    "stock": 5,
-    "profileImg": "https://placeimg.com/742/675/any",
-    "images": [
-      "https://placeimg.com/742/675/any",
-      "https://placeimg.com/43/742/any"
-    ],
-    "originalPrice": 1127.71,
-    "offeredPrice": 923.62,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Steve Peterson",
-        "rating": 3,
-        "comment": "Who approach training example campaign.",
-        "profileImg": "https://dummyimage.com/574x782"
-      },
-      {
-        "user": "Glenn Melton",
-        "rating": 3,
-        "comment": "Leader room into language player increase.",
-        "profileImg": "https://www.lorempixel.com/812/883"
-      }
-    ],
-    "features": [
-      "Three should political believe reveal moment significant.",
-      "Score with use least.",
-      "Leg response success relationship goal happy."
-    ]
-  },
-  {
-    "id": 28,
-    "name": "Grass-roots analyzing archive",
-    "category": "drones",
-    "description": "Great top article type or degree its almost. Friend leader computer future. Picture guy surface large again partner.",
-    "stock": 96,
-    "profileImg": "https://placeimg.com/11/111/any",
-    "images": [
-      "https://placeimg.com/11/111/any",
-      "https://dummyimage.com/312x915",
-      "https://placeimg.com/531/381/any",
-      "https://placekitten.com/455/248",
-      "https://dummyimage.com/269x864"
-    ],
-    "originalPrice": 1125.53,
-    "offeredPrice": 766.78,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Candice Matthews",
-        "rating": 1,
-        "comment": "Development with property likely eye name.",
-        "profileImg": "https://www.lorempixel.com/588/144"
-      },
-      {
-        "user": "Joseph Ward",
-        "rating": 3,
-        "comment": "Economic adult they contain of admit great cell.",
-        "profileImg": "https://dummyimage.com/209x273"
-      },
-      {
-        "user": "Harold Ortiz",
-        "rating": 5,
-        "comment": "Speech understand success blue.",
-        "profileImg": "https://dummyimage.com/834x678"
-      }
-    ],
-    "features": [
-      "Yes resource phone lot minute provide.",
-      "Situation effort allow beat senior sense attention.",
-      "Town middle television manage quickly than attack."
-    ]
-  },
-  {
-    "id": 29,
-    "name": "Diverse systematic approach",
-    "category": "ipads",
-    "description": "Ten official top already. This with new others win here conference. Book property detail black benefit similar onto.",
-    "stock": 9,
-    "profileImg": "https://www.lorempixel.com/982/362",
-    "images": [
-      "https://www.lorempixel.com/982/362",
-      "https://placekitten.com/925/525",
-      "https://www.lorempixel.com/906/1005",
-      "https://placekitten.com/127/873"
-    ],
-    "originalPrice": 552.83,
-    "offeredPrice": 440.51,
-    "rating": 3.8,
-    "reviews": [
-      {
-        "user": "Rodney Gray",
-        "rating": 5,
-        "comment": "Still must citizen voice sort country.",
-        "profileImg": "https://dummyimage.com/261x783"
-      },
-      {
-        "user": "Ebony Taylor",
-        "rating": 2,
-        "comment": "Huge so person.",
-        "profileImg": "https://dummyimage.com/645x521"
-      },
-      {
-        "user": "Rachel King",
-        "rating": 5,
-        "comment": "Arm interest western include per organization claim.",
-        "profileImg": "https://placeimg.com/644/682/any"
-      },
-      {
-        "user": "Matthew Adams",
-        "rating": 3,
-        "comment": "Occur another start never nothing country role statement.",
-        "profileImg": "https://www.lorempixel.com/918/600"
-      }
-    ],
-    "features": [
-      "Less floor message TV become drug.",
-      "Provide wall production song hear.",
-      "Month fact floor he very whom."
-    ]
-  },
-  {
-    "id": 30,
-    "name": "Devolved full-range matrix",
-    "category": "ipads",
-    "description": "Responsibility deep town change customer take employee. Process feel poor kind part.",
-    "stock": 44,
-    "profileImg": "https://placeimg.com/627/748/any",
-    "images": [
-      "https://placeimg.com/627/748/any",
-      "https://dummyimage.com/672x27"
-    ],
-    "originalPrice": 343.48,
-    "offeredPrice": 305.39,
-    "rating": 4.0,
-    "reviews": [
-      {
-        "user": "Sandra Walker",
-        "rating": 4,
-        "comment": "Stock address public form half story wide.",
-        "profileImg": "https://dummyimage.com/21x287"
-      },
-      {
-        "user": "Stephanie Nelson",
-        "rating": 4,
-        "comment": "Marriage note face any especially its finish.",
-        "profileImg": "https://placeimg.com/800/490/any"
-      }
-    ],
-    "features": [
-      "Throughout down manage environmental role.",
-      "Impact focus foreign TV would.",
-      "Matter blood goal ten cost."
-    ]
-  },
-  {
-    "id": 31,
-    "name": "Enhanced system-worthy artificial intelligence",
-    "category": "laptops",
-    "description": "Break cause organization market. Surface seek stock together sea car see.",
-    "stock": 45,
-    "profileImg": "https://placeimg.com/919/984/any",
-    "images": [
-      "https://placeimg.com/919/984/any",
-      "https://placeimg.com/299/914/any",
-      "https://placeimg.com/978/790/any"
-    ],
-    "originalPrice": 792.77,
-    "offeredPrice": 561.57,
-    "rating": 2.0,
-    "reviews": [
-      {
-        "user": "Kristina Holden",
-        "rating": 2,
-        "comment": "By learn its land space system.",
-        "profileImg": "https://dummyimage.com/375x465"
-      },
-      {
-        "user": "Brian Hall",
-        "rating": 2,
-        "comment": "Write your thus campaign.",
-        "profileImg": "https://placekitten.com/200/254"
-      },
-      {
-        "user": "Christian Woods",
-        "rating": 2,
-        "comment": "Go walk never newspaper.",
-        "profileImg": "https://dummyimage.com/745x984"
-      }
-    ],
-    "features": [
-      "Other court star speech.",
-      "Walk week especially chair employee bill win raise.",
-      "Human star letter."
-    ]
-  },
-  {
-    "id": 32,
-    "name": "Quality-focused interactive interface",
-    "category": "drones",
-    "description": "Worker collection network character notice. Federal defense boy feel particular. Career hotel health military effort hold.",
-    "stock": 11,
-    "profileImg": "https://placekitten.com/943/750",
-    "images": [
-      "https://placekitten.com/943/750",
-      "https://placeimg.com/944/644/any",
-      "https://placekitten.com/900/22",
-      "https://dummyimage.com/231x710"
-    ],
-    "originalPrice": 802.99,
-    "offeredPrice": 635.14,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Denise Martinez",
-        "rating": 5,
-        "comment": "Stuff still spring community.",
-        "profileImg": "https://www.lorempixel.com/241/989"
-      },
-      {
-        "user": "Jodi Glover",
-        "rating": 1,
-        "comment": "Away art purpose hotel science out positive quite.",
-        "profileImg": "https://placeimg.com/96/701/any"
-      }
-    ],
-    "features": [
-      "Could position rise main treat.",
-      "Position score me may to.",
-      "Song within believe short share choice."
-    ]
-  },
-  {
-    "id": 33,
-    "name": "Optional discrete challenge",
-    "category": "ipads",
-    "description": "Military himself page far concern tend. Show they wall. Me hour majority.",
-    "stock": 81,
-    "profileImg": "https://www.lorempixel.com/133/783",
-    "images": [
-      "https://www.lorempixel.com/133/783",
-      "https://www.lorempixel.com/27/320",
-      "https://www.lorempixel.com/633/938"
-    ],
-    "originalPrice": 514.19,
-    "offeredPrice": 348.69,
-    "rating": 4.7,
-    "reviews": [
-      {
-        "user": "Cynthia Gross",
-        "rating": 5,
-        "comment": "Drive amount air.",
-        "profileImg": "https://placeimg.com/599/117/any"
-      },
-      {
-        "user": "Michelle Henry",
-        "rating": 4,
-        "comment": "Student claim TV.",
-        "profileImg": "https://placeimg.com/98/172/any"
-      },
-      {
-        "user": "Mary Green",
-        "rating": 5,
-        "comment": "Wear fill act step happy.",
-        "profileImg": "https://placeimg.com/773/496/any"
-      }
-    ],
-    "features": [
-      "Whether dream very media.",
-      "Wide page federal light item civil former.",
-      "Cost be major down."
-    ]
-  },
-  {
-    "id": 34,
-    "name": "Visionary web-enabled capability",
-    "category": "cameras",
-    "description": "Get box experience responsibility as. Fast card carry through drop individual whole. Let prove factor suddenly cold sometimes.",
-    "stock": 21,
-    "profileImg": "https://placeimg.com/931/156/any",
-    "images": [
-      "https://placeimg.com/931/156/any",
-      "https://placekitten.com/518/216",
-      "https://dummyimage.com/157x1007",
-      "https://placeimg.com/25/416/any"
-    ],
-    "originalPrice": 364.4,
-    "offeredPrice": 225.62,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Keith Garcia",
-        "rating": 1,
-        "comment": "Board line memory ground of part.",
-        "profileImg": "https://dummyimage.com/399x65"
-      },
-      {
-        "user": "Andrew Santiago",
-        "rating": 4,
-        "comment": "Research challenge responsibility leader.",
-        "profileImg": "https://placekitten.com/712/909"
-      },
-      {
-        "user": "Alexis Pennington",
-        "rating": 4,
-        "comment": "Enter include region outside sense radio.",
-        "profileImg": "https://placeimg.com/176/247/any"
-      },
-      {
-        "user": "Christina Henry",
-        "rating": 4,
-        "comment": "Parent seat machine single likely relate.",
-        "profileImg": "https://dummyimage.com/831x862"
-      },
-      {
-        "user": "John Coffey",
-        "rating": 2,
-        "comment": "Remain choose old rate second north black.",
-        "profileImg": "https://dummyimage.com/462x481"
-      }
-    ],
-    "features": [
-      "Man evidence police call challenge citizen fear.",
-      "Whose Democrat think try.",
-      "Citizen audience Mrs find themselves."
-    ]
-  },
-  {
-    "id": 35,
-    "name": "Decentralized object-oriented utilization",
-    "category": "mobiles",
-    "description": "Civil generation because statement. No common traditional dog officer us your kid. Usually experience parent must kid suddenly.",
-    "stock": 37,
-    "profileImg": "https://placeimg.com/957/757/any",
-    "images": [
-      "https://placeimg.com/957/757/any",
-      "https://placeimg.com/219/499/any",
-      "https://dummyimage.com/672x837"
-    ],
-    "originalPrice": 501.54,
-    "offeredPrice": 409.7,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Todd Alvarez MD",
-        "rating": 3,
-        "comment": "Approach meet trouble whatever.",
-        "profileImg": "https://placekitten.com/450/609"
-      },
-      {
-        "user": "Brandy Cain",
-        "rating": 3,
-        "comment": "Tv drive time hear.",
-        "profileImg": "https://placeimg.com/1021/142/any"
-      }
-    ],
-    "features": [
-      "Have finally also member carry company.",
-      "Might never apply produce.",
-      "Ten focus value able another issue why star."
-    ]
-  },
-  {
-    "id": 36,
-    "name": "Mandatory radical emulation",
-    "category": "cameras",
-    "description": "Keep choice pick old land five smile fight. Success he American pressure minute. Scene beat them describe.",
-    "stock": 23,
-    "profileImg": "https://placekitten.com/492/563",
-    "images": [
-      "https://placekitten.com/492/563",
-      "https://placeimg.com/684/19/any",
-      "https://dummyimage.com/565x162"
-    ],
-    "originalPrice": 150.39,
-    "offeredPrice": 126.81,
-    "rating": 4.3,
-    "reviews": [
-      {
-        "user": "Kelly Smith",
-        "rating": 4,
-        "comment": "Front wonder person mean.",
-        "profileImg": "https://placeimg.com/383/954/any"
-      },
-      {
-        "user": "Rebecca Mann",
-        "rating": 5,
-        "comment": "Message audience rich either you trouble.",
-        "profileImg": "https://placekitten.com/493/6"
-      },
-      {
-        "user": "Ashley Smith",
-        "rating": 4,
-        "comment": "Camera according Republican.",
-        "profileImg": "https://placeimg.com/796/453/any"
-      }
-    ],
-    "features": [
-      "Hour beyond half.",
-      "Accept somebody why off church since.",
-      "Plant pull policy long such magazine operation."
-    ]
-  },
-  {
-    "id": 37,
-    "name": "Synergized upward-trending adapter",
-    "category": "new-arrivals",
-    "description": "Environmental quite appear animal job people.",
-    "stock": 19,
-    "profileImg": "https://dummyimage.com/190x539",
-    "images": [
-      "https://dummyimage.com/190x539",
-      "https://placekitten.com/469/196",
-      "https://dummyimage.com/567x923",
-      "https://www.lorempixel.com/175/146"
-    ],
-    "originalPrice": 406.32,
-    "offeredPrice": 309.82,
-    "rating": 2.7,
-    "reviews": [
-      {
-        "user": "Lisa Jackson",
-        "rating": 4,
-        "comment": "Form recent his effect hundred several trade level.",
-        "profileImg": "https://placeimg.com/409/814/any"
-      },
-      {
-        "user": "Shannon Johnson",
-        "rating": 1,
-        "comment": "Attack minute force.",
-        "profileImg": "https://placeimg.com/208/1014/any"
-      },
-      {
-        "user": "Jordan Murphy",
-        "rating": 3,
-        "comment": "Clear stage seem unit another step.",
-        "profileImg": "https://dummyimage.com/671x297"
-      }
-    ],
-    "features": [
-      "Return dark opportunity different.",
-      "Play benefit fact opportunity matter month city.",
-      "Perform hope game describe why."
-    ]
-  },
-  {
-    "id": 38,
-    "name": "Synchronized multi-state toolset",
-    "category": "collections",
-    "description": "Simple house like cultural Mr the technology media. Successful attack from history.",
-    "stock": 12,
-    "profileImg": "https://www.lorempixel.com/27/54",
-    "images": [
-      "https://www.lorempixel.com/27/54",
-      "https://www.lorempixel.com/649/612",
-      "https://dummyimage.com/39x51",
-      "https://placeimg.com/827/117/any",
-      "https://placeimg.com/134/806/any"
-    ],
-    "originalPrice": 264.42,
-    "offeredPrice": 181.49,
-    "rating": 1.5,
-    "reviews": [
-      {
-        "user": "Brian Hamilton",
-        "rating": 1,
-        "comment": "Increase floor court head affect already federal.",
-        "profileImg": "https://dummyimage.com/1021x418"
-      },
-      {
-        "user": "Mark Nelson",
-        "rating": 2,
-        "comment": "Make real who unit suggest vote.",
-        "profileImg": "https://placeimg.com/447/631/any"
-      }
-    ],
-    "features": [
-      "Rule to know dinner conference.",
-      "Other large boy respond your politics animal.",
-      "Morning network relationship must my he."
-    ]
-  },
-  {
-    "id": 39,
-    "name": "Optimized grid-enabled extranet",
-    "category": "headphones",
-    "description": "Picture growth father both oil shake lead. Until night there miss nor.",
-    "stock": 42,
-    "profileImg": "https://placekitten.com/856/706",
-    "images": [
-      "https://placekitten.com/856/706",
-      "https://www.lorempixel.com/778/820",
-      "https://placeimg.com/289/487/any",
-      "https://www.lorempixel.com/889/1007",
-      "https://dummyimage.com/22x207"
-    ],
-    "originalPrice": 701.67,
-    "offeredPrice": 445.43,
-    "rating": 3.5,
-    "reviews": [
-      {
-        "user": "Julie Williams",
-        "rating": 4,
-        "comment": "Consumer grow including staff machine base.",
-        "profileImg": "https://placekitten.com/16/939"
-      },
-      {
-        "user": "Monica Perkins",
-        "rating": 3,
-        "comment": "Theory street participant red edge fact animal avoid.",
-        "profileImg": "https://placeimg.com/947/984/any"
-      }
-    ],
-    "features": [
-      "Brother new also even late theory.",
-      "Firm large already company I moment.",
-      "Subject represent picture see eight Democrat black."
-    ]
-  },
-  {
-    "id": 40,
-    "name": "Centralized grid-enabled ability",
-    "category": "ipads",
-    "description": "Agency subject season right southern then with. Bank political guy old. Provide body building contain gas mean.",
-    "stock": 39,
-    "profileImg": "https://placekitten.com/478/334",
-    "images": [
-      "https://placekitten.com/478/334",
-      "https://dummyimage.com/543x456",
-      "https://placekitten.com/110/940"
-    ],
-    "originalPrice": 195.01,
-    "offeredPrice": 170.07,
-    "rating": 4.0,
-    "reviews": [
-      {
-        "user": "Theresa Macias",
-        "rating": 4,
-        "comment": "Culture among adult.",
-        "profileImg": "https://dummyimage.com/137x69"
-      },
-      {
-        "user": "Nicole Cooper",
-        "rating": 3,
-        "comment": "Technology draw it week eight.",
-        "profileImg": "https://dummyimage.com/947x489"
-      },
-      {
-        "user": "Amanda White",
-        "rating": 5,
-        "comment": "Table network away important within program.",
-        "profileImg": "https://placekitten.com/754/371"
-      },
-      {
-        "user": "Amanda Cardenas",
-        "rating": 5,
-        "comment": "Young meet might much become.",
-        "profileImg": "https://placekitten.com/413/474"
-      },
-      {
-        "user": "Theresa Foley",
-        "rating": 3,
-        "comment": "Need yet quality might member.",
-        "profileImg": "https://placekitten.com/263/154"
-      }
-    ],
-    "features": [
-      "Item let window let high school.",
-      "Much third himself experience beyond.",
-      "Dinner message movement analysis every year wall."
-    ]
-  },
-  {
-    "id": 41,
-    "name": "Synergistic multimedia database",
-    "category": "cameras",
-    "description": "New likely economy method draw cold bag. Mrs thing left.",
-    "stock": 13,
-    "profileImg": "https://placekitten.com/205/354",
-    "images": [
-      "https://placekitten.com/205/354",
-      "https://dummyimage.com/119x78",
-      "https://dummyimage.com/63x661",
-      "https://www.lorempixel.com/845/692"
-    ],
-    "originalPrice": 1272.07,
-    "offeredPrice": 829.11,
-    "rating": 2.5,
-    "reviews": [
-      {
-        "user": "Diana Figueroa",
-        "rating": 3,
-        "comment": "Future ever design themselves from.",
-        "profileImg": "https://www.lorempixel.com/322/427"
-      },
-      {
-        "user": "John Olson",
-        "rating": 2,
-        "comment": "Although prove page large cultural should leg.",
-        "profileImg": "https://placeimg.com/485/990/any"
-      }
-    ],
-    "features": [
-      "Rather sea scientist five raise.",
-      "Recently physical although the you.",
-      "Run side before meeting heart kitchen."
-    ]
-  },
-  {
-    "id": 42,
-    "name": "Down-sized context-sensitive core",
-    "category": "ipads",
-    "description": "Friend rest story writer hour who able interview. Class it professor upon because. Save yard wonder wish. Dark itself left open imagine.",
-    "stock": 65,
-    "profileImg": "https://placekitten.com/557/973",
-    "images": [
-      "https://placekitten.com/557/973",
-      "https://placekitten.com/759/780"
-    ],
-    "originalPrice": 225.96,
-    "offeredPrice": 209.13,
-    "rating": 4.0,
-    "reviews": [
-      {
-        "user": "Rhonda Lawson",
-        "rating": 5,
-        "comment": "Table most effort from adult development.",
-        "profileImg": "https://dummyimage.com/772x707"
-      },
-      {
-        "user": "Sheryl Lewis",
-        "rating": 2,
-        "comment": "Difficult growth me bill.",
-        "profileImg": "https://placekitten.com/526/886"
-      },
-      {
-        "user": "Jesse Harrington",
-        "rating": 5,
-        "comment": "Voice so near wrong far table.",
-        "profileImg": "https://dummyimage.com/375x927"
-      },
-      {
-        "user": "Stephen Watkins",
-        "rating": 4,
-        "comment": "Animal majority town.",
-        "profileImg": "https://placeimg.com/813/235/any"
-      }
-    ],
-    "features": [
-      "Item authority bring.",
-      "Happen style real movement eye also time.",
-      "Say wait minute report meet."
-    ]
-  },
-  {
-    "id": 43,
-    "name": "Profound transitional benchmark",
-    "category": "new-arrivals",
-    "description": "Office now like tend. Least manager perform bring. System else short necessary charge actually view glass.",
-    "stock": 33,
-    "profileImg": "https://www.lorempixel.com/182/127",
-    "images": [
-      "https://www.lorempixel.com/182/127",
-      "https://www.lorempixel.com/576/447",
-      "https://placeimg.com/278/290/any"
-    ],
-    "originalPrice": 956.53,
-    "offeredPrice": 762.65,
-    "rating": 2.0,
-    "reviews": [
-      {
-        "user": "Frank Thompson",
-        "rating": 1,
-        "comment": "Read common again teach degree.",
-        "profileImg": "https://www.lorempixel.com/791/472"
-      },
-      {
-        "user": "Raymond Good",
-        "rating": 3,
-        "comment": "Cold even near.",
-        "profileImg": "https://placekitten.com/43/673"
-      },
-      {
-        "user": "Paige Harris",
-        "rating": 2,
-        "comment": "Property cover participant interest local prepare.",
-        "profileImg": "https://placekitten.com/804/377"
-      },
-      {
-        "user": "Ms. Leslie Dickerson",
-        "rating": 2,
-        "comment": "Quality hospital without risk.",
-        "profileImg": "https://placekitten.com/714/71"
-      }
-    ],
-    "features": [
-      "Similar present crime east experience finish movie.",
-      "Something town necessary degree later hard.",
-      "Shoulder wait figure situation."
-    ]
-  },
-  {
-    "id": 44,
-    "name": "Open-architected even-keeled flexibility",
-    "category": "laptops",
-    "description": "Ok it thank have front amount stand. Tree resource picture site condition everyone. Over seem area address join community.",
-    "stock": 25,
-    "profileImg": "https://placekitten.com/153/579",
-    "images": [
-      "https://placekitten.com/153/579",
-      "https://placekitten.com/971/998",
-      "https://placeimg.com/56/968/any",
-      "https://www.lorempixel.com/636/339",
-      "https://placekitten.com/745/103"
-    ],
-    "originalPrice": 1340.58,
-    "offeredPrice": 958.71,
-    "rating": 4.0,
-    "reviews": [
-      {
-        "user": "Jennifer Price",
-        "rating": 4,
-        "comment": "Event important meet level agree add.",
-        "profileImg": "https://www.lorempixel.com/920/792"
-      },
-      {
-        "user": "Derek Clements",
-        "rating": 3,
-        "comment": "Hope investment number range industry possible.",
-        "profileImg": "https://dummyimage.com/475x852"
-      },
-      {
-        "user": "Parker Peterson",
-        "rating": 5,
-        "comment": "Various candidate kind her from office.",
-        "profileImg": "https://placeimg.com/77/715/any"
-      }
-    ],
-    "features": [
-      "Camera music lose watch.",
-      "Others place sound democratic among.",
-      "International step condition determine tonight without maybe media."
-    ]
-  },
-  {
-    "id": 45,
-    "name": "Future-proofed neutral groupware",
-    "category": "drones",
-    "description": "Listen same turn tough. Week art raise game. Throw meeting staff.",
-    "stock": 98,
-    "profileImg": "https://dummyimage.com/113x418",
-    "images": [
-      "https://dummyimage.com/113x418",
-      "https://placekitten.com/81/702"
-    ],
-    "originalPrice": 1247.62,
-    "offeredPrice": 1044.0,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Roberta Dominguez",
-        "rating": 5,
-        "comment": "Sister history him all down answer.",
-        "profileImg": "https://placeimg.com/711/91/any"
-      },
-      {
-        "user": "William Shaw",
-        "rating": 1,
-        "comment": "Only day understand throw thousand radio management.",
-        "profileImg": "https://placekitten.com/38/228"
-      }
-    ],
-    "features": [
-      "Even from write.",
-      "Need foreign now tonight change leg.",
-      "Return girl detail should partner dinner attorney."
-    ]
-  },
-  {
-    "id": 46,
-    "name": "Customer-focused heuristic approach",
-    "category": "cameras",
-    "description": "Focus anything some employee opportunity. Pull crime over feel civil have.",
-    "stock": 6,
-    "profileImg": "https://placekitten.com/954/467",
-    "images": [
-      "https://placekitten.com/954/467",
-      "https://placekitten.com/520/538",
-      "https://www.lorempixel.com/475/883"
-    ],
-    "originalPrice": 1858.57,
-    "offeredPrice": 1724.23,
-    "rating": 2.8,
-    "reviews": [
-      {
-        "user": "Matthew Ball",
-        "rating": 1,
-        "comment": "Already a exist.",
-        "profileImg": "https://placeimg.com/383/626/any"
-      },
-      {
-        "user": "Michelle Hernandez",
-        "rating": 5,
-        "comment": "Edge community sport would media husband into.",
-        "profileImg": "https://dummyimage.com/133x660"
-      },
-      {
-        "user": "Logan Silva",
-        "rating": 3,
-        "comment": "Room air southern share stop.",
-        "profileImg": "https://placekitten.com/857/730"
-      },
-      {
-        "user": "Joseph Weiss",
-        "rating": 2,
-        "comment": "Head pass star by effort officer example.",
-        "profileImg": "https://placekitten.com/642/272"
-      }
-    ],
-    "features": [
-      "Computer clearly offer final property face.",
-      "Blood leave nor official reveal learn guess.",
-      "Push minute use when democratic drive weight."
-    ]
-  },
-  {
-    "id": 47,
-    "name": "User-centric optimal projection",
-    "category": "laptops",
-    "description": "Responsibility consumer cup prepare offer. Entire poor he probably sense officer quite.",
-    "stock": 33,
-    "profileImg": "https://placeimg.com/446/410/any",
-    "images": [
-      "https://placeimg.com/446/410/any",
-      "https://dummyimage.com/742x251",
-      "https://placeimg.com/449/101/any"
-    ],
-    "originalPrice": 1077.48,
-    "offeredPrice": 921.07,
-    "rating": 3.4,
-    "reviews": [
-      {
-        "user": "Jessica Rice",
-        "rating": 3,
-        "comment": "Support two chance big picture expect tonight.",
-        "profileImg": "https://www.lorempixel.com/309/619"
-      },
-      {
-        "user": "Mason Osborne",
-        "rating": 4,
-        "comment": "Middle shoulder audience scientist.",
-        "profileImg": "https://dummyimage.com/928x502"
-      },
-      {
-        "user": "Aaron Scott",
-        "rating": 2,
-        "comment": "Focus past edge image sign move.",
-        "profileImg": "https://www.lorempixel.com/174/140"
-      },
-      {
-        "user": "Michelle Roberts",
-        "rating": 4,
-        "comment": "That yard next eye measure.",
-        "profileImg": "https://www.lorempixel.com/322/53"
-      },
-      {
-        "user": "Debra Jacobson",
-        "rating": 4,
-        "comment": "Yes woman consider difference.",
-        "profileImg": "https://placekitten.com/48/231"
-      }
-    ],
-    "features": [
-      "National should indicate evidence.",
-      "Hundred staff method attorney.",
-      "Become open seem."
-    ]
-  },
-  {
-    "id": 48,
-    "name": "Optimized systematic implementation",
-    "category": "drones",
-    "description": "Since dinner recognize trip country. Benefit brother however fall us.",
-    "stock": 56,
-    "profileImg": "https://placeimg.com/573/844/any",
-    "images": [
-      "https://placeimg.com/573/844/any",
-      "https://dummyimage.com/939x430",
-      "https://placekitten.com/1007/163",
-      "https://placeimg.com/816/547/any"
-    ],
-    "originalPrice": 1405.84,
-    "offeredPrice": 1332.64,
-    "rating": 4.2,
-    "reviews": [
-      {
-        "user": "Nina Mcdaniel",
-        "rating": 5,
-        "comment": "Civil outside hand left material.",
-        "profileImg": "https://dummyimage.com/842x187"
-      },
-      {
-        "user": "Glenn Wong",
-        "rating": 5,
-        "comment": "Southern test require coach possible thought table wide.",
-        "profileImg": "https://placeimg.com/265/821/any"
-      },
-      {
-        "user": "Brandon Fuentes",
-        "rating": 3,
-        "comment": "Success throw career work member cup her.",
-        "profileImg": "https://www.lorempixel.com/894/790"
-      },
-      {
-        "user": "Angela Williams",
-        "rating": 4,
-        "comment": "From very information age.",
-        "profileImg": "https://placeimg.com/988/225/any"
-      }
-    ],
-    "features": [
-      "Stock star throw worry method leader.",
-      "Together side by subject place.",
-      "Tell debate if own."
-    ]
-  },
-  {
-    "id": 49,
-    "name": "Streamlined uniform time-frame",
-    "category": "collections",
-    "description": "Although easy eight in fine hospital suddenly wear. Oil mouth Republican. Commercial page image time whom here.",
-    "stock": 100,
-    "profileImg": "https://placeimg.com/667/681/any",
-    "images": [
-      "https://placeimg.com/667/681/any",
-      "https://placeimg.com/857/483/any"
-    ],
-    "originalPrice": 836.38,
-    "offeredPrice": 704.4,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Logan Murphy",
-        "rating": 1,
-        "comment": "Step build safe.",
-        "profileImg": "https://dummyimage.com/12x780"
-      },
-      {
-        "user": "Erica Gonzalez",
-        "rating": 5,
-        "comment": "Thousand front big same consumer.",
-        "profileImg": "https://placeimg.com/329/637/any"
-      }
-    ],
-    "features": [
-      "Paper we mother hospital above lawyer.",
-      "Player late director turn.",
-      "Return same establish."
-    ]
-  },
-  {
-    "id": 50,
-    "name": "Self-enabling regional Internet solution",
-    "category": "laptops",
-    "description": "Material season inside benefit music law paper. Seek now collection particularly become remember piece throw.",
-    "stock": 85,
-    "profileImg": "https://placekitten.com/801/907",
-    "images": [
-      "https://placekitten.com/801/907",
-      "https://placekitten.com/893/214"
-    ],
-    "originalPrice": 1910.99,
-    "offeredPrice": 1268.3,
-    "rating": 2.6,
-    "reviews": [
-      {
-        "user": "Jose Howard",
-        "rating": 3,
-        "comment": "Specific dark respond table.",
-        "profileImg": "https://www.lorempixel.com/503/345"
-      },
-      {
-        "user": "Jessica Espinoza",
-        "rating": 3,
-        "comment": "Test develop her purpose condition.",
-        "profileImg": "https://placeimg.com/362/428/any"
-      },
-      {
-        "user": "Paul Reese",
-        "rating": 1,
-        "comment": "Meet sound unit.",
-        "profileImg": "https://placeimg.com/598/596/any"
-      },
-      {
-        "user": "Jason Mason",
-        "rating": 4,
-        "comment": "Car while customer dark explain.",
-        "profileImg": "https://placekitten.com/903/565"
-      },
-      {
-        "user": "Robert Grant",
-        "rating": 2,
-        "comment": "Decision music particular establish avoid friend common.",
-        "profileImg": "https://www.lorempixel.com/211/841"
-      }
-    ],
-    "features": [
-      "Face place where camera almost.",
-      "Wife least bank establish time none commercial about.",
-      "Draw career professional care area vote gun."
-    ]
-  },
-  {
-    "id": 51,
-    "name": "Profit-focused uniform task-force",
-    "category": "ipads",
-    "description": "Value wonder area apply society hope rich. Suffer then fight entire light.",
-    "stock": 3,
-    "profileImg": "https://placeimg.com/1001/596/any",
-    "images": [
-      "https://placeimg.com/1001/596/any",
-      "https://dummyimage.com/465x69",
-      "https://placekitten.com/632/542"
-    ],
-    "originalPrice": 1664.17,
-    "offeredPrice": 1168.86,
-    "rating": 3.5,
-    "reviews": [
-      {
-        "user": "Jerry Lynch",
-        "rating": 5,
-        "comment": "Enough maintain but place owner station.",
-        "profileImg": "https://dummyimage.com/318x387"
-      },
-      {
-        "user": "Joann Clark",
-        "rating": 1,
-        "comment": "Loss just American produce but.",
-        "profileImg": "https://dummyimage.com/208x479"
-      },
-      {
-        "user": "Carlos Flynn",
-        "rating": 3,
-        "comment": "Throughout turn rest dog determine answer these.",
-        "profileImg": "https://dummyimage.com/71x575"
-      },
-      {
-        "user": "Kathy Campbell",
-        "rating": 5,
-        "comment": "Dream decide bed it.",
-        "profileImg": "https://placekitten.com/320/209"
-      }
-    ],
-    "features": [
-      "Police do moment behind through.",
-      "Least institution industry national herself southern.",
-      "Necessary huge hundred similar."
-    ]
-  },
-  {
-    "id": 52,
-    "name": "Intuitive analyzing matrix",
-    "category": "laptops",
-    "description": "Third rate place. Spend increase deal main young news. Star bar national eye investment their them forward.",
-    "stock": 96,
-    "profileImg": "https://www.lorempixel.com/342/274",
-    "images": [
-      "https://www.lorempixel.com/342/274",
-      "https://dummyimage.com/26x969",
-      "https://www.lorempixel.com/124/494",
-      "https://placeimg.com/955/43/any"
-    ],
-    "originalPrice": 1579.23,
-    "offeredPrice": 1223.66,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Joshua Mccullough",
-        "rating": 3,
-        "comment": "Even help around music.",
-        "profileImg": "https://placekitten.com/570/957"
-      },
-      {
-        "user": "Brian Harris",
-        "rating": 1,
-        "comment": "Trial stuff police reality.",
-        "profileImg": "https://www.lorempixel.com/850/319"
-      },
-      {
-        "user": "Rebecca Torres DVM",
-        "rating": 4,
-        "comment": "Structure vote detail born.",
-        "profileImg": "https://placeimg.com/300/964/any"
-      },
-      {
-        "user": "Jamie Graham",
-        "rating": 4,
-        "comment": "Task nature increase available investment.",
-        "profileImg": "https://dummyimage.com/552x875"
-      },
-      {
-        "user": "Robyn Richardson",
-        "rating": 3,
-        "comment": "Speak wish myself until friend.",
-        "profileImg": "https://www.lorempixel.com/632/92"
-      }
-    ],
-    "features": [
-      "President one citizen live exactly when stock watch.",
-      "Purpose happen painting some charge instead.",
-      "Cover century daughter strong receive as on."
-    ]
-  },
-  {
-    "id": 53,
-    "name": "Ameliorated high-level Internet solution",
-    "category": "best-sellers",
-    "description": "Interview herself when outside. Yes position nearly performance peace standard national. Store tax defense central. Town low herself two information.",
-    "stock": 99,
-    "profileImg": "https://www.lorempixel.com/136/246",
-    "images": [
-      "https://www.lorempixel.com/136/246",
-      "https://placekitten.com/231/741",
-      "https://www.lorempixel.com/286/497"
-    ],
-    "originalPrice": 225.65,
-    "offeredPrice": 191.79,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Robert Smith",
-        "rating": 2,
-        "comment": "Goal structure accept speech spend speech politics back.",
-        "profileImg": "https://placeimg.com/416/553/any"
-      },
-      {
-        "user": "Billy Barber",
-        "rating": 4,
-        "comment": "Current memory action pass decision a.",
-        "profileImg": "https://placekitten.com/672/29"
-      }
-    ],
-    "features": [
-      "Fast quite soon seek.",
-      "Who commercial whom bit trial with price budget.",
-      "General act seven example."
-    ]
-  },
-  {
-    "id": 54,
-    "name": "Phased neutral toolset",
-    "category": "ipads",
-    "description": "Fear remain begin rule standard begin government attack. Wish lawyer young example hospital necessary. Far same church from protect camera.",
-    "stock": 50,
-    "profileImg": "https://dummyimage.com/867x761",
-    "images": [
-      "https://dummyimage.com/867x761",
-      "https://dummyimage.com/302x690"
-    ],
-    "originalPrice": 761.46,
-    "offeredPrice": 683.83,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Danielle Chapman",
-        "rating": 2,
-        "comment": "Or firm hand campaign red method.",
-        "profileImg": "https://dummyimage.com/735x437"
-      },
-      {
-        "user": "Teresa Rollins",
-        "rating": 4,
-        "comment": "World item admit very north foreign plant.",
-        "profileImg": "https://placekitten.com/52/689"
-      }
-    ],
-    "features": [
-      "Worker decade thought need imagine how.",
-      "Have husband return myself low hospital which.",
-      "Environment safe another large first."
-    ]
-  },
-  {
-    "id": 55,
-    "name": "Function-based directional protocol",
-    "category": "ipads",
-    "description": "Movie movie letter after. Former service old but process. Model foot inside nearly own build.",
-    "stock": 77,
-    "profileImg": "https://placeimg.com/686/326/any",
-    "images": [
-      "https://placeimg.com/686/326/any",
-      "https://dummyimage.com/968x487",
-      "https://placekitten.com/314/616"
-    ],
-    "originalPrice": 1634.44,
-    "offeredPrice": 1535.14,
-    "rating": 3.2,
-    "reviews": [
-      {
-        "user": "Stephanie Mooney DDS",
-        "rating": 2,
-        "comment": "Study again wife task.",
-        "profileImg": "https://www.lorempixel.com/174/148"
-      },
-      {
-        "user": "Ruth Evans",
-        "rating": 4,
-        "comment": "Do eye response realize customer.",
-        "profileImg": "https://placeimg.com/556/22/any"
-      },
-      {
-        "user": "Laura Camacho",
-        "rating": 2,
-        "comment": "Meet next wall common.",
-        "profileImg": "https://dummyimage.com/297x697"
-      },
-      {
-        "user": "Christopher French",
-        "rating": 5,
-        "comment": "Bill deal movie prepare.",
-        "profileImg": "https://www.lorempixel.com/606/98"
-      }
-    ],
-    "features": [
-      "Generation class boy meeting.",
-      "Husband successful the cell treatment seven my.",
-      "After make analysis popular administration turn."
-    ]
-  },
-  {
-    "id": 56,
-    "name": "Business-focused user-facing pricing structure",
-    "category": "laptops",
-    "description": "Minute western executive receive phone expect sea contain. Game participant hot key TV. American black business population.",
-    "stock": 11,
-    "profileImg": "https://www.lorempixel.com/553/250",
-    "images": [
-      "https://www.lorempixel.com/553/250",
-      "https://placekitten.com/311/929",
-      "https://dummyimage.com/259x444",
-      "https://placekitten.com/76/130",
-      "https://dummyimage.com/604x932"
-    ],
-    "originalPrice": 892.8,
-    "offeredPrice": 841.69,
-    "rating": 3.8,
-    "reviews": [
-      {
-        "user": "Sarah Cunningham",
-        "rating": 2,
-        "comment": "Loss draw everyone president.",
-        "profileImg": "https://www.lorempixel.com/508/500"
-      },
-      {
-        "user": "Andrew Ortiz",
-        "rating": 5,
-        "comment": "General serious prepare arm.",
-        "profileImg": "https://placeimg.com/943/317/any"
-      },
-      {
-        "user": "Nicholas Martinez",
-        "rating": 5,
-        "comment": "Opportunity art strategy stock news.",
-        "profileImg": "https://dummyimage.com/690x10"
-      },
-      {
-        "user": "Brian Miller",
-        "rating": 3,
-        "comment": "Season study it it.",
-        "profileImg": "https://placeimg.com/200/343/any"
-      }
-    ],
-    "features": [
-      "Author value may myself.",
-      "Strong real race wind front pay.",
-      "Quite work around together note authority."
-    ]
-  },
-  {
-    "id": 57,
-    "name": "Persevering eco-centric intranet",
-    "category": "laptops",
-    "description": "Leg state mission gun listen today happy former. Once choose party ok. Include move large society society collection.",
-    "stock": 9,
-    "profileImg": "https://placeimg.com/1002/999/any",
-    "images": [
-      "https://placeimg.com/1002/999/any",
-      "https://placekitten.com/774/584",
-      "https://www.lorempixel.com/659/1019",
-      "https://placekitten.com/528/504"
-    ],
-    "originalPrice": 736.53,
-    "offeredPrice": 584.44,
-    "rating": 2.7,
-    "reviews": [
-      {
-        "user": "Derek Harrison",
-        "rating": 2,
-        "comment": "Share that least offer what.",
-        "profileImg": "https://placekitten.com/1008/653"
-      },
-      {
-        "user": "Seth Dennis",
-        "rating": 2,
-        "comment": "Service shake store degree a end region.",
-        "profileImg": "https://www.lorempixel.com/486/310"
-      },
-      {
-        "user": "Caleb Briggs",
-        "rating": 4,
-        "comment": "Happen field positive camera individual.",
-        "profileImg": "https://placeimg.com/258/823/any"
-      }
-    ],
-    "features": [
-      "Begin your factor various return.",
-      "Visit couple receive year maintain staff power accept.",
-      "Baby player piece indeed teach animal."
-    ]
-  },
-  {
-    "id": 58,
-    "name": "Multi-channeled background info-mediaries",
-    "category": "drones",
-    "description": "Party step product girl commercial cultural good. Raise reality politics approach. Job whole imagine central prepare again either play.",
-    "stock": 10,
-    "profileImg": "https://placekitten.com/167/155",
-    "images": [
-      "https://placekitten.com/167/155",
-      "https://placekitten.com/836/923",
-      "https://placekitten.com/200/29"
-    ],
-    "originalPrice": 1327.87,
-    "offeredPrice": 1079.85,
-    "rating": 3.2,
-    "reviews": [
-      {
-        "user": "Mark Brown",
-        "rating": 4,
-        "comment": "Position for speech performance everything traditional system.",
-        "profileImg": "https://www.lorempixel.com/235/792"
-      },
-      {
-        "user": "Jessica Fernandez",
-        "rating": 5,
-        "comment": "Anyone responsibility sign.",
-        "profileImg": "https://dummyimage.com/603x276"
-      },
-      {
-        "user": "Kyle Davenport",
-        "rating": 3,
-        "comment": "While teacher sea really whose TV rate.",
-        "profileImg": "https://dummyimage.com/273x631"
-      },
-      {
-        "user": "Mark Thompson",
-        "rating": 2,
-        "comment": "Listen agency any subject.",
-        "profileImg": "https://dummyimage.com/989x749"
-      },
-      {
-        "user": "Katherine Little",
-        "rating": 2,
-        "comment": "Agree course wish model.",
-        "profileImg": "https://dummyimage.com/160x716"
-      }
-    ],
-    "features": [
-      "Concern dinner including oil.",
-      "Third cost know outside add such.",
-      "Degree usually PM."
-    ]
-  },
-  {
-    "id": 59,
-    "name": "Enhanced object-oriented framework",
-    "category": "laptops",
-    "description": "News war eight more send. Before quite trade right play.",
-    "stock": 2,
-    "profileImg": "https://www.lorempixel.com/923/36",
-    "images": [
-      "https://www.lorempixel.com/923/36",
-      "https://placeimg.com/34/493/any",
-      "https://www.lorempixel.com/345/367",
-      "https://placeimg.com/465/815/any",
-      "https://www.lorempixel.com/355/966"
-    ],
-    "originalPrice": 356.15,
-    "offeredPrice": 283.48,
-    "rating": 2.7,
-    "reviews": [
-      {
-        "user": "Caleb Rangel DDS",
-        "rating": 3,
-        "comment": "Kitchen ball cut source.",
-        "profileImg": "https://dummyimage.com/119x830"
-      },
-      {
-        "user": "Jacob Hudson",
-        "rating": 4,
-        "comment": "Model book remember also good.",
-        "profileImg": "https://www.lorempixel.com/21/1004"
-      },
-      {
-        "user": "Jessica Tucker",
-        "rating": 1,
-        "comment": "Public school compare machine hundred finally.",
-        "profileImg": "https://dummyimage.com/927x504"
-      }
-    ],
-    "features": [
-      "Perhaps who year responsibility.",
-      "Fear somebody message middle.",
-      "Accept set popular student."
-    ]
-  },
-  {
-    "id": 60,
-    "name": "Enhanced 24/7 adapter",
-    "category": "best-sellers",
-    "description": "Item clear box capital. Important sell ever. Or moment relationship likely present.",
-    "stock": 73,
-    "profileImg": "https://www.lorempixel.com/594/920",
-    "images": [
-      "https://www.lorempixel.com/594/920",
-      "https://dummyimage.com/737x14"
-    ],
-    "originalPrice": 204.24,
-    "offeredPrice": 150.85,
-    "rating": 3.5,
-    "reviews": [
-      {
-        "user": "Carlos Case",
-        "rating": 3,
-        "comment": "Discover bad good five page sell institution.",
-        "profileImg": "https://www.lorempixel.com/744/1003"
-      },
-      {
-        "user": "Kevin Thomas",
-        "rating": 4,
-        "comment": "Join man market realize mouth and.",
-        "profileImg": "https://www.lorempixel.com/768/740"
-      }
-    ],
-    "features": [
-      "Better college alone blue.",
-      "Guy body several figure policy.",
-      "Rich term woman population."
-    ]
-  },
-  {
-    "id": 61,
-    "name": "Visionary multimedia superstructure",
-    "category": "headphones",
-    "description": "Suddenly language seven phone along a several. Officer lose throughout try pull.",
-    "stock": 88,
-    "profileImg": "https://www.lorempixel.com/783/243",
-    "images": [
-      "https://www.lorempixel.com/783/243",
-      "https://www.lorempixel.com/1019/662"
-    ],
-    "originalPrice": 996.78,
-    "offeredPrice": 619.57,
-    "rating": 3.3,
-    "reviews": [
-      {
-        "user": "Brian Ortiz",
-        "rating": 3,
-        "comment": "Raise job once capital professor score.",
-        "profileImg": "https://placekitten.com/553/308"
-      },
-      {
-        "user": "Amy Henderson",
-        "rating": 5,
-        "comment": "Institution both policy quite.",
-        "profileImg": "https://placekitten.com/679/495"
-      },
-      {
-        "user": "John Bowman",
-        "rating": 2,
-        "comment": "Item form security field agree heavy rule.",
-        "profileImg": "https://www.lorempixel.com/423/1000"
-      }
-    ],
-    "features": [
-      "Third someone experience bar performance mind doctor.",
-      "Try painting major research son move hair.",
-      "Tv usually floor technology scientist."
-    ]
-  },
-  {
-    "id": 62,
-    "name": "Enhanced systemic structure",
-    "category": "collections",
-    "description": "Personal various sign sea quickly. Real mind recent let author player.",
-    "stock": 78,
-    "profileImg": "https://dummyimage.com/888x15",
-    "images": [
-      "https://dummyimage.com/888x15",
-      "https://placeimg.com/921/89/any"
-    ],
-    "originalPrice": 1635.41,
-    "offeredPrice": 1210.88,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Colleen Kelly",
-        "rating": 4,
-        "comment": "Tonight within morning true.",
-        "profileImg": "https://placekitten.com/850/879"
-      },
-      {
-        "user": "Matthew Thomas",
-        "rating": 2,
-        "comment": "Magazine member street second art east.",
-        "profileImg": "https://dummyimage.com/234x607"
-      }
-    ],
-    "features": [
-      "Doctor money institution computer town.",
-      "Start game spend animal age energy.",
-      "To popular join camera option investment."
-    ]
-  },
-  {
-    "id": 63,
-    "name": "Sharable mission-critical instruction set",
-    "category": "laptops",
-    "description": "Discussion others sign probably same mind. Camera place each door teach hope.",
-    "stock": 23,
-    "profileImg": "https://placekitten.com/638/418",
-    "images": [
-      "https://placekitten.com/638/418",
-      "https://www.lorempixel.com/569/520"
-    ],
-    "originalPrice": 508.17,
-    "offeredPrice": 458.23,
-    "rating": 4.5,
-    "reviews": [
-      {
-        "user": "Stephanie Richardson",
-        "rating": 5,
-        "comment": "None edge west.",
-        "profileImg": "https://www.lorempixel.com/956/666"
-      },
-      {
-        "user": "William Allen",
-        "rating": 4,
-        "comment": "Light imagine majority.",
-        "profileImg": "https://placekitten.com/305/345"
-      }
-    ],
-    "features": [
-      "Car interest method apply various toward while report.",
-      "Evidence cell wrong could.",
-      "Business southern agent."
-    ]
-  },
-  {
-    "id": 64,
-    "name": "Visionary bi-directional functionalities",
-    "category": "cameras",
-    "description": "Black some while sister. Best bank according administration score hundred person. Work grow moment church ready.",
-    "stock": 72,
-    "profileImg": "https://dummyimage.com/956x117",
-    "images": [
-      "https://dummyimage.com/956x117",
-      "https://www.lorempixel.com/741/783"
-    ],
-    "originalPrice": 140.5,
-    "offeredPrice": 103.96,
-    "rating": 2.2,
-    "reviews": [
-      {
-        "user": "Brian Sanchez",
-        "rating": 2,
-        "comment": "Summer number message might card cultural.",
-        "profileImg": "https://dummyimage.com/186x336"
-      },
-      {
-        "user": "Joshua Burnett",
-        "rating": 4,
-        "comment": "Rather moment all board authority.",
-        "profileImg": "https://placeimg.com/629/790/any"
-      },
-      {
-        "user": "Henry Taylor",
-        "rating": 1,
-        "comment": "High hot wall place four where owner appear.",
-        "profileImg": "https://placekitten.com/827/429"
-      },
-      {
-        "user": "Brittney Park",
-        "rating": 2,
-        "comment": "Together unit return simple yard painting wind.",
-        "profileImg": "https://www.lorempixel.com/956/732"
-      }
-    ],
-    "features": [
-      "Skill fish education among.",
-      "Tonight significant clearly candidate.",
-      "Drug mind decide matter weight song."
-    ]
-  },
-  {
-    "id": 65,
-    "name": "Multi-tiered neutral Graphical User Interface",
-    "category": "laptops",
-    "description": "However black month form enter. Beat what worry identify family important with west.",
-    "stock": 94,
-    "profileImg": "https://dummyimage.com/527x402",
-    "images": [
-      "https://dummyimage.com/527x402",
-      "https://placekitten.com/704/926",
-      "https://placekitten.com/616/438",
-      "https://www.lorempixel.com/878/176"
-    ],
-    "originalPrice": 1385.22,
-    "offeredPrice": 1117.83,
-    "rating": 3.7,
-    "reviews": [
-      {
-        "user": "Donna Anthony",
-        "rating": 3,
-        "comment": "Pay high defense cause feeling million describe.",
-        "profileImg": "https://www.lorempixel.com/461/75"
-      },
-      {
-        "user": "Jennifer Smith",
-        "rating": 3,
-        "comment": "Same various treatment face.",
-        "profileImg": "https://placekitten.com/2/83"
-      },
-      {
-        "user": "Wayne Dixon",
-        "rating": 5,
-        "comment": "Figure month position possible notice relationship run.",
-        "profileImg": "https://placekitten.com/930/437"
-      }
-    ],
-    "features": [
-      "Wind even page candidate listen.",
-      "Forget continue news result myself medical organization.",
-      "Which exist pay how Congress."
-    ]
-  },
-  {
-    "id": 66,
-    "name": "Grass-roots zero administration Internet solution",
-    "category": "ipads",
-    "description": "Instead home others traditional physical.",
-    "stock": 77,
-    "profileImg": "https://dummyimage.com/380x28",
-    "images": [
-      "https://dummyimage.com/380x28",
-      "https://placekitten.com/359/119",
-      "https://placekitten.com/489/201",
-      "https://placeimg.com/959/406/any",
-      "https://dummyimage.com/956x777"
-    ],
-    "originalPrice": 1722.14,
-    "offeredPrice": 1519.68,
-    "rating": 2.3,
-    "reviews": [
-      {
-        "user": "Andrew Mills",
-        "rating": 3,
-        "comment": "You community family car control police.",
-        "profileImg": "https://placeimg.com/594/929/any"
-      },
-      {
-        "user": "Nancy Mclaughlin",
-        "rating": 2,
-        "comment": "Ever bit while city political letter now right.",
-        "profileImg": "https://placekitten.com/573/971"
-      },
-      {
-        "user": "Jacob Downs",
-        "rating": 2,
-        "comment": "Task attention must western.",
-        "profileImg": "https://dummyimage.com/245x495"
-      }
-    ],
-    "features": [
-      "Learn add tonight culture its.",
-      "Happen seek long program least success hot.",
-      "Food lose heart water."
-    ]
-  },
-  {
-    "id": 67,
-    "name": "Face-to-face national hub",
-    "category": "mobiles",
-    "description": "Everybody strategy cell democratic kid. Less act rock fear reflect also once. Bag window expect thus develop hot.",
-    "stock": 34,
-    "profileImg": "https://placekitten.com/172/491",
-    "images": [
-      "https://placekitten.com/172/491",
-      "https://placeimg.com/1021/396/any",
-      "https://placekitten.com/258/1018",
-      "https://dummyimage.com/729x106",
-      "https://placekitten.com/776/545"
-    ],
-    "originalPrice": 1537.54,
-    "offeredPrice": 1313.13,
-    "rating": 4.5,
-    "reviews": [
-      {
-        "user": "Mrs. Crystal Lawson DVM",
-        "rating": 4,
-        "comment": "Water nearly wind team story.",
-        "profileImg": "https://placekitten.com/226/660"
-      },
-      {
-        "user": "Phyllis Rowe",
-        "rating": 5,
-        "comment": "Impact business minute occur prevent your.",
-        "profileImg": "https://placekitten.com/895/974"
-      }
-    ],
-    "features": [
-      "Attack discussion win than.",
-      "Part position risk from.",
-      "Hand individual whom report future benefit glass best."
-    ]
-  },
-  {
-    "id": 68,
-    "name": "Multi-lateral tangible system engine",
-    "category": "cameras",
-    "description": "Whether common guess act result buy. Million offer less toward.",
-    "stock": 6,
-    "profileImg": "https://placekitten.com/31/617",
-    "images": [
-      "https://placekitten.com/31/617",
-      "https://placekitten.com/832/49",
-      "https://dummyimage.com/914x766",
-      "https://placeimg.com/77/242/any"
-    ],
-    "originalPrice": 1050.04,
-    "offeredPrice": 677.48,
-    "rating": 3.3,
-    "reviews": [
-      {
-        "user": "Christopher Crane",
-        "rating": 5,
-        "comment": "Meet town strategy budget.",
-        "profileImg": "https://dummyimage.com/812x7"
-      },
-      {
-        "user": "Donald Thompson",
-        "rating": 4,
-        "comment": "High seat sure collection entire.",
-        "profileImg": "https://www.lorempixel.com/438/389"
-      },
-      {
-        "user": "Brandon Carrillo",
-        "rating": 1,
-        "comment": "Receive sometimes environment investment amount on like wear.",
-        "profileImg": "https://dummyimage.com/431x101"
-      }
-    ],
-    "features": [
-      "Get learn again edge carry class.",
-      "Street people serious some.",
-      "Modern accept the glass continue one."
-    ]
-  },
-  {
-    "id": 69,
-    "name": "User-friendly even-keeled archive",
-    "category": "ipads",
-    "description": "Perhaps race how form what performance large. Rise whose soon form effect.",
-    "stock": 77,
-    "profileImg": "https://www.lorempixel.com/49/512",
-    "images": [
-      "https://www.lorempixel.com/49/512",
-      "https://dummyimage.com/938x494",
-      "https://placeimg.com/216/392/any"
-    ],
-    "originalPrice": 1956.68,
-    "offeredPrice": 1456.73,
-    "rating": 3.5,
-    "reviews": [
-      {
-        "user": "Kristy Bates",
-        "rating": 3,
-        "comment": "Shake allow value.",
-        "profileImg": "https://www.lorempixel.com/792/745"
-      },
-      {
-        "user": "Hunter Hicks",
-        "rating": 5,
-        "comment": "Also owner ask night window receive chance shoulder.",
-        "profileImg": "https://placekitten.com/569/461"
-      },
-      {
-        "user": "Sharon Robertson",
-        "rating": 1,
-        "comment": "Meet leg tough method pretty.",
-        "profileImg": "https://www.lorempixel.com/819/839"
-      },
-      {
-        "user": "Jessica Medina",
-        "rating": 5,
-        "comment": "Baby teach hear owner chance.",
-        "profileImg": "https://www.lorempixel.com/818/416"
-      }
-    ],
-    "features": [
-      "This value bank coach save popular perhaps.",
-      "Chair clearly your option.",
-      "Front certainly week food."
-    ]
-  },
-  {
-    "id": 70,
-    "name": "Seamless reciprocal hub",
-    "category": "ipads",
-    "description": "Professor staff learn recognize. Against doctor best live fast.",
-    "stock": 25,
-    "profileImg": "https://placeimg.com/490/348/any",
-    "images": [
-      "https://placeimg.com/490/348/any",
-      "https://www.lorempixel.com/366/574",
-      "https://dummyimage.com/553x804",
-      "https://placeimg.com/906/63/any",
-      "https://placekitten.com/611/191"
-    ],
-    "originalPrice": 1924.51,
-    "offeredPrice": 1370.68,
-    "rating": 3.7,
-    "reviews": [
-      {
-        "user": "Tracie Watson",
-        "rating": 4,
-        "comment": "Image they help medical.",
-        "profileImg": "https://www.lorempixel.com/303/863"
-      },
-      {
-        "user": "Kathleen Beasley",
-        "rating": 3,
-        "comment": "Cost at community budget television.",
-        "profileImg": "https://placeimg.com/359/225/any"
-      },
-      {
-        "user": "Mark Holmes",
-        "rating": 4,
-        "comment": "Police card leave my issue.",
-        "profileImg": "https://dummyimage.com/520x342"
-      }
-    ],
-    "features": [
-      "Trade place drug yet likely final live.",
-      "Alone second behind stuff have several drop.",
-      "Despite sort protect yet."
-    ]
-  },
-  {
-    "id": 71,
-    "name": "Self-enabling multi-state artificial intelligence",
-    "category": "laptops",
-    "description": "Involve large society face choose. Tree open city set least. Effort which nature cost usually age. North impact personal however soon friend book.",
-    "stock": 86,
-    "profileImg": "https://dummyimage.com/89x197",
-    "images": [
-      "https://dummyimage.com/89x197",
-      "https://dummyimage.com/937x664",
-      "https://www.lorempixel.com/651/266"
-    ],
-    "originalPrice": 878.0,
-    "offeredPrice": 701.16,
-    "rating": 3.7,
-    "reviews": [
-      {
-        "user": "Rhonda Freeman",
-        "rating": 2,
-        "comment": "Forget quite while word.",
-        "profileImg": "https://placeimg.com/727/847/any"
-      },
-      {
-        "user": "Corey Adams",
-        "rating": 5,
-        "comment": "Include pull there enter stage your defense.",
-        "profileImg": "https://placekitten.com/457/504"
-      },
-      {
-        "user": "Scott Perez",
-        "rating": 4,
-        "comment": "Cause top significant color sure population.",
-        "profileImg": "https://dummyimage.com/794x879"
-      }
-    ],
-    "features": [
-      "Memory pattern both mission.",
-      "Across senior future same above sit democratic.",
-      "But name ability student notice dream."
-    ]
-  },
-  {
-    "id": 72,
-    "name": "Right-sized systemic info-mediaries",
-    "category": "cameras",
-    "description": "Investment throughout nearly goal theory point mission. Important something them plan respond then.",
-    "stock": 59,
-    "profileImg": "https://dummyimage.com/744x692",
-    "images": [
-      "https://dummyimage.com/744x692",
-      "https://placekitten.com/802/297"
-    ],
-    "originalPrice": 126.21,
-    "offeredPrice": 76.33,
-    "rating": 3.5,
-    "reviews": [
-      {
-        "user": "Rita Esparza",
-        "rating": 4,
-        "comment": "Open truth hotel sport quickly interest reduce.",
-        "profileImg": "https://www.lorempixel.com/18/419"
-      },
-      {
-        "user": "Daniel Bullock",
-        "rating": 3,
-        "comment": "Window appear blue would process leave couple.",
-        "profileImg": "https://placeimg.com/542/967/any"
-      }
-    ],
-    "features": [
-      "Daughter memory experience yeah.",
-      "Decade whole very.",
-      "Base ten capital American."
-    ]
-  },
-  {
-    "id": 73,
-    "name": "Team-oriented zero-defect encryption",
-    "category": "collections",
-    "description": "Network you speak. See economic peace drug north budget while. Product throughout weight coach would democratic that.",
-    "stock": 20,
-    "profileImg": "https://www.lorempixel.com/486/711",
-    "images": [
-      "https://www.lorempixel.com/486/711",
-      "https://dummyimage.com/250x460",
-      "https://www.lorempixel.com/41/140",
-      "https://dummyimage.com/954x602",
-      "https://placeimg.com/230/491/any"
-    ],
-    "originalPrice": 1658.63,
-    "offeredPrice": 1529.86,
-    "rating": 2.8,
-    "reviews": [
-      {
-        "user": "Brandy Turner",
-        "rating": 1,
-        "comment": "Those responsibility plant imagine population short that enjoy.",
-        "profileImg": "https://www.lorempixel.com/207/515"
-      },
-      {
-        "user": "Melissa Smith",
-        "rating": 4,
-        "comment": "Nation region religious thank.",
-        "profileImg": "https://www.lorempixel.com/267/517"
-      },
-      {
-        "user": "Ryan Mejia",
-        "rating": 4,
-        "comment": "So image four.",
-        "profileImg": "https://www.lorempixel.com/354/386"
-      },
-      {
-        "user": "Rebecca Harrison",
-        "rating": 2,
-        "comment": "Production drive improve remember.",
-        "profileImg": "https://placekitten.com/7/517"
-      },
-      {
-        "user": "Robert Perez",
-        "rating": 3,
-        "comment": "Ground debate direction character room take cup increase.",
-        "profileImg": "https://dummyimage.com/664x507"
-      }
-    ],
-    "features": [
-      "Type positive cause staff in under source.",
-      "Matter hand product hundred.",
-      "Likely away affect fire toward forward."
-    ]
-  },
-  {
-    "id": 74,
-    "name": "Pre-emptive foreground definition",
-    "category": "cameras",
-    "description": "Anyone place mouth admit. Network soldier us. Anyone trouble machine bill walk fund movie.",
-    "stock": 97,
-    "profileImg": "https://www.lorempixel.com/274/7",
-    "images": [
-      "https://www.lorempixel.com/274/7",
-      "https://dummyimage.com/396x522"
-    ],
-    "originalPrice": 127.63,
-    "offeredPrice": 95.16,
-    "rating": 2.0,
-    "reviews": [
-      {
-        "user": "Curtis Smith",
-        "rating": 3,
-        "comment": "Point ever main whether he none ten young.",
-        "profileImg": "https://placekitten.com/988/125"
-      },
-      {
-        "user": "Jonathan Lin",
-        "rating": 1,
-        "comment": "Figure item life cover edge writer between.",
-        "profileImg": "https://www.lorempixel.com/173/620"
-      },
-      {
-        "user": "Cindy Williams",
-        "rating": 2,
-        "comment": "Music relate take people himself threat.",
-        "profileImg": "https://placeimg.com/898/677/any"
-      }
-    ],
-    "features": [
-      "Later rise everything real.",
-      "Notice what push daughter cup.",
-      "Police generation forget field hand nor add."
-    ]
-  },
-  {
-    "id": 75,
-    "name": "Progressive solution-oriented capability",
-    "category": "headphones",
-    "description": "Morning lot price Congress. Figure ground either treat participant.",
-    "stock": 89,
-    "profileImg": "https://dummyimage.com/661x276",
-    "images": [
-      "https://dummyimage.com/661x276",
-      "https://placeimg.com/31/460/any",
-      "https://dummyimage.com/720x59",
-      "https://dummyimage.com/20x871",
-      "https://dummyimage.com/454x670"
-    ],
-    "originalPrice": 1982.11,
-    "offeredPrice": 1223.19,
-    "rating": 4.3,
-    "reviews": [
-      {
-        "user": "Gary Watts",
-        "rating": 5,
-        "comment": "Movement purpose expert decision image.",
-        "profileImg": "https://www.lorempixel.com/59/68"
-      },
-      {
-        "user": "Amy Allison",
-        "rating": 3,
-        "comment": "Better direction author member.",
-        "profileImg": "https://placeimg.com/572/573/any"
-      },
-      {
-        "user": "Jason Miller",
-        "rating": 5,
-        "comment": "Serious buy down arm coach.",
-        "profileImg": "https://placekitten.com/235/564"
-      }
-    ],
-    "features": [
-      "Office care alone agreement simple affect seem.",
-      "Stop eye share work imagine he.",
-      "Writer drive body network tough blood parent."
-    ]
-  },
-  {
-    "id": 76,
-    "name": "Ameliorated next generation superstructure",
-    "category": "mobiles",
-    "description": "Available oil on including race pattern.",
-    "stock": 6,
-    "profileImg": "https://placeimg.com/394/709/any",
-    "images": [
-      "https://placeimg.com/394/709/any",
-      "https://dummyimage.com/983x20",
-      "https://placekitten.com/646/159",
-      "https://placekitten.com/367/130",
-      "https://dummyimage.com/741x748"
-    ],
-    "originalPrice": 1932.22,
-    "offeredPrice": 1564.57,
-    "rating": 4.0,
-    "reviews": [
-      {
-        "user": "Scott Grimes",
-        "rating": 5,
-        "comment": "Child assume although with.",
-        "profileImg": "https://www.lorempixel.com/693/911"
-      },
-      {
-        "user": "Andre Mays",
-        "rating": 5,
-        "comment": "Hour character clearly.",
-        "profileImg": "https://www.lorempixel.com/325/763"
-      },
-      {
-        "user": "Dr. Caroline Walker",
-        "rating": 1,
-        "comment": "Fact she although again model case chance.",
-        "profileImg": "https://placekitten.com/614/88"
-      },
-      {
-        "user": "Gabrielle Bailey",
-        "rating": 5,
-        "comment": "Alone two our read deep claim great price.",
-        "profileImg": "https://dummyimage.com/963x790"
-      }
-    ],
-    "features": [
-      "Station inside present building.",
-      "American do wall news rather growth.",
-      "Skill turn PM."
-    ]
-  },
-  {
-    "id": 77,
-    "name": "Distributed 4thgeneration open system",
-    "category": "best-sellers",
-    "description": "Bit mention television though side. Reason size sense tend.",
-    "stock": 10,
-    "profileImg": "https://dummyimage.com/746x470",
-    "images": [
-      "https://dummyimage.com/746x470",
-      "https://placekitten.com/197/902"
-    ],
-    "originalPrice": 244.27,
-    "offeredPrice": 189.19,
-    "rating": 3.3,
-    "reviews": [
-      {
-        "user": "Maria Baker",
-        "rating": 4,
-        "comment": "Stand property eat first.",
-        "profileImg": "https://placeimg.com/313/215/any"
-      },
-      {
-        "user": "Thomas Ramos",
-        "rating": 2,
-        "comment": "Chair know wait under piece cup personal.",
-        "profileImg": "https://placeimg.com/216/30/any"
-      },
-      {
-        "user": "Eugene Jackson",
-        "rating": 4,
-        "comment": "Western simple on discussion admit.",
-        "profileImg": "https://www.lorempixel.com/868/596"
-      }
-    ],
-    "features": [
-      "Somebody agency control issue go grow.",
-      "History consumer action product.",
-      "Than myself animal economic."
-    ]
-  },
-  {
-    "id": 78,
-    "name": "Innovative tangible contingency",
-    "category": "best-sellers",
-    "description": "Oil recognize thus pretty. Certainly admit stuff campaign. Seem position beat debate month partner shake.",
-    "stock": 11,
-    "profileImg": "https://placekitten.com/469/156",
-    "images": [
-      "https://placekitten.com/469/156",
-      "https://dummyimage.com/937x852",
-      "https://placekitten.com/746/697",
-      "https://placekitten.com/542/526"
-    ],
-    "originalPrice": 1264.51,
-    "offeredPrice": 1069.78,
-    "rating": 1.7,
-    "reviews": [
-      {
-        "user": "Katie Vazquez",
-        "rating": 2,
-        "comment": "Every a heart some already could.",
-        "profileImg": "https://dummyimage.com/92x205"
-      },
-      {
-        "user": "Theresa Hays",
-        "rating": 1,
-        "comment": "While land wind check campaign side.",
-        "profileImg": "https://dummyimage.com/72x834"
-      },
-      {
-        "user": "Lindsey Frazier",
-        "rating": 2,
-        "comment": "Result thank consider think.",
-        "profileImg": "https://placeimg.com/437/953/any"
-      }
-    ],
-    "features": [
-      "Each recently actually.",
-      "Represent left people upon.",
-      "City ready cover discussion nature."
-    ]
-  },
-  {
-    "id": 79,
-    "name": "Object-based foreground strategy",
-    "category": "headphones",
-    "description": "Support share lose wind real draw much. Happy fear political suffer person. Response section despite well. Suddenly teach expect job with.",
-    "stock": 19,
-    "profileImg": "https://placekitten.com/958/605",
-    "images": [
-      "https://placekitten.com/958/605",
-      "https://placekitten.com/530/738",
-      "https://www.lorempixel.com/657/574"
-    ],
-    "originalPrice": 1902.75,
-    "offeredPrice": 1655.87,
-    "rating": 2.3,
-    "reviews": [
-      {
-        "user": "Nicholas Kirk",
-        "rating": 2,
-        "comment": "Population military all deal.",
-        "profileImg": "https://placeimg.com/612/718/any"
-      },
-      {
-        "user": "Manuel Henry",
-        "rating": 4,
-        "comment": "Collection threat opportunity pick.",
-        "profileImg": "https://placekitten.com/247/48"
-      },
-      {
-        "user": "Aimee Martin",
-        "rating": 1,
-        "comment": "First participant describe.",
-        "profileImg": "https://placekitten.com/586/341"
-      }
-    ],
-    "features": [
-      "Down go rise.",
-      "Thousand professional fight truth.",
-      "Course let national budget lay who anything."
-    ]
-  },
-  {
-    "id": 80,
-    "name": "Multi-layered responsive capability",
-    "category": "ipads",
-    "description": "Style whole prove poor ask from. Support forward yard early.",
-    "stock": 29,
-    "profileImg": "https://placekitten.com/363/991",
-    "images": [
-      "https://placekitten.com/363/991",
-      "https://placekitten.com/738/284",
-      "https://www.lorempixel.com/582/989",
-      "https://placeimg.com/878/241/any",
-      "https://placekitten.com/835/1003"
-    ],
-    "originalPrice": 1912.04,
-    "offeredPrice": 1181.55,
-    "rating": 2.5,
-    "reviews": [
-      {
-        "user": "Pamela Davis",
-        "rating": 3,
-        "comment": "Arrive from cell human camera information build.",
-        "profileImg": "https://dummyimage.com/1000x258"
-      },
-      {
-        "user": "Elizabeth Perez",
-        "rating": 2,
-        "comment": "Nice natural practice school might threat.",
-        "profileImg": "https://placeimg.com/343/367/any"
-      }
-    ],
-    "features": [
-      "Decision performance action large phone.",
-      "Step through term painting discuss establish politics industry.",
-      "Its seven toward field girl."
-    ]
-  },
-  {
-    "id": 81,
-    "name": "Right-sized bottom-line neural-net",
-    "category": "best-sellers",
-    "description": "Huge TV water only brother meet. Now picture house rock place.",
-    "stock": 58,
-    "profileImg": "https://placeimg.com/158/1023/any",
-    "images": [
-      "https://placeimg.com/158/1023/any",
-      "https://dummyimage.com/293x476",
-      "https://www.lorempixel.com/1008/869",
-      "https://www.lorempixel.com/280/346",
-      "https://placeimg.com/204/852/any"
-    ],
-    "originalPrice": 568.86,
-    "offeredPrice": 511.45,
-    "rating": 3.3,
-    "reviews": [
-      {
-        "user": "Tanya Kerr",
-        "rating": 4,
-        "comment": "Must population goal time it not break.",
-        "profileImg": "https://dummyimage.com/215x718"
-      },
-      {
-        "user": "Martha Mitchell PhD",
-        "rating": 5,
-        "comment": "Health media tend capital value.",
-        "profileImg": "https://placekitten.com/87/287"
-      },
-      {
-        "user": "Amy Vaughn",
-        "rating": 1,
-        "comment": "Require long short office government somebody.",
-        "profileImg": "https://dummyimage.com/439x259"
-      }
-    ],
-    "features": [
-      "News throughout war military their heart answer particular.",
-      "Left south create price meet left.",
-      "Trade need friend room from person."
-    ]
-  },
-  {
-    "id": 82,
-    "name": "Adaptive human-resource matrices",
-    "category": "collections",
-    "description": "Husband dinner important relationship owner later pay. Left myself source.",
-    "stock": 62,
-    "profileImg": "https://placeimg.com/99/683/any",
-    "images": [
-      "https://placeimg.com/99/683/any",
-      "https://placeimg.com/1013/754/any"
-    ],
-    "originalPrice": 1741.0,
-    "offeredPrice": 1395.29,
-    "rating": 3.5,
-    "reviews": [
-      {
-        "user": "Susan Austin",
-        "rating": 4,
-        "comment": "Store myself else place.",
-        "profileImg": "https://placekitten.com/882/1013"
-      },
-      {
-        "user": "Tina Tran",
-        "rating": 5,
-        "comment": "Pattern course themselves when information.",
-        "profileImg": "https://placeimg.com/695/572/any"
-      },
-      {
-        "user": "Mary Warren",
-        "rating": 2,
-        "comment": "Southern cover reality yard.",
-        "profileImg": "https://placeimg.com/600/805/any"
-      },
-      {
-        "user": "Jerry Cameron",
-        "rating": 3,
-        "comment": "Final bit place rich add hundred.",
-        "profileImg": "https://www.lorempixel.com/197/802"
-      }
-    ],
-    "features": [
-      "Score central skill land especially expert themselves.",
-      "Indicate benefit several half yeah act.",
-      "Peace long song rise much instead."
-    ]
-  },
-  {
-    "id": 83,
-    "name": "Open-architected eco-centric core",
-    "category": "collections",
-    "description": "Term prevent any old treatment nature risk. Raise character term someone.",
-    "stock": 89,
-    "profileImg": "https://dummyimage.com/992x577",
-    "images": [
-      "https://dummyimage.com/992x577",
-      "https://placekitten.com/986/515",
-      "https://www.lorempixel.com/468/265",
-      "https://placeimg.com/326/572/any"
-    ],
-    "originalPrice": 766.48,
-    "offeredPrice": 526.53,
-    "rating": 2.8,
-    "reviews": [
-      {
-        "user": "Beverly Lewis",
-        "rating": 3,
-        "comment": "Stay red report.",
-        "profileImg": "https://dummyimage.com/1012x293"
-      },
-      {
-        "user": "Michelle Meyer",
-        "rating": 5,
-        "comment": "At visit feel lose vote democratic.",
-        "profileImg": "https://dummyimage.com/298x10"
-      },
-      {
-        "user": "Emily Bailey",
-        "rating": 2,
-        "comment": "Major thousand fight rock off.",
-        "profileImg": "https://dummyimage.com/910x828"
-      },
-      {
-        "user": "Jimmy Moody",
-        "rating": 1,
-        "comment": "Action able run whose.",
-        "profileImg": "https://placeimg.com/600/482/any"
-      }
-    ],
-    "features": [
-      "Money forward bag past.",
-      "Central everybody suggest at.",
-      "Director line final really black increase."
-    ]
-  },
-  {
-    "id": 84,
-    "name": "Optional systematic forecast",
-    "category": "ipads",
-    "description": "Too boy positive. Peace teacher which trip address argue we.",
-    "stock": 29,
-    "profileImg": "https://www.lorempixel.com/7/760",
-    "images": [
-      "https://www.lorempixel.com/7/760",
-      "https://dummyimage.com/498x817",
-      "https://placekitten.com/963/971",
-      "https://www.lorempixel.com/255/5",
-      "https://www.lorempixel.com/300/309"
-    ],
-    "originalPrice": 1486.73,
-    "offeredPrice": 1170.51,
-    "rating": 4.0,
-    "reviews": [
-      {
-        "user": "Henry Rodgers",
-        "rating": 4,
-        "comment": "Answer course entire buy view second onto.",
-        "profileImg": "https://www.lorempixel.com/699/13"
-      },
-      {
-        "user": "Mark Smith",
-        "rating": 4,
-        "comment": "Serious protect study that improve experience.",
-        "profileImg": "https://dummyimage.com/220x244"
-      }
-    ],
-    "features": [
-      "Style product model per week.",
-      "Hit analysis could coach success half.",
-      "Probably organization firm development beyond PM."
-    ]
-  },
-  {
-    "id": 85,
-    "name": "Decentralized client-server encryption",
-    "category": "headphones",
-    "description": "Size stuff spring decision view everything line. Anything part understand across history.",
-    "stock": 66,
-    "profileImg": "https://placekitten.com/697/611",
-    "images": [
-      "https://placekitten.com/697/611",
-      "https://www.lorempixel.com/839/450"
-    ],
-    "originalPrice": 734.53,
-    "offeredPrice": 680.9,
-    "rating": 4.5,
-    "reviews": [
-      {
-        "user": "Patricia Benson",
-        "rating": 5,
-        "comment": "Hope group of.",
-        "profileImg": "https://dummyimage.com/493x428"
-      },
-      {
-        "user": "Tina Kirk",
-        "rating": 4,
-        "comment": "Allow once lot whatever any site scientist.",
-        "profileImg": "https://www.lorempixel.com/807/484"
-      }
-    ],
-    "features": [
-      "Such face describe eye activity hit get yard.",
-      "Like although recent third real build time.",
-      "He nature nation game."
-    ]
-  },
-  {
-    "id": 86,
-    "name": "Assimilated reciprocal groupware",
-    "category": "cameras",
-    "description": "Record democratic within natural. Opportunity government player worker off local we.",
-    "stock": 24,
-    "profileImg": "https://placekitten.com/140/643",
-    "images": [
-      "https://placekitten.com/140/643",
-      "https://dummyimage.com/89x495",
-      "https://placeimg.com/901/702/any"
-    ],
-    "originalPrice": 1214.88,
-    "offeredPrice": 1081.12,
-    "rating": 2.4,
-    "reviews": [
-      {
-        "user": "Caitlin Gomez",
-        "rating": 3,
-        "comment": "Establish role why car.",
-        "profileImg": "https://www.lorempixel.com/493/627"
-      },
-      {
-        "user": "Lisa Snyder",
-        "rating": 1,
-        "comment": "Seek loss stuff recognize against total.",
-        "profileImg": "https://placekitten.com/669/357"
-      },
-      {
-        "user": "Brian Rivera",
-        "rating": 4,
-        "comment": "Difference unit front decide crime chair statement.",
-        "profileImg": "https://www.lorempixel.com/53/576"
-      },
-      {
-        "user": "Michael Swanson",
-        "rating": 3,
-        "comment": "Not moment house short only decade.",
-        "profileImg": "https://placekitten.com/748/85"
-      },
-      {
-        "user": "Valerie Howard",
-        "rating": 1,
-        "comment": "Class option pass.",
-        "profileImg": "https://dummyimage.com/390x390"
-      }
-    ],
-    "features": [
-      "Military thank old friend threat which.",
-      "Them officer call interest conference leave.",
-      "Sing pick play leave run."
-    ]
-  },
-  {
-    "id": 87,
-    "name": "Down-sized content-based intranet",
-    "category": "collections",
-    "description": "Away radio religious not. Law smile trial professor onto east sport develop.",
-    "stock": 91,
-    "profileImg": "https://placekitten.com/1016/413",
-    "images": [
-      "https://placekitten.com/1016/413",
-      "https://placeimg.com/548/599/any"
-    ],
-    "originalPrice": 816.85,
-    "offeredPrice": 594.86,
-    "rating": 2.8,
-    "reviews": [
-      {
-        "user": "George Murphy",
-        "rating": 2,
-        "comment": "Last example during which.",
-        "profileImg": "https://placekitten.com/746/948"
-      },
-      {
-        "user": "Carmen Atkinson",
-        "rating": 2,
-        "comment": "Describe strategy if new third.",
-        "profileImg": "https://placekitten.com/461/381"
-      },
-      {
-        "user": "Kevin Williams",
-        "rating": 4,
-        "comment": "Candidate billion case lose.",
-        "profileImg": "https://dummyimage.com/385x34"
-      },
-      {
-        "user": "Richard Lewis",
-        "rating": 3,
-        "comment": "Manage expert because everything rich picture probably.",
-        "profileImg": "https://placeimg.com/95/791/any"
-      }
-    ],
-    "features": [
-      "Image garden relationship carry protect.",
-      "Pattern catch spend.",
-      "Move door speak."
-    ]
-  },
-  {
-    "id": 88,
-    "name": "Cloned empowering alliance",
-    "category": "headphones",
-    "description": "Spring officer size whole site thus force. Ready then candidate example power partner order.",
-    "stock": 54,
-    "profileImg": "https://placekitten.com/927/1023",
-    "images": [
-      "https://placekitten.com/927/1023",
-      "https://dummyimage.com/11x495",
-      "https://dummyimage.com/513x683",
-      "https://placeimg.com/1000/377/any"
-    ],
-    "originalPrice": 1385.24,
-    "offeredPrice": 1291.11,
-    "rating": 2.3,
-    "reviews": [
-      {
-        "user": "Peter Gonzalez",
-        "rating": 4,
-        "comment": "Have cost son culture star fall.",
-        "profileImg": "https://placeimg.com/226/415/any"
-      },
-      {
-        "user": "Kelly Osborne",
-        "rating": 1,
-        "comment": "Outside sign sit.",
-        "profileImg": "https://dummyimage.com/862x654"
-      },
-      {
-        "user": "Megan Casey",
-        "rating": 2,
-        "comment": "Purpose left study population position realize.",
-        "profileImg": "https://placeimg.com/898/65/any"
-      }
-    ],
-    "features": [
-      "Chair successful agree there cut character hair explain.",
-      "Effect task outside our.",
-      "Sea trade step natural."
-    ]
-  },
-  {
-    "id": 89,
-    "name": "Reactive discrete portal",
-    "category": "collections",
-    "description": "Yard card loss. Adult response leave read such among least. Republican others travel act pass.",
-    "stock": 95,
-    "profileImg": "https://placeimg.com/27/402/any",
-    "images": [
-      "https://placeimg.com/27/402/any",
-      "https://www.lorempixel.com/913/698"
-    ],
-    "originalPrice": 433.41,
-    "offeredPrice": 397.78,
-    "rating": 2.7,
-    "reviews": [
-      {
-        "user": "Brandon Jackson",
-        "rating": 2,
-        "comment": "House practice determine season I despite.",
-        "profileImg": "https://www.lorempixel.com/893/500"
-      },
-      {
-        "user": "Randy Douglas",
-        "rating": 4,
-        "comment": "Write happen bar difference quite such.",
-        "profileImg": "https://dummyimage.com/583x609"
-      },
-      {
-        "user": "Kevin Lane",
-        "rating": 2,
-        "comment": "Like director stand cultural source.",
-        "profileImg": "https://placeimg.com/617/466/any"
-      }
-    ],
-    "features": [
-      "Grow student hospital your strategy bring they away.",
-      "Price father raise realize whatever.",
-      "Art guy rather prevent thought."
-    ]
-  },
-  {
-    "id": 90,
-    "name": "Distributed tangible product",
-    "category": "collections",
-    "description": "Start relate billion party generation. Dinner so significant guess hold serious hotel down.",
-    "stock": 80,
-    "profileImg": "https://dummyimage.com/317x53",
-    "images": [
-      "https://dummyimage.com/317x53",
-      "https://placeimg.com/789/832/any",
-      "https://dummyimage.com/304x474",
-      "https://placeimg.com/945/697/any"
-    ],
-    "originalPrice": 1706.36,
-    "offeredPrice": 1275.71,
-    "rating": 3.5,
-    "reviews": [
-      {
-        "user": "Wendy Thornton",
-        "rating": 4,
-        "comment": "Tv own walk seat system quality.",
-        "profileImg": "https://placekitten.com/379/996"
-      },
-      {
-        "user": "Dylan Clark",
-        "rating": 1,
-        "comment": "State above property character.",
-        "profileImg": "https://placeimg.com/180/37/any"
-      },
-      {
-        "user": "Ronald Benjamin",
-        "rating": 5,
-        "comment": "Section her once paper more glass.",
-        "profileImg": "https://placekitten.com/97/526"
-      },
-      {
-        "user": "Kristin Lee",
-        "rating": 4,
-        "comment": "Star laugh relationship respond yourself.",
-        "profileImg": "https://placeimg.com/4/608/any"
-      }
-    ],
-    "features": [
-      "Five voice kind both direction exactly require.",
-      "Positive professional long agree build.",
-      "Table measure know center seat."
-    ]
-  },
-  {
-    "id": 91,
-    "name": "Monitored motivating budgetary management",
-    "category": "ipads",
-    "description": "Apply small night. Impact card school perhaps so. Sister share herself early program clear.",
-    "stock": 94,
-    "profileImg": "https://dummyimage.com/250x127",
-    "images": [
-      "https://dummyimage.com/250x127",
-      "https://www.lorempixel.com/12/50",
-      "https://dummyimage.com/571x751",
-      "https://placekitten.com/946/852"
-    ],
-    "originalPrice": 463.01,
-    "offeredPrice": 318.63,
-    "rating": 4.5,
-    "reviews": [
-      {
-        "user": "Joan Pierce",
-        "rating": 5,
-        "comment": "Appear crime beautiful toward social leader.",
-        "profileImg": "https://placekitten.com/862/515"
-      },
-      {
-        "user": "Sandra Williams",
-        "rating": 4,
-        "comment": "While discover but interesting claim.",
-        "profileImg": "https://placeimg.com/15/194/any"
-      }
-    ],
-    "features": [
-      "Seek situation remain us.",
-      "Fly ten parent tax worry.",
-      "Affect weight room on account begin."
-    ]
-  },
-  {
-    "id": 92,
-    "name": "Compatible disintermediate process improvement",
-    "category": "mobiles",
-    "description": "Run agree decision budget several. Difficult world capital key property. Difference like student site.",
-    "stock": 20,
-    "profileImg": "https://www.lorempixel.com/21/49",
-    "images": [
-      "https://www.lorempixel.com/21/49",
-      "https://www.lorempixel.com/646/404",
-      "https://placeimg.com/681/219/any",
-      "https://www.lorempixel.com/799/41",
-      "https://www.lorempixel.com/601/256"
-    ],
-    "originalPrice": 1742.61,
-    "offeredPrice": 1251.14,
-    "rating": 3.5,
-    "reviews": [
-      {
-        "user": "Rebecca Cobb",
-        "rating": 2,
-        "comment": "The live individual.",
-        "profileImg": "https://placekitten.com/25/112"
-      },
-      {
-        "user": "Angela Moss",
-        "rating": 5,
-        "comment": "Institution mother sport break.",
-        "profileImg": "https://placeimg.com/484/1017/any"
-      }
-    ],
-    "features": [
-      "Report list as full ago grow walk.",
-      "Yard record near student nature force.",
-      "At push claim final."
-    ]
-  },
-  {
-    "id": 93,
-    "name": "Reduced non-volatile neural-net",
-    "category": "mobiles",
-    "description": "Will reflect exactly increase staff forward box. Matter strategy cell understand light main.",
-    "stock": 0,
-    "profileImg": "https://placekitten.com/208/281",
-    "images": [
-      "https://placekitten.com/208/281",
-      "https://placeimg.com/941/501/any",
-      "https://www.lorempixel.com/709/647",
-      "https://dummyimage.com/476x386",
-      "https://placeimg.com/469/267/any"
-    ],
-    "originalPrice": 399.65,
-    "offeredPrice": 336.7,
-    "rating": 3.3,
-    "reviews": [
-      {
-        "user": "Julie Thompson",
-        "rating": 2,
-        "comment": "Though perhaps relationship rule room continue.",
-        "profileImg": "https://dummyimage.com/19x901"
-      },
-      {
-        "user": "Michael Brown",
-        "rating": 4,
-        "comment": "Example stock serious spring.",
-        "profileImg": "https://placekitten.com/800/474"
-      },
-      {
-        "user": "Michael Ortiz",
-        "rating": 4,
-        "comment": "Field newspaper development last member.",
-        "profileImg": "https://placeimg.com/631/341/any"
-      }
-    ],
-    "features": [
-      "Put fine maintain all everyone ok partner according.",
-      "Old reach poor fly easy opportunity.",
-      "Budget worker eight huge including notice order."
-    ]
-  },
-  {
-    "id": 94,
-    "name": "User-friendly didactic open system",
-    "category": "new-arrivals",
-    "description": "Movie from reason program dinner your. Western line relationship southern family election sell.",
-    "stock": 92,
-    "profileImg": "https://placeimg.com/760/231/any",
-    "images": [
-      "https://placeimg.com/760/231/any",
-      "https://placekitten.com/178/645"
-    ],
-    "originalPrice": 1574.7,
-    "offeredPrice": 1232.0,
-    "rating": 2.8,
-    "reviews": [
-      {
-        "user": "James Lowe",
-        "rating": 2,
-        "comment": "Minute work American political.",
-        "profileImg": "https://placeimg.com/530/697/any"
-      },
-      {
-        "user": "Mary Cohen",
-        "rating": 4,
-        "comment": "Return after human end girl perform war.",
-        "profileImg": "https://placeimg.com/99/489/any"
-      },
-      {
-        "user": "Bailey Rowland",
-        "rating": 2,
-        "comment": "Expect stop case machine knowledge whether.",
-        "profileImg": "https://placekitten.com/328/635"
-      },
-      {
-        "user": "Kimberly Cooke",
-        "rating": 3,
-        "comment": "Go want sure somebody.",
-        "profileImg": "https://dummyimage.com/472x877"
-      }
-    ],
-    "features": [
-      "Give dinner near main.",
-      "Size north involve.",
-      "Buy eye role activity."
-    ]
-  },
-  {
-    "id": 95,
-    "name": "Innovative fault-tolerant capacity",
-    "category": "headphones",
-    "description": "Agree probably name. Politics kitchen suffer mean student.",
-    "stock": 53,
-    "profileImg": "https://dummyimage.com/549x975",
-    "images": [
-      "https://dummyimage.com/549x975",
-      "https://dummyimage.com/900x915",
-      "https://www.lorempixel.com/682/551"
-    ],
-    "originalPrice": 1444.5,
-    "offeredPrice": 1366.11,
-    "rating": 3.0,
-    "reviews": [
-      {
-        "user": "Sarah Mccoy",
-        "rating": 1,
-        "comment": "Painting technology anyone continue how answer.",
-        "profileImg": "https://placeimg.com/614/925/any"
-      },
-      {
-        "user": "Lori Wall",
-        "rating": 5,
-        "comment": "Individual official region actually.",
-        "profileImg": "https://dummyimage.com/224x338"
-      },
-      {
-        "user": "Bruce Fisher",
-        "rating": 3,
-        "comment": "Unit if we person age.",
-        "profileImg": "https://dummyimage.com/691x558"
-      }
-    ],
-    "features": [
-      "Parent information subject short center deep interesting beyond.",
-      "Suffer firm position anyone write drop describe measure.",
-      "Although he deal skill charge benefit."
-    ]
-  },
-  {
-    "id": 96,
-    "name": "Polarized leadingedge instruction set",
-    "category": "cameras",
-    "description": "Shake door figure protect happen member compare. Heavy become stock head.",
-    "stock": 100,
-    "profileImg": "https://www.lorempixel.com/274/808",
-    "images": [
-      "https://www.lorempixel.com/274/808",
-      "https://placekitten.com/265/926",
-      "https://dummyimage.com/955x91"
-    ],
-    "originalPrice": 144.88,
-    "offeredPrice": 118.08,
-    "rating": 2.4,
-    "reviews": [
-      {
-        "user": "Karen Fuentes",
-        "rating": 1,
-        "comment": "Behind great should film according speak ready apply.",
-        "profileImg": "https://www.lorempixel.com/228/35"
-      },
-      {
-        "user": "Steven Bush",
-        "rating": 4,
-        "comment": "Remember before edge area fast back.",
-        "profileImg": "https://placeimg.com/864/390/any"
-      },
-      {
-        "user": "Candace Lane",
-        "rating": 3,
-        "comment": "Worry newspaper live home.",
-        "profileImg": "https://placeimg.com/229/1005/any"
-      },
-      {
-        "user": "Priscilla Santiago",
-        "rating": 1,
-        "comment": "Site politics close own pattern fund success.",
-        "profileImg": "https://dummyimage.com/650x349"
-      },
-      {
-        "user": "Lori Yang",
-        "rating": 3,
-        "comment": "Newspaper into worry.",
-        "profileImg": "https://placekitten.com/790/840"
-      }
-    ],
-    "features": [
-      "Collection since instead everyone certainly.",
-      "Direction war up chair Mrs exactly.",
-      "Know help quality suffer."
-    ]
-  },
-  {
-    "id": 97,
-    "name": "Exclusive local projection",
-    "category": "new-arrivals",
-    "description": "Wife experience discussion well. Dark price degree. Rather away try medical plan window.",
-    "stock": 65,
-    "profileImg": "https://placekitten.com/247/84",
-    "images": [
-      "https://placekitten.com/247/84",
-      "https://placekitten.com/137/32"
-    ],
-    "originalPrice": 533.02,
-    "offeredPrice": 447.29,
-    "rating": 2.0,
-    "reviews": [
-      {
-        "user": "Juan Sanchez",
-        "rating": 2,
-        "comment": "Sure issue great together wish.",
-        "profileImg": "https://www.lorempixel.com/878/647"
-      },
-      {
-        "user": "Joy Garza",
-        "rating": 2,
-        "comment": "Fight although side least good detail.",
-        "profileImg": "https://www.lorempixel.com/321/230"
-      }
-    ],
-    "features": [
-      "Security argue worry every phone.",
-      "Four truth company significant.",
-      "Tree several office myself win full."
-    ]
-  },
-  {
-    "id": 98,
-    "name": "Synergistic 5thgeneration policy",
-    "category": "collections",
-    "description": "Science mind station win three top her. Food fight indeed. Big media book wonder room defense sure skill. Pretty animal main case American return.",
-    "stock": 37,
-    "profileImg": "https://dummyimage.com/577x652",
-    "images": [
-      "https://dummyimage.com/577x652",
-      "https://placeimg.com/537/947/any"
-    ],
-    "originalPrice": 254.01,
-    "offeredPrice": 169.31,
-    "rating": 3.3,
-    "reviews": [
-      {
-        "user": "Bridget Gilbert",
-        "rating": 5,
-        "comment": "All be office usually production look now.",
-        "profileImg": "https://placeimg.com/534/598/any"
-      },
-      {
-        "user": "Dawn Green",
+        "user": "stepmaster",
+        "comment": "Light and accurate, great for daily use.",
         "rating": 4,
-        "comment": "Everyone eat because task practice camera side.",
-        "profileImg": "https://dummyimage.com/761x361"
-      },
-      {
-        "user": "Nicholas Carter",
-        "rating": 1,
-        "comment": "Reflect popular southern a shoulder yard gun.",
-        "profileImg": "https://www.lorempixel.com/862/708"
-      }
-    ],
-    "features": [
-      "Interesting town actually example sure.",
-      "Writer before second once third pass particular.",
-      "Hotel eye former impact."
-    ]
-  },
-  {
-    "id": 99,
-    "name": "Inverse client-server synergy",
-    "category": "headphones",
-    "description": "Accept wonder race. Current amount end throughout program fear scene. Boy sit bill.",
-    "stock": 28,
-    "profileImg": "https://dummyimage.com/864x342",
-    "images": [
-      "https://dummyimage.com/864x342",
-      "https://www.lorempixel.com/329/18",
-      "https://dummyimage.com/340x1022",
-      "https://dummyimage.com/840x568",
-      "https://www.lorempixel.com/163/631"
-    ],
-    "originalPrice": 621.49,
-    "offeredPrice": 504.26,
-    "rating": 1.0,
-    "reviews": [
-      {
-        "user": "Jorge Johnson",
-        "rating": 1,
-        "comment": "Office group large write lay billion.",
-        "profileImg": "https://www.lorempixel.com/172/350"
-      },
-      {
-        "user": "Lacey Diaz",
-        "rating": 1,
-        "comment": "Compare usually case civil agreement third PM.",
-        "profileImg": "https://dummyimage.com/599x471"
+        "profileImg": "/images/Smartwatch/watch1.png"
       }
     ],
-    "features": [
-      "Personal see about exactly fact.",
-      "Turn itself have meet dream American say.",
-      "Million least doctor year democratic."
-    ]
+    "features": ["Sleep Tracking", "Step Counter", "Water Resistant"]
   }
 ]

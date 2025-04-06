@@ -26,21 +26,6 @@ const ProductDetail = () => {
         setCartItems(updated);
     };
 
-
-    // const handleAddToCart = () => {
-    //     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    //     const alreadyInCart = cart.find(item => item.id === product.id);
-
-    //     if (!alreadyInCart) {
-    //         cart.push({ ...product, quantity: 1 });
-    //     } else {
-    //         alreadyInCart.quantity += 1;
-    //     }
-
-    //     localStorage.setItem("cart", JSON.stringify(cart));
-    //     alert("Added to cart!");
-    // };
-
     if (loading) return <div className="p-6 text-center">Loading product...</div>;
     if (!product) return <div className="p-6 text-center text-red-500">Product not found.</div>;
 

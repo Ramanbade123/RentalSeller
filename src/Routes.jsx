@@ -61,9 +61,7 @@ const dynamicProductRoutes = productRoutes.map((path) => ({
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <CartProvider>
-      <App />
-    </CartProvider>,
+    element: <App />,
     errorElement: <ErrorBoundary />, // Added Error Boundary
     children: [
       { index: true, element: <HomePage /> },
