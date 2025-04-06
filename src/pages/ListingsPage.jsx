@@ -7,31 +7,23 @@ const ListingsPage = () => {
   const initialListings = [
     { 
       id: 1, 
-      name: 'Mountain Bike', 
-      price: '250', 
-      description: 'Great for trails', 
+      name: 'Samsung S24', 
+      price: '250000', 
+      description: 'Great for photography', 
       status: 'Active',
-      category: 'Bikes',
-      location: 'New York'
+      category: 'Mobile',
+      location: 'Lalitpur'
     },
     { 
       id: 2, 
-      name: 'Road Bike', 
-      price: '350', 
-      description: 'Sleek and fast', 
+      name: 'Canon', 
+      price: '350000', 
+      description: 'Videography camera', 
       status: 'Active',
-      category: 'Bikes',
-      location: 'Chicago'
+      category: 'Mobile',
+      location: 'Kathmandu'
     },
-    { 
-      id: 3, 
-      name: 'Kids Bike', 
-      price: '120', 
-      description: 'Perfect for children', 
-      status: 'Inactive',
-      category: 'Bikes',
-      location: 'Los Angeles'
-    },
+
   ];
 
   const navigate = useNavigate();

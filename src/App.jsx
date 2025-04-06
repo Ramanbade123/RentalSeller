@@ -42,10 +42,10 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
 
         {/* Default route - redirect to login */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
         {/* Catch-all route for undefined paths */}
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
       <Footer />
     </Router>
