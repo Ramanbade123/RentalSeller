@@ -36,10 +36,10 @@ const Finalize = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen">
+    <div className="flex flex-col lg:flex-row min-h-screen font-sans">
       {/* Left Side - Information Panel with Background */}
       <div className="lg:w-1/3 bg-cover bg-center relative" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)' }}>
-        <div className="absolute inset-0 bg-indigo-900/80"></div>
+        <div className="absolute inset-0 bg-gray-800/90"></div>
         <div className="relative z-10 p-8 text-white h-full flex flex-col justify-center">
           <div className="max-w-md mx-auto">
             <h1 className="text-3xl font-bold mb-6">Finalize Your Listing</h1>
@@ -48,28 +48,28 @@ const Finalize = () => {
                 You're almost done! The final step is to set up your delivery options and return policy. These details help build trust with customers and ensure smooth transactions.
               </p>
               
-              <div className="bg-white/20 p-5 rounded-lg backdrop-blur-sm border border-white/30">
+              <div className="bg-gray-700/80 p-5 rounded-lg backdrop-blur-sm border border-gray-600">
                 <div className="flex items-start">
                   <svg className="w-6 h-6 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Pro Tip</h3>
-                    <p className="text-white/90">
+                    <p className="text-gray-200">
                       Clear return policies and delivery options can increase your conversion rate by up to 30%. Customers appreciate transparency!
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/20 p-5 rounded-lg backdrop-blur-sm border border-white/30">
+              <div className="bg-gray-700/80 p-5 rounded-lg backdrop-blur-sm border border-gray-600">
                 <div className="flex items-start">
                   <svg className="w-6 h-6 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                   <div>
                     <h3 className="text-xl font-semibold mb-1">Secure Your Sales</h3>
-                    <p className="text-white/90">
+                    <p className="text-gray-200">
                       Providing accurate return address information helps prevent disputes and ensures smooth returns processing.
                     </p>
                   </div>
@@ -81,23 +81,23 @@ const Finalize = () => {
       </div>
 
       {/* Right Side - Form */}
-      <div className="lg:w-2/3 bg-gray-50 p-6 md:p-10">
+      <div className="lg:w-2/3 bg-white p-6 md:p-10">
         <div className="max-w-3xl mx-auto">
           {/* Progress Stepper */}
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">Complete Your Listing</h1>
             <div className="flex items-center justify-between relative">
               <div className="absolute top-3 left-8 right-8 h-1 bg-gray-200 z-0">
-                <div className="h-full bg-indigo-600 w-full"></div>
+                <div className="h-full bg-gray-700 w-full"></div>
               </div>
               {['Description', 'Media', 'Finalize'].map((step, index) => (
                 <div key={step} className="flex flex-col items-center z-10">
                   <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs ${
-                    index <= 2 ? 'bg-indigo-600 text-white' : 'border border-gray-300 text-gray-500 bg-white'
+                    index <= 2 ? 'bg-gray-700 text-white' : 'border border-gray-300 text-gray-500 bg-white'
                   }`}>
                     {index + 1}
                   </div>
-                  <span className={`mt-1 text-xs ${index <= 2 ? 'text-indigo-600 font-medium' : 'text-gray-500'}`}>
+                  <span className={`mt-1 text-xs ${index <= 2 ? 'text-gray-700 font-medium' : 'text-gray-500'}`}>
                     {step}
                   </span>
                 </div>
@@ -120,7 +120,7 @@ const Finalize = () => {
                       value={option.id}
                       checked={deliveryOption === option.id}
                       onChange={() => setDeliveryOption(option.id)}
-                      className="h-4 w-4 text-indigo-600 focus:ring-indigo-500"
+                      className="h-4 w-4 text-gray-700 focus:ring-gray-500"
                     />
                     <label htmlFor={option.id} className="ml-2 block text-sm text-gray-700">
                       {option.name}
@@ -141,7 +141,7 @@ const Finalize = () => {
                     name="street"
                     value={returnAddress.street}
                     onChange={handleAddressChange}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                     required
                   />
                 </div>
@@ -152,7 +152,7 @@ const Finalize = () => {
                     name="city"
                     value={returnAddress.city}
                     onChange={handleAddressChange}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                     required
                   />
                 </div>
@@ -163,7 +163,7 @@ const Finalize = () => {
                     name="postalCode"
                     value={returnAddress.postalCode}
                     onChange={handleAddressChange}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                     required
                   />
                 </div>
@@ -174,7 +174,7 @@ const Finalize = () => {
                     name="country"
                     value={returnAddress.country}
                     onChange={handleAddressChange}
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                     required
                   />
                 </div>
@@ -191,7 +191,7 @@ const Finalize = () => {
                 <textarea
                   value={complaintDescription}
                   onChange={(e) => setComplaintDescription(e.target.value)}
-                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 min-h-[120px]"
+                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-500 focus:border-gray-500 min-h-[120px]"
                   placeholder="Example: 'We accept returns within 14 days of delivery. Items must be unused and in original packaging. Contact us first to initiate a return...'"
                 />
               </div>
@@ -217,7 +217,7 @@ const Finalize = () => {
               className={`flex items-center px-5 py-2.5 rounded-md text-sm font-medium transition-colors shadow-sm ${
                 (!deliveryOption || !returnAddress.street || !returnAddress.city || !returnAddress.postalCode || !returnAddress.country) 
                   ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-                  : 'bg-indigo-600 text-white hover:bg-indigo-700'
+                  : 'bg-gray-700 text-white hover:bg-gray-800'
               }`}
             >
               Submit Listing

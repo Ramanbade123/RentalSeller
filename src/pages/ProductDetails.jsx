@@ -46,24 +46,88 @@ const ProductDetails = () => {
       <div className="lg:w-1/3 bg-gray-900 text-white">
         <div className="p-8 h-full flex flex-col justify-center">
           <div className="max-w-md mx-auto">
-            <h1 className="text-2xl font-bold mb-6">Create Your Listing</h1>
-            <div className="space-y-6">
-              <p className="text-gray-300 leading-relaxed">
-                Provide accurate details about your product to ensure better visibility and faster transactions. Complete all required fields to proceed.
-              </p>
-              <div className="bg-gray-800 p-5 rounded-lg border border-gray-700">
-                <div className="flex items-start">
-                  <svg className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <h1 className="text-2xl font-bold mb-6">Sell Smart on RenTour</h1>
+            
+            {/* Benefits Section */}
+            <div className="mb-8 space-y-4">
+              <div className="flex items-start">
+                <div className="bg-gray-700 p-2 rounded-full mr-3">
+                  <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
-                  <div>
-                    <h3 className="text-gray-200 font-medium mb-1">Tips for Success</h3>
-                    <p className="text-gray-400 text-sm">
-                      High-quality images and detailed descriptions can increase your product's appeal by up to 40%.
-                    </p>
-                  </div>
+                </div>
+                <div>
+                  <h3 className="text-gray-100 font-medium">Reach Millions of Buyers</h3>
+                  <p className="text-gray-400 text-sm mt-1">
+                    Join our marketplace of 10M+ active users looking for quality products like yours.
+                  </p>
                 </div>
               </div>
+
+              <div className="flex items-start">
+                <div className="bg-gray-700 p-2 rounded-full mr-3">
+                  <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-gray-100 font-medium">Trusted Transactions</h3>
+                  <p className="text-gray-400 text-sm mt-1">
+                    Our secure payment system protects both buyers and sellers for worry-free transactions.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="bg-gray-700 p-2 rounded-full mr-3">
+                  <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-gray-100 font-medium">Low Selling Fees</h3>
+                  <p className="text-gray-400 text-sm mt-1">
+                    Only 5% commission on successful sales - one of the lowest rates in the market.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Success Tips Section */}
+            <div className="bg-gray-800 p-5 rounded-lg border border-gray-700 mb-6">
+              <h3 className="text-gray-200 font-medium mb-3">How to Create a Winning Listing</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 mt-0.5 mr-2 text-gray-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Use clear, high-resolution photos (minimum 3 images)</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 mt-0.5 mr-2 text-gray-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Write detailed descriptions with specifications</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 mt-0.5 mr-2 text-gray-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Set competitive prices based on market trends</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 mt-0.5 mr-2 text-gray-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Respond quickly to buyer inquiries (avg. response time shown)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Support Information */}
+            <div className="text-center text-sm text-gray-400">
+              <p>Need help? <a href="#" className="text-gray-300 hover:text-white underline">Contact our seller support</a></p>
+              <p className="mt-1">Average listing approval time: 2-4 hours</p>
             </div>
           </div>
         </div>

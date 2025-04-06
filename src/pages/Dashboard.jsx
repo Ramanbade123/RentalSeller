@@ -124,17 +124,18 @@ export default function Dashboard() {
         <nav className="mt-6 flex-1">
           {[
             { name: "Dashboard", icon: <FiHome size={18} />, id: "dashboard" },
-            {
-              name: "Analytics",
-              icon: <FiPieChart size={18} />,
-              id: "analytics",
+            { name: "Analytics", icon: <FiPieChart size={18} />, id: "analytics" },
+            { 
+              name: "Listings", 
+              icon: <FiBox size={18} />, 
+              id: "listings",
+              onClick: () => navigate("/listings")  // Fixed: Now navigates to ListingsPage
             },
-            { name: "Listings", icon: <FiBox size={18} />, id: "listings" },
             { name: "Customers", icon: <FiUsers size={18} />, id: "customers" },
           ].map((item) => (
             <button
               key={item.id}
-              onClick={() => setActiveTab(item.id)}
+              onClick={item.onClick || (() => setActiveTab(item.id))}
               className={`flex items-center w-full px-4 py-3 text-sm transition-colors ${
                 activeTab === item.id
                   ? "bg-gray-100 text-gray-900 font-medium border-l-4 border-gray-800"
@@ -149,13 +150,10 @@ export default function Dashboard() {
           ))}
         </nav>
 
-        {/* Create Listing Button (Fixed at the bottom) */}
+        {/* Create Listing Button */}
         <div className="p-4 border-t border-gray-200 mt-auto">
           <button
-            onClick={() => {
-              console.log("Attempting navigation...");
-              navigate("/productdetails");
-            }}
+            onClick={() => navigate("/productdetails")}
             className="flex items-center w-full px-4 py-3 text-sm bg-gray-800 text-white rounded-md hover:bg-gray-700"
           >
             <FiPlus className={sidebarOpen ? "mr-3" : "mx-auto"} />
@@ -164,7 +162,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Main Content Area */}
       <div className="flex-1 overflow-auto">
         <header className="bg-white shadow-xs p-4 border-b border-gray-200">
           <div className="flex justify-between items-center max-w-7xl mx-auto">
@@ -234,9 +232,9 @@ export default function Dashboard() {
             ))}
           </div>
 
-          {/* Content Area */}
+          {/* Charts & Activity Section */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Device Rentals */}
+            {/* Device Rentals Chart */}
             <div className="bg-white p-5 rounded-lg shadow-xs border border-gray-200 lg:col-span-2">
               <div className="flex justify-between items-center mb-5">
                 <h2 className="text-lg font-semibold text-gray-800">

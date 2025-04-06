@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const RentourLogin = () => {
   const [formData, setFormData] = React.useState({
@@ -182,12 +183,12 @@ const RentourLogin = () => {
                 </div>
 
                 <div className="text-sm">
-                  <a
-                    href="#"
+                  <Link
+                    to="/forgot-password"
                     className="font-medium text-gray-700 hover:text-gray-800"
                   >
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -254,12 +255,12 @@ const RentourLogin = () => {
           <div className="mt-6 text-center text-sm">
             <p className="text-gray-600">
               New to Rentour?{" "}
-              <a
-                href="#"
+              <Link
+                to="/register"
                 className="font-medium text-gray-700 hover:text-gray-800"
               >
                 Create an account
-              </a>
+              </Link>
             </p>
           </div>
         </div>

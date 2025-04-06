@@ -16,6 +16,8 @@ import SellerRegister from "./pages/Sellerregister";
 import AuthLayout from "./Layout/Authlayout";
 import DashboardLayout from "./Layout/DashboardLayout";
 import ProductDetails from "./pages/ProductDetails";
+import ForgotPassword from "./pages/ForgotPassword";
+import ListingsPage from "./pages/ListingsPage";
 
 const App = () => {
   return (
@@ -25,9 +27,11 @@ const App = () => {
           {/* Authentication Routes */}
           <Route path="/login" element={<SellerLogin />} />
           <Route path="/register" element={<SellerRegister />} />
+          <Route path="/forgot-password" element ={<ForgotPassword/>}/>
         </Route>
 
         <Route element={<DashboardLayout />}>
+          <Route path="/listings" element={<ListingsPage/>}/>
           <Route path="/productdetails" element={<ProductDetails/>} />
           <Route path="/upload-images" element={<Uploadimage />} />
           <Route path="/finalize" element={<Finalize />} />

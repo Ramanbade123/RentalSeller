@@ -5,23 +5,7 @@ import { FiUser, FiHeart, FiShoppingCart, FiSearch } from "react-icons/fi";
 
 const LoginNav = ({
     logo = "/logo.svg",
-    links = [
-        {
-            name: "You",
-            path: "/",
-            icon: <FiUser className="w-5 h-5" />
-        },
-        {
-            name: "Wishlist",
-            path: "/contact",
-            icon: <FiHeart className="w-5 h-5" />
-        },
-        {
-            name: "Cart",
-            path: "/",
-            icon: <FiShoppingCart className="w-5 h-5" />
-        }
-    ],
+    links = [],
     classes = "",
     scrollToSection,
     auths = []
@@ -54,27 +38,7 @@ const LoginNav = ({
             {/* Navigation Links */}
             <div className="flex items-center justify-end gap-4 sm:gap-6 text-sm sm:text-base">
                 <div className="hidden sm:flex items-center gap-6">
-                    {links.map((link, index) =>
-                        link.ref ? (
-                            <button
-                                key={index}
-                                onClick={() => scrollToSection(link.ref)}
-                                className="flex items-center gap-1.5 text-gray-600 hover:text-gray-900 transition-colors"
-                            >
-                                {link.icon}
-                                <span>{link.name}</span>
-                            </button>
-                        ) : (
-                            <Link
-                                key={index}
-                                to={link.path}
-                                className="flex items-center gap-1.5 text-gray-600 hover:text-gray-900 transition-colors"
-                            >
-                                {link.icon}
-                                <span>{link.name}</span>
-                            </Link>
-                        )
-                    )}
+                    {/* Navigation links removed */}
                 </div>
 
                 <div className="flex items-center gap-3 sm:gap-4">

@@ -28,10 +28,10 @@ const Confirmation = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-8">
-          <CheckCircleIcon className="mx-auto h-16 w-16 text-green-500" />
+          <CheckCircleIcon className="mx-auto h-16 w-16 text-gray-700" />
           <h1 className="mt-3 text-3xl font-bold text-gray-900">Your Product Has Been Listed Successfully!</h1>
           <p className="mt-2 text-lg text-gray-600">
             Your item is now live and visible to potential buyers. Here are the details:
@@ -40,7 +40,7 @@ const Confirmation = () => {
 
         <div className="bg-white shadow rounded-lg overflow-hidden">
           {/* Product Images */}
-          <div className="p-4 border-b">
+          <div className="p-4 border-b border-gray-200">
             <h2 className="text-lg font-medium text-gray-900 mb-3">Product Images</h2>
             <div className="grid grid-cols-2 gap-4">
               {productData.images.map((img, index) => (
@@ -55,7 +55,7 @@ const Confirmation = () => {
           </div>
 
           {/* Product Details */}
-          <div className="p-4 border-b">
+          <div className="p-4 border-b border-gray-200">
             <h2 className="text-lg font-medium text-gray-900 mb-3">Product Details</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -105,26 +105,26 @@ const Confirmation = () => {
         </div>
 
         {/* Next Steps */}
-        <div className="mt-8 bg-indigo-50 p-6 rounded-lg">
-          <h2 className="text-lg font-medium text-indigo-800 mb-3">Next Steps</h2>
+        <div className="mt-8 bg-gray-100 p-6 rounded-lg">
+          <h2 className="text-lg font-medium text-gray-800 mb-3">Next Steps</h2>
           <ul className="space-y-3">
             <li className="flex items-start">
-              <svg className="h-5 w-5 text-indigo-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-5 w-5 text-gray-700 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="text-indigo-700">Your listing is now active and visible to buyers</span>
+              <span className="text-gray-700">Your listing is now active and visible to buyers</span>
             </li>
             <li className="flex items-start">
-              <svg className="h-5 w-5 text-indigo-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-5 w-5 text-gray-700 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="text-indigo-700">You'll receive notifications when buyers show interest</span>
+              <span className="text-gray-700">You'll receive notifications when buyers show interest</span>
             </li>
             <li className="flex items-start">
-              <svg className="h-5 w-5 text-indigo-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-5 w-5 text-gray-700 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
-              <span className="text-indigo-700">You can manage your listing from your dashboard</span>
+              <span className="text-gray-700">You can manage your listing from your dashboard</span>
             </li>
           </ul>
         </div>
@@ -133,15 +133,15 @@ const Confirmation = () => {
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <button
             onClick={() => navigate('/dashboard')}
-            className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="px-6 py-3 bg-gray-700 text-white font-medium rounded-md shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
           >
             Go to Dashboard
           </button>
           <button
-            onClick={() => navigate('/create-listing')}
-            className="px-6 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            onClick={() => navigate('/listings')}
+            className="px-6 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
           >
-            List Another Item
+            View Listing
           </button>
         </div>
       </div>
