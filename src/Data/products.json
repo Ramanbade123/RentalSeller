@@ -632,5 +632,33 @@
       }
     ],
     "features": ["Sleep Tracking", "Step Counter", "Water Resistant"]
+  },
+  {
+    "id": 23,
+    "name": "PulseFit Mini",
+    "category": "mobiles",
+    "publisher": "fitzone",
+    "description": "Compact smart band with sleep tracking and step counter.",
+    "stock": 70,
+    "sold": 41,
+    "productAvatar": "/images/Laptop/laptop4.png",
+    "images": [
+      "/images/Smartwatch/laptop4.png",
+      "/images/Smartwatch/laptop3.png",
+      "/images/Smartwatch/laptop2.png"
+    ],
+    "originalPrice": 199,
+    "offeredPrice": 159,
+    "rating": 4.1,
+    "createdAt": "2025-03-16",
+    "reviews": [
+      {
+        "user": "stepmaster",
+        "comment": "Light and accurate, great for daily use.",
+        "rating": 4,
+        "profileImg": "/images/Smartwatch/watch1.png"
+      }
+    ],
+    "features": ["Sleep Tracking", "Step Counter", "Water Resistant"]
   }
 ]

@@ -1,3 +1,297 @@
 [
-
+  {
+    "id": 1743954428129,
+    "name": "Anish Gautam",
+    "username": "anish1",
+    "email": "anish@gmail.com",
+    "password": "$2b$10$yUBNQI4dIlHJNazjJVKtoulsRK3PfuXDTk6FDxiQC.xL3/sLE3jZG",
+    "userType": "buyer",
+    "reviews": [],
+    "products": [],
+    "cart": [],
+    "wishlist": []
+  },
+  {
+    "id": 1744003693763,
+    "name": "Anish Gautam",
+    "username": "admin",
+    "email": "admin@gmail.com",
+    "password": "$2b$10$hz9Pp3Zw6fWpYnS9yO1rJupCRE9qcBDc.PG9lCmobmQWrob958AB2",
+    "userType": "buyer",
+    "cart": [
+      {
+        "id": 13,
+        "name": "Edge Lite 6",
+        "category": "mobiles",
+        "publisher": "mobiplus",
+        "description": "Slim and sleek smartphone with powerful battery backup.",
+        "stock": 65,
+        "sold": 43,
+        "badge": "Sale",
+        "productAvatar": "/images/Smartphones/mobile2.png",
+        "images": [
+          "/images/Smartphones/mobile1.png",
+          "/images/Smartphones/mobile2.png",
+          "/images/Smartphones/mobile3.png",
+          "/images/Smartphones/mobile4.png"
+        ],
+        "originalPrice": 749,
+        "offeredPrice": 659,
+        "rating": 4.4,
+        "createdAt": "2025-03-29",
+        "reviews": [
+          {
+            "user": "mobilefreak",
+            "comment": "Solid battery and lightweight.",
+            "rating": 4,
+            "profileImg": "/images/Smartphones/mobile4.png"
+          }
+        ],
+        "features": [
+          "Lightweight",
+          "Long Battery",
+          "Face Unlock"
+        ],
+        "quantity": 1
+      },
+      {
+        "id": 17,
+        "name": "ZenTime 360",
+        "category": "headphones",
+        "publisher": "wristtech",
+        "description": "Premium smartwatch with metal body and wireless charging.",
+        "stock": 38,
+        "sold": 25,
+        "productAvatar": "/images/Smartwatch/watch2.png",
+        "images": [
+          "/images/Smartwatch/watch1.png",
+          "/images/Smartwatch/watch2.png",
+          "/images/Smartwatch/watch3.png"
+        ],
+        "originalPrice": 349,
+        "offeredPrice": 289,
+        "rating": 4.5,
+        "createdAt": "2025-03-19",
+        "reviews": [
+          {
+            "user": "classytech",
+            "comment": "Feels and looks like a premium watch.",
+            "rating": 5,
+            "profileImg": "/images/Smartwatch/watch3.png"
+          }
+        ],
+        "features": [
+          "Wireless Charging",
+          "Metal Body",
+          "Waterproof"
+        ],
+        "quantity": 1
+      },
+      {
+        "id": 6,
+        "name": "SnapShot Pro 12",
+        "category": "cameras",
+        "publisher": "shuttermax",
+        "description": "DSLR camera with 24MP resolution and fast autofocus.",
+        "stock": 45,
+        "sold": 29,
+        "productAvatar": "/images/Camera/camera2.png",
+        "images": [
+          "/images/Camera/camera2.png",
+          "/images/Camera/camera3.png",
+          "/images/Camera/camera4.png"
+        ],
+        "originalPrice": 1299,
+        "offeredPrice": 1049,
+        "rating": 4.6,
+        "createdAt": "2025-04-01",
+        "reviews": [
+          {
+            "user": "lensmaster",
+            "comment": "Fast shutter and great image clarity!",
+            "rating": 5,
+            "profileImg": "/images/Camera/camera4.png"
+          }
+        ],
+        "features": [
+          "24MP",
+          "Autofocus",
+          "HDR",
+          "WiFi"
+        ],
+        "quantity": 1
+      }
+    ],
+    "wishlist": [
+      {
+        "id": 20,
+        "name": "PulseFit Mini",
+        "category": "laptops",
+        "publisher": "fitzone",
+        "description": "Compact smart band with sleep tracking and step counter.",
+        "stock": 70,
+        "sold": 41,
+        "productAvatar": "/images/Laptop/laptop2.png",
+        "images": [
+          "/images/Smartwatch/laptop4.png",
+          "/images/Smartwatch/laptop3.png",
+          "/images/Smartwatch/laptop2.png"
+        ],
+        "originalPrice": 199,
+        "offeredPrice": 159,
+        "rating": 4.1,
+        "createdAt": "2025-03-16",
+        "reviews": [
+          {
+            "user": "stepmaster",
+            "comment": "Light and accurate, great for daily use.",
+            "rating": 4,
+            "profileImg": "/images/Smartwatch/watch1.png"
+          }
+        ],
+        "features": [
+          "Sleep Tracking",
+          "Step Counter",
+          "Water Resistant"
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Edge Lite 6",
+        "category": "mobiles",
+        "publisher": "mobiplus",
+        "description": "Slim and sleek smartphone with powerful battery backup.",
+        "stock": 65,
+        "sold": 43,
+        "badge": "Sale",
+        "productAvatar": "/images/Smartphones/mobile2.png",
+        "images": [
+          "/images/Smartphones/mobile1.png",
+          "/images/Smartphones/mobile2.png",
+          "/images/Smartphones/mobile3.png",
+          "/images/Smartphones/mobile4.png"
+        ],
+        "originalPrice": 749,
+        "offeredPrice": 659,
+        "rating": 4.4,
+        "createdAt": "2025-03-29",
+        "reviews": [
+          {
+            "user": "mobilefreak",
+            "comment": "Solid battery and lightweight.",
+            "rating": 4,
+            "profileImg": "/images/Smartphones/mobile4.png"
+          }
+        ],
+        "features": [
+          "Lightweight",
+          "Long Battery",
+          "Face Unlock"
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Nova X1 Pro",
+        "category": "mobiles",
+        "publisher": "techgeekz",
+        "description": "Flagship smartphone with AMOLED display and quad camera setup.",
+        "stock": 80,
+        "sold": 60,
+        "badge": "New",
+        "productAvatar": "/images/Smartphones/mobile1.png",
+        "images": [
+          "/images/Smartphones/mobile1.png",
+          "/images/Smartphones/mobile2.png",
+          "/images/Smartphones/mobile3.png",
+          "/images/Smartphones/mobile4.png"
+        ],
+        "originalPrice": 999,
+        "offeredPrice": 849,
+        "rating": 4.7,
+        "createdAt": "2025-04-06",
+        "reviews": [
+          {
+            "user": "xuser007",
+            "comment": "Beast performance and stunning camera!",
+            "rating": 5,
+            "profileImg": "/images/Smartphones/mobile2.png"
+          }
+        ],
+        "features": [
+          "AMOLED",
+          "Quad Camera",
+          "Fast Charging",
+          "5G"
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Galaxy Neo 5",
+        "category": "mobiles",
+        "publisher": "neomobile",
+        "description": "Mid-range device with excellent camera and storage.",
+        "stock": 90,
+        "sold": 58,
+        "badge": "New",
+        "productAvatar": "/images/Smartphones/mobile3.png",
+        "images": [
+          "/images/Smartphones/mobile1.png",
+          "/images/Smartphones/mobile2.png",
+          "/images/Smartphones/mobile3.png",
+          "/images/Smartphones/mobile4.png"
+        ],
+        "originalPrice": 599,
+        "offeredPrice": 499,
+        "rating": 4.3,
+        "createdAt": "2025-03-26",
+        "reviews": [
+          {
+            "user": "camerakid",
+            "comment": "Camera performance exceeded my expectations.",
+            "rating": 4,
+            "profileImg": "/images/Smartphones/mobile1.png"
+          }
+        ],
+        "features": [
+          "64MP Camera",
+          "128GB Storage",
+          "Fingerprint Sensor"
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Pixel Spark 3",
+        "category": "mobiles",
+        "publisher": "sparkmobile",
+        "description": "Compact phone with pure Android and fast updates.",
+        "stock": 55,
+        "sold": 39,
+        "badge": "Sale",
+        "productAvatar": "/images/Smartphones/mobile4.png",
+        "images": [
+          "/images/Smartphones/mobile1.png",
+          "/images/Smartphones/mobile2.png",
+          "/images/Smartphones/mobile3.png",
+          "/images/Smartphones/mobile4.png"
+        ],
+        "originalPrice": 499,
+        "offeredPrice": 429,
+        "rating": 4.2,
+        "createdAt": "2025-03-23",
+        "reviews": [
+          {
+            "user": "droidfan",
+            "comment": "Clean UI and great compact feel.",
+            "rating": 4,
+            "profileImg": "/images/Smartphones/mobile3.png"
+          }
+        ],
+        "features": [
+          "Pure Android",
+          "Compact",
+          "Fast Updates"
+        ]
+      }
+    ]
+  }
 ]

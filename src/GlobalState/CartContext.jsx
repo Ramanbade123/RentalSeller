@@ -1,11 +1,9 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useRef } from "react";
+import axiosInstance, { setAuthToken } from "../utils/axiosInstance";
 
-// Create context
 const CartContext = createContext();
 
-// Provider component
 export const CartProvider = ({ children }) => {
-  // Lazy init from localStorage
   const [cartItems, setCartItems] = useState(() => {
     try {
       return JSON.parse(localStorage.getItem("cart")) || [];
@@ -24,11 +22,54 @@ export const CartProvider = ({ children }) => {
     }
   });
 
-  // Save to localStorage when cart or wishlist changes
+  const prevCartRef = useRef(cartItems);
+  const prevWishlistRef = useRef(wishlistItems);
+
+  // Set auth token on first render
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      setAuthToken(token);
+    }
+  }, []);
+
+  // Sync updated cart only if it changed
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
+
+    const prevCart = prevCartRef.current;
+    if (JSON.stringify(cartItems) !== JSON.stringify(prevCart)) {
+      syncCart(cartItems);
+      prevCartRef.current = cartItems;
+    }
+  }, [cartItems]);
+
+  // Sync updated wishlist only if it changed
+  useEffect(() => {
     localStorage.setItem("wishlist", JSON.stringify(wishlistItems));
-  }, [cartItems, wishlistItems]);
+
+    const prevWishlist = prevWishlistRef.current;
+    if (JSON.stringify(wishlistItems) !== JSON.stringify(prevWishlist)) {
+      syncWishlist(wishlistItems);
+      prevWishlistRef.current = wishlistItems;
+    }
+  }, [wishlistItems]);
+
+  const syncCart = async (updatedCart) => {
+    try {
+      await axiosInstance.post("/user/update-cart", { cart: updatedCart });
+    } catch (error) {
+      console.error("Failed syncing cart to backend:", error);
+    }
+  };
+
+  const syncWishlist = async (updatedWishlist) => {
+    try {
+      await axiosInstance.post("/user/update-wishlist", { wishlist: updatedWishlist });
+    } catch (error) {
+      console.error("Failed syncing wishlist to backend:", error);
+    }
+  };
 
   return (
     <CartContext.Provider
@@ -44,5 +85,4 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the cart context
 export const useCart = () => useContext(CartContext);

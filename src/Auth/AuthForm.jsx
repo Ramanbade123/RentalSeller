@@ -6,6 +6,7 @@ import { FaGooglePlusG, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/
 import { z } from "zod";
 
 import { ToastContainer, toast } from 'react-toastify';
+import { setAuthToken } from "../utils/axiosInstance";
 
 const fullNameSchema = z.string()
     .min(5, "Full Name must include at least first and last name")
@@ -94,6 +95,7 @@ const AuthForm = () => {
                 console.log(`Data received from server on ${type}`, data);
                 const authToken = data?.tokens?.access || data?.message;
                 localStorage.setItem("authToken", authToken);
+                setAuthToken(authToken);
                 navigate("/");
             } catch (error) {
                 const errorMessage = error?.response?.data?.username?.[0] ||

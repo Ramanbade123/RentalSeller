@@ -113,7 +113,9 @@ export const signup = (req, res) => {
     res.status(201).json({
       success: true,
       message: "Signup successful!",
-      token,
+      tokens: {
+        access: token,
+      },
       user: {
         id: newUser.id,
         name: newUser.name,

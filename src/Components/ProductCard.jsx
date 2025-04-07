@@ -29,7 +29,7 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <div className="relative group w-[90%] sm:min-w-[22%] sm:w-[22%] bg-white rounded-lg h-[55dvh] shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <div className="relative group w-[90%] sm:min-w-[22%] sm:w-[300px] bg-white rounded-lg h-[55dvh] shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
             {/* Wishlist Icon */}
             <div
                 onClick={toggleWishlist}
@@ -50,12 +50,13 @@ const ProductCard = ({ product }) => {
             )}
 
             {/* Image section */}
-            <div className="h-[80%] bg-gray-100 w-full p-[2px]">
-                <Link to={`/${product.category}/${product.id}`}>
+            <div className="h-[80%] aspect-auto bg-pink-500 w-full p-[2px]">
+                <Link to={`/${product.category}/${product.id}`} className="w-full h-full aspect-auto">
                     <img
                         src={product.productAvatar}
                         alt={product.name}
-                        className="w-full h-full object-contain"
+                        onError={(e) => { e.currentTarget.src = "/placeholder.png"; e.currentTarget.onerror = null; }}
+                        className="w-full h-full bg-yellow-200 object-contain"
                     />
                 </Link>
             </div>

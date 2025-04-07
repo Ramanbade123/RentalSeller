@@ -1,0 +1,16 @@
+import axios from "axios";
+
+const axiosInstance = axios.create({
+  baseURL: "http://localhost:5000/api", // or your deployed backend URL
+});
+
+export const setAuthToken = (token) => {
+  if (token) {
+    console.log("Seted auth token:", token);
+    axiosInstance.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  } else {
+    delete axiosInstance.defaults.headers.common["Authorization"];
+  }
+};
+
+export default axiosInstance;
