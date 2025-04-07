@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import clsx from "clsx";
-import { FiUser, FiHeart, FiShoppingCart, FiSearch } from "react-icons/fi";
+import { FiUser, FiHeart, FiShoppingCart, FiSearch, FiHome } from "react-icons/fi";
 
 const LoginNav = ({
     logo = "/logo.svg",
@@ -19,7 +19,6 @@ const LoginNav = ({
         )}>
             {/* Logo */}
             {logo && <Link to="/" className="flex items-center text-gray-800 text-lg sm:text-xl font-medium gap-2 sm:gap-3 sm:w-[20%]">
-                <img src={logo} alt={"RenTour"} className="w-[25px] sm:w-[30px]" /> 
                 <span className="hidden sm:flex">RenTour</span>
             </Link>}
             
@@ -35,26 +34,43 @@ const LoginNav = ({
                 />
             </div>
             
-            {/* Navigation Links */}
-            <div className="flex items-center justify-end gap-4 sm:gap-6 text-sm sm:text-base">
-                <div className="hidden sm:flex items-center gap-6">
-                    {/* Navigation links removed */}
-                </div>
-
-                <div className="flex items-center gap-3 sm:gap-4">
-                    <Link
-                        to="/login"
-                        className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-                    >
-                        Login
-                    </Link>
-                    <button
-                        onClick={() => navigate("/register")}
-                        className="px-3 py-1.5 sm:px-4 sm:py-2 text-sm font-medium text-white bg-gray-800 hover:bg-gray-700 rounded-md transition-colors"
-                    >
-                        Register for free
-                    </button>
-                </div>
+            {/* Navigation Icons */}
+            <div className="flex items-center justify-end gap-4 sm:gap-6">
+                <Link 
+                    to="/landingpage" 
+                    className="text-gray-600 hover:text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                    aria-label="Home"
+                >
+                    <FiHome className="w-5 h-5 sm:w-6 sm:h-6" />
+                </Link>
+                
+                <Link 
+                    to="/profile" 
+                    className="text-gray-600 hover:text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                    aria-label="Profile"
+                >
+                    <FiUser className="w-5 h-5 sm:w-6 sm:h-6" />
+                </Link>
+                
+                <Link 
+                    to="/wishlist" 
+                    className="text-gray-600 hover:text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                    aria-label="Wishlist"
+                >
+                    <FiHeart className="w-5 h-5 sm:w-6 sm:h-6" />
+                </Link>
+                
+                <Link 
+                    to="/cart" 
+                    className="text-gray-600 hover:text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors relative"
+                    aria-label="Cart"
+                >
+                    <FiShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
+                    {/* Cart item count badge */}
+                    <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                        3
+                    </span>
+                </Link>
             </div>
         </nav>
     );

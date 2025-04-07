@@ -20,7 +20,7 @@ const ListingsPage = () => {
       price: '350000', 
       description: 'Videography camera', 
       status: 'Active',
-      category: 'Mobile',
+      category: 'Camera',
       location: 'Kathmandu'
     },
 

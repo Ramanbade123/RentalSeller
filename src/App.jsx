@@ -18,6 +18,16 @@ import DashboardLayout from "./Layout/DashboardLayout";
 import ProductDetails from "./pages/ProductDetails";
 import ForgotPassword from "./pages/ForgotPassword";
 import ListingsPage from "./pages/ListingsPage";
+import Homepage from "./pages/Homepage";
+import HowItWorks from "./pages/HowItWorks";
+import MobileDetails from "./pages/MobileDetails";
+// Import new product category pages
+import SmartphonesPage from "./pages/SmartphonesPage";
+import LaptopsPage from "./pages/LaptopsPage";
+import CamerasPage from "./pages/CamerasPage";
+import SmartwatchesPage from "./pages/SmartwatchesPage";
+import Products from "./pages/Products";
+import AnalyticsPage from "./pages/AnalyticsPage";
 
 const App = () => {
   return (
@@ -25,27 +35,36 @@ const App = () => {
       <Routes>
         <Route element={<AuthLayout />}>
           {/* Authentication Routes */}
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/landingpage" element={<Homepage />} />
+          <Route path="/howitworks" element={<HowItWorks />} />
+          <Route path="/mobile-details" element={<MobileDetails />} />
           <Route path="/login" element={<SellerLogin />} />
           <Route path="/register" element={<SellerRegister />} />
-          <Route path="/forgot-password" element ={<ForgotPassword/>}/>
-        </Route>
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+
+          {/* New Product Category Routes */}
+          <Route path="/products/smartphones" element={<SmartphonesPage />} />
+          <Route path="/products/laptops" element={<LaptopsPage />} />
+          <Route path="/products/cameras" element={<CamerasPage />} />
+          <Route path="/products/smartwatches" element={<SmartwatchesPage />} />
+          <Route path="/products" element={<Products/>}/>
+         </Route>
 
         <Route element={<DashboardLayout />}>
-          <Route path="/listings" element={<ListingsPage/>}/>
-          <Route path="/productdetails" element={<ProductDetails/>} />
+          <Route path="/listings" element={<ListingsPage />} />
+          <Route path="/productdetails" element={<ProductDetails />} />
           <Route path="/upload-images" element={<Uploadimage />} />
           <Route path="/finalize" element={<Finalize />} />
           <Route path="/confirmation" element={<Confirmation />} />
         </Route>
 
-        {/* Dashboard route */}
-        <Route path="/dashboard" element={<Dashboard />} />
-
-        {/* Default route - redirect to login */}
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="/analytics" element={<AnalyticsPage/>}/>
+        {/* Default route - redirect to landing page */}
+        <Route path="/" element={<Navigate to="/landingpage" replace />} />
 
         {/* Catch-all route for undefined paths */}
-        <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        <Route path="*" element={<Navigate to="/landingpage" replace />} />
       </Routes>
       <Footer />
     </Router>

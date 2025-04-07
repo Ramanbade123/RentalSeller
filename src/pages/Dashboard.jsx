@@ -123,19 +123,46 @@ export default function Dashboard() {
 
         <nav className="mt-6 flex-1">
           {[
-            { name: "Dashboard", icon: <FiHome size={18} />, id: "dashboard" },
-            { name: "Analytics", icon: <FiPieChart size={18} />, id: "analytics" },
+            { 
+              name: "Dashboard", 
+              icon: <FiHome size={18} />, 
+              id: "dashboard",
+              onClick: () => {
+                setActiveTab("dashboard");
+                navigate("/dashboard");
+              }
+            },
+            { 
+              name: "Analytics", 
+              icon: <FiPieChart size={18} />, 
+              id: "analytics",
+              onClick: () => {
+                setActiveTab("analytics");
+                navigate("/analytics");
+              }
+            },
             { 
               name: "Listings", 
               icon: <FiBox size={18} />, 
               id: "listings",
-              onClick: () => navigate("/listings")  // Fixed: Now navigates to ListingsPage
+              onClick: () => {
+                setActiveTab("listings");
+                navigate("/listings");
+              }
             },
-            { name: "Customers", icon: <FiUsers size={18} />, id: "customers" },
+            { 
+              name: "Customers", 
+              icon: <FiUsers size={18} />, 
+              id: "customers",
+              onClick: () => {
+                setActiveTab("customers");
+                navigate("/customers");
+              }
+            },
           ].map((item) => (
             <button
               key={item.id}
-              onClick={item.onClick || (() => setActiveTab(item.id))}
+              onClick={item.onClick}
               className={`flex items-center w-full px-4 py-3 text-sm transition-colors ${
                 activeTab === item.id
                   ? "bg-gray-100 text-gray-900 font-medium border-l-4 border-gray-800"
