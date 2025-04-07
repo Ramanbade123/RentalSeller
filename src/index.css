@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
 @import "tailwindcss";
 
 body {
@@ -18,5 +19,11 @@ body {
 .meow-script-regular {
     font-family: "Meow Script", cursive;
     font-weight: 400;
+    font-style: normal;
+}
+
+.lavishly-yours-regular {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 550;
     font-style: normal;
 }

@@ -20,7 +20,7 @@ const NavBar = ({ toggleCart }) => {
                     <div className=''>
                         <img src="/logo.svg" alt="logo" className='h-full w-[30px] sm:w-[40px] md:w-[50px] object-cover ' />
                     </div>
-                    <h1 className='meow-script-regular text-2xl sm:text-3xl md:text-5xl'>RenTour</h1>
+                    <h1 className='lavishly-yours-regular text-3xl sm:text-5xl md:text-6xl font-bold'>RenTour</h1>
                 </Link>
                 <div className='absolute z-2 right-4 w-fit h-full flex top-[50%] -translate-y-[50%] items-center justify-end gap-4 sm:gap-x-8 text-[16px] sm:text-[24px]'>
                     <Link to={"/auth"}>
