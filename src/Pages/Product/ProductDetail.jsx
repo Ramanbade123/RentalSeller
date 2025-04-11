@@ -1,23 +1,38 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import products from "/src/Data/products.json";
 import { useCart } from "../../GlobalState/CartContext";
 import { IoIosStar } from "react-icons/io";
+import axios from "axios";
 
 const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true); // track loading
-    const { cartItems, setCartItems } = useCart();
+    const { cartItems, setCartItems, isLoggedIn } = useCart();
+    // fetch the product detail 
     useEffect(() => {
-        const found = products.find(p => p.id === Number(id));
-        setProduct(found);
-        setLoading(false); // done loading
-    }, [id])
+        const baseUrl = import.meta.env.VITE_API_BASE_URL;
+        const fetchProduct = async () => {
+            try {
+                const res = await axios.get(`${baseUrl}/products/${id}`);
+                setProduct(res.data);
+            } catch (err) {
+                console.error("Error fetching product:", err);
+                setProduct(null);
+            } finally {
+                setLoading(false);
+            }
+        };
 
+        fetchProduct();
+    }, [id]);
 
 
     const handleAddToCart = () => {
+        if (!isLoggedIn) {
+            alert("Login to Add on Cart");
+            return;
+        };
         const updated = [...cartItems];
         const exists = updated.find(item => item.id === product.id);
         if (exists) {
@@ -71,13 +86,6 @@ const ProductDetail = () => {
                     >
                         Add to Cart
                     </button>
-
-                    {/* <button
-                        onClick={handleAddToCart}
-                        className="text-[13px] sm:text-[14px] cursor-pointer  px-6 py-1 border border-black bg-black text-white hover:bg-white hover:text-black transition-all duration-300"
-                    >
-                        Wishlist
-                    </button> */}
                 </div>
 
                 {/* Reviews */}

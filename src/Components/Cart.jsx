@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { LuPanelRightClose } from "react-icons/lu";
 import { useCart } from "../GlobalState/CartContext";
+import { Link } from "react-router-dom";
 
 const Cart = ({ isOpen, toggleCart }) => {
-  const { cartItems, setCartItems } = useCart();
+  const { cartItems, setCartItems, subtractFromCart, isLoggedIn } = useCart();
 
   // Load cart only once on component mount
   useEffect(() => {
@@ -20,7 +21,7 @@ const Cart = ({ isOpen, toggleCart }) => {
 
   // Update quantity
   const updateQuantity = (id, newQty) => {
-    if (newQty < 1) return; // Prevent 0 or negative quantity
+    if (newQty < 1) return;
     const updatedCart = cartItems.map((item) =>
       item.id === id ? { ...item, quantity: newQty } : item
     );
@@ -50,7 +51,15 @@ const Cart = ({ isOpen, toggleCart }) => {
       {/* Cart Content */}
       <h2 className="text-xl font-semibold mb-4">Your Cart</h2>
 
-      {cartItems.length === 0 ? (
+      {!isLoggedIn ? (
+        <div className="mt-4 text-center text-sm text-red-600 font-medium">
+          Please{" "}
+          <Link onClick={toggleCart} to="/auth" className="text-blue-600 underline hover:text-blue-800">
+            log in
+          </Link>{" "}
+          to use your cart.
+        </div>
+      ) : cartItems.length === 0 ? (
         <p className="text-gray-600">No items in the cart.</p>
       ) : (
         <div>
@@ -62,7 +71,7 @@ const Cart = ({ isOpen, toggleCart }) => {
               <img
                 src={item.productAvatar}
                 alt={item.name}
-                className="w-16 h-16 object-contain "
+                className="w-16 h-16 object-contain"
               />
               <div className="flex-1 px-3">
                 <h3 className="text-sm font-medium">{item.name}</h3>
@@ -73,16 +82,17 @@ const Cart = ({ isOpen, toggleCart }) => {
                 {/* Quantity Controls */}
                 <div className="flex items-center gap-2 mt-1">
                   <button
-                    onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                    className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
-                    disabled={item.quantity <= 1}
+                    onClick={() => subtractFromCart(item.id)}
+                    className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
+                    disabled={item.quantity <= 1 || !isLoggedIn}
                   >
                     -
                   </button>
                   <span>{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                    className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                    className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
+                    disabled={!isLoggedIn}
                   >
                     +
                   </button>
@@ -90,8 +100,9 @@ const Cart = ({ isOpen, toggleCart }) => {
               </div>
 
               <button
-                className="text-red-500 text-sm font-semibold hover:underline"
+                className="text-red-500 text-sm font-semibold hover:underline disabled:opacity-50"
                 onClick={() => removeFromCart(item.id)}
+                disabled={!isLoggedIn}
               >
                 Remove
               </button>

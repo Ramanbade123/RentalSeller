@@ -4,7 +4,7 @@ import { useCart } from "../GlobalState/CartContext";
 
 
 const WishlistCard = ({ product }) => {
-    const { wishlistItems, setWishlistItems, cartItems, setCartItems } = useCart();
+    const { cartItems, setCartItems, removeFromWishlist } = useCart();
 
     const addToCart = () => {
         const exists = cartItems.find((item) => item.id === product.id);
@@ -13,9 +13,8 @@ const WishlistCard = ({ product }) => {
         }
     };
 
-    const removeFromWishlist = () => {
-        const updated = wishlistItems.filter((item) => item.id !== product.id);
-        setWishlistItems(updated);
+    const removeItem = (id) => {
+        removeFromWishlist(id)
     };
 
     return (
@@ -37,7 +36,7 @@ const WishlistCard = ({ product }) => {
                 </button>
                 <button
                     className="bg-red-500 text-white p-2 rounded hover:bg-red-600"
-                    onClick={removeFromWishlist}
+                    onClick={() => { removeItem(product.id) }}
                 >
                     <FaTrashAlt />
                 </button>

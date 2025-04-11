@@ -50,13 +50,13 @@ const ProductCard = ({ product }) => {
             )}
 
             {/* Image section */}
-            <div className="h-[80%] aspect-auto bg-pink-500 w-full p-[2px]">
+            <div className="h-[80%] aspect-auto bg-gray-100 w-full p-[2px]">
                 <Link to={`/${product.category}/${product.id}`} className="w-full h-full aspect-auto">
                     <img
                         src={product.productAvatar}
                         alt={product.name}
                         onError={(e) => { e.currentTarget.src = "/placeholder.png"; e.currentTarget.onerror = null; }}
-                        className="w-full h-full bg-yellow-200 object-contain"
+                        className="w-full h-full object-contain"
                     />
                 </Link>
             </div>

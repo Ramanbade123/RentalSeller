@@ -4,52 +4,60 @@ import axiosInstance, { setAuthToken } from "../utils/axiosInstance";
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState(() => {
-    try {
-      return JSON.parse(localStorage.getItem("cart")) || [];
-    } catch (err) {
-      console.error("Failed to parse cart from localStorage:", err);
-      return [];
-    }
-  });
+  const [cartItems, setCartItems] = useState([]);
+  const [wishlistItems, setWishlistItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(() => !!localStorage.getItem("authToken"));
 
-  const [wishlistItems, setWishlistItems] = useState(() => {
-    try {
-      return JSON.parse(localStorage.getItem("wishlist")) || [];
-    } catch (err) {
-      console.error("Failed to parse wishlist from localStorage:", err);
-      return [];
-    }
-  });
+  const prevCartRef = useRef([]);
+  const prevWishlistRef = useRef([]);
 
-  const prevCartRef = useRef(cartItems);
-  const prevWishlistRef = useRef(wishlistItems);
-
-  // Set auth token on first render
+  // Set token on mount
   useEffect(() => {
     const token = localStorage.getItem("authToken");
-    if (token) {
-      setAuthToken(token);
-    }
+    setIsLoggedIn(!!token);
+    if (token) setAuthToken(token);
   }, []);
 
-  // Sync updated cart only if it changed
+  // ✅ Fetch initial cart and wishlist from backend
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [cartRes, wishlistRes] = await Promise.all([
+          axiosInstance.get("/user/get-cart"),
+          axiosInstance.get("/user/get-wishlist"),
+        ]);
+        setCartItems(cartRes.data.cart || []);
+        setWishlistItems(wishlistRes.data.wishlist || []);
+
+        prevCartRef.current = cartRes.data.cart || [];
+        prevWishlistRef.current = wishlistRes.data.wishlist || [];
+
+        localStorage.setItem("cart", JSON.stringify(cartRes.data.cart || []));
+        localStorage.setItem("wishlist", JSON.stringify(wishlistRes.data.wishlist || []));
+      } catch (err) {
+        console.error("Error fetching cart/wishlist from backend:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Auto sync cart
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
-
-    const prevCart = prevCartRef.current;
-    if (JSON.stringify(cartItems) !== JSON.stringify(prevCart)) {
+    if (JSON.stringify(cartItems) !== JSON.stringify(prevCartRef.current)) {
       syncCart(cartItems);
       prevCartRef.current = cartItems;
     }
   }, [cartItems]);
 
-  // Sync updated wishlist only if it changed
+  // Auto sync wishlist
   useEffect(() => {
     localStorage.setItem("wishlist", JSON.stringify(wishlistItems));
-
-    const prevWishlist = prevWishlistRef.current;
-    if (JSON.stringify(wishlistItems) !== JSON.stringify(prevWishlist)) {
+    if (JSON.stringify(wishlistItems) !== JSON.stringify(prevWishlistRef.current)) {
       syncWishlist(wishlistItems);
       prevWishlistRef.current = wishlistItems;
     }
@@ -71,6 +79,49 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  // ========== CART FUNCTIONS ==========
+  const addToCart = (product) => {
+    setCartItems((prev) => {
+      const exists = prev.find((item) => item.id === product.id);
+      if (exists) {
+        return prev.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      }
+      return [...prev, { ...product, quantity: 1 }];
+    });
+  };
+
+  const subtractFromCart = (productId) => {
+    setCartItems((prev) =>
+      prev
+        .map((item) =>
+          item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  };
+
+  const removeFromCart = (productId) => {
+    setCartItems((prev) => prev.filter((item) => item.id !== productId));
+  };
+
+  // ========== WISHLIST FUNCTIONS ==========
+  const addToWishlist = (product) => {
+    setWishlistItems((prev) => {
+      const exists = prev.some((item) => item.id === product.id);
+      return exists ? prev : [...prev, product];
+    });
+  };
+
+  const removeFromWishlist = (productId) => {
+    setWishlistItems((prev) => prev.filter((item) => item.id !== productId));
+  };
+
+  const clearWishlist = () => {
+    setWishlistItems([]);
+  };
+  if (loading) return <div className="p-6">Loading your data...</div>;
   return (
     <CartContext.Provider
       value={{
@@ -78,6 +129,13 @@ export const CartProvider = ({ children }) => {
         setCartItems,
         wishlistItems,
         setWishlistItems,
+        addToCart,
+        subtractFromCart,
+        removeFromCart,
+        addToWishlist,
+        removeFromWishlist,
+        clearWishlist,
+        isLoggedIn,
       }}
     >
       {children}
