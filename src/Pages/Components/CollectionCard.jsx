@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
-import allProducts from "/src/Data/products.json";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const CollectionCard = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
-        const topSold = allProducts
-            .filter((p) => typeof p.sold === "number")
-            .sort((a, b) => b.sold - a.sold)
-            .slice(0, 5);
+        const fetchTopSold = async () => {
+            try {
+                const baseUrl = import.meta.env.VITE_API_BASE_URL;
+                const res = await axios.get(`${baseUrl}/products/top-sold`);
+                setFilteredProducts(res.data);
+            } catch (error) {
+                console.error("Error fetching top sold products:", error);
+            }
+        };
 
-        setFilteredProducts(topSold);
+        fetchTopSold();
     }, []);
 
     return (

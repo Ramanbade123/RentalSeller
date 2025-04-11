@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import allProducts from "/src/Data/products.json";
+import axios from "axios";
 
 const NewArrivals = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
@@ -10,17 +10,19 @@ const NewArrivals = () => {
 
 
     useEffect(() => {
-        const latest = allProducts
-            .filter((p) => p.createdAt) // Ensures product has a date
-            .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort newest first
-            .slice(0, 4); // Get top 4
+        const fetchNewArrivals = async () => {
+            try {
+                const baseUrl = import.meta.env.VITE_API_BASE_URL;
+                const res = await axios.get(`${baseUrl}/products/new-arrivals`);
+                setFilteredProducts(res.data);
+            } catch (error) {
+                console.error("Error fetching top sold products:", error);
+            }
+        };
 
-        setFilteredProducts(latest);
-        console.log("Current Date:", new Date()); // corrected console log
+        fetchNewArrivals();
     }, []);
 
-
-    console.log("New-Arrivals products: ", filteredProducts)
 
     const handleMouseEnter = (desc, index) => {
         clearInterval(typingInterval.current);
