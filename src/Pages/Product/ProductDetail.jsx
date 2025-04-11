@@ -8,7 +8,7 @@ const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true); // track loading
-    const { cartItems, setCartItems, isLoggedIn } = useCart();
+    const { addToCart, } = useCart();
     // fetch the product detail 
     useEffect(() => {
         const baseUrl = import.meta.env.VITE_API_BASE_URL;
@@ -26,22 +26,6 @@ const ProductDetail = () => {
 
         fetchProduct();
     }, [id]);
-
-
-    const handleAddToCart = () => {
-        if (!isLoggedIn) {
-            alert("Login to Add on Cart");
-            return;
-        };
-        const updated = [...cartItems];
-        const exists = updated.find(item => item.id === product.id);
-        if (exists) {
-            exists.quantity += 1;
-        } else {
-            updated.push({ ...product, quantity: 1 });
-        }
-        setCartItems(updated);
-    };
 
     if (loading) return <div className="p-6 text-center">Loading product...</div>;
     if (!product) return <div className="p-6 text-center text-red-500">Product not found.</div>;
@@ -81,7 +65,7 @@ const ProductDetail = () => {
 
                 <div className="mt-4 flex gap-4 sm:gap-7">
                     <button
-                        onClick={handleAddToCart}
+                        onClick={() => { addToCart(product.id, product.offeredPrice) }}
                         className="text-[13px] sm:text-[14px] cursor-pointer px-6 py-1 border border-black bg-black text-white hover:bg-white hover:text-black transition-all duration-300"
                     >
                         Add to Cart

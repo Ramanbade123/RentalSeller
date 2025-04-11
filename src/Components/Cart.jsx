@@ -1,33 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { LuPanelRightClose } from "react-icons/lu";
 import { useCart } from "../GlobalState/CartContext";
 import { Link } from "react-router-dom";
+import CartCard from "./CartCard";
 
 const Cart = ({ isOpen, toggleCart }) => {
-  const { cartItems, setCartItems, subtractFromCart, isLoggedIn } = useCart();
-
-  // Load cart only once on component mount
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartItems(storedCart);
-  }, []);
-
-  // Remove item from cart
-  const removeFromCart = (id) => {
-    const updatedCart = cartItems.filter((item) => item.id !== id);
-    setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  };
-
-  // Update quantity
-  const updateQuantity = (id, newQty) => {
-    if (newQty < 1) return;
-    const updatedCart = cartItems.map((item) =>
-      item.id === id ? { ...item, quantity: newQty } : item
-    );
-    setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-  };
+  const { cartItems } = useCart();
+  const isLoggedIn = !!localStorage.getItem("authToken");
 
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.offeredPrice * item.quantity,
@@ -48,7 +27,6 @@ const Cart = ({ isOpen, toggleCart }) => {
         onClick={toggleCart}
       />
 
-      {/* Cart Content */}
       <h2 className="text-xl font-semibold mb-4">Your Cart</h2>
 
       {!isLoggedIn ? (
@@ -64,49 +42,11 @@ const Cart = ({ isOpen, toggleCart }) => {
       ) : (
         <div>
           {cartItems.map((item) => (
-            <div
-              key={item.id}
-              className="flex items-center justify-between p-2 border-b"
-            >
-              <img
-                src={item.productAvatar}
-                alt={item.name}
-                className="w-16 h-16 object-contain"
-              />
-              <div className="flex-1 px-3">
-                <h3 className="text-sm font-medium">{item.name}</h3>
-                <p className="text-xs text-gray-500">
-                  ₹{item.offeredPrice} x {item.quantity}
-                </p>
-
-                {/* Quantity Controls */}
-                <div className="flex items-center gap-2 mt-1">
-                  <button
-                    onClick={() => subtractFromCart(item.id)}
-                    className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
-                    disabled={item.quantity <= 1 || !isLoggedIn}
-                  >
-                    -
-                  </button>
-                  <span>{item.quantity}</span>
-                  <button
-                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                    className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50"
-                    disabled={!isLoggedIn}
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-
-              <button
-                className="text-red-500 text-sm font-semibold hover:underline disabled:opacity-50"
-                onClick={() => removeFromCart(item.id)}
-                disabled={!isLoggedIn}
-              >
-                Remove
-              </button>
-            </div>
+            <CartCard
+              key={item.productid}
+              productid={item.productid}
+              quantity={item.quantity}
+            />
           ))}
 
           {/* Total & Checkout */}

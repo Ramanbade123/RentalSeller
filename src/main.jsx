@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import './index.css'
 import Router from "./Routes";
-import { CartProvider } from "./GlobalState/CartContext";
+import AppProvider from "./GlobalState/AppProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <CartProvider>
+    <AppProvider>
       <RouterProvider router={Router} />
-    </CartProvider>
+    </AppProvider>
   </React.StrictMode>
 );

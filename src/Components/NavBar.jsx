@@ -7,9 +7,9 @@ import { BsSearch } from "react-icons/bs";
 import { GiSelfLove } from "react-icons/gi";
 import { BsCart4 } from "react-icons/bs";
 const NavBar = ({ toggleCart }) => {
-    const { cartItems, wishlistItems } = useCart();
+    const { cartItems } = useCart();
     const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
-    const wishListItemCount = wishlistItems.length;
+    // const wishListItemCount = wishlistItems.length;
 
     return (
         <div className='w-full h-[25dvh] bg-white'>
@@ -29,11 +29,11 @@ const NavBar = ({ toggleCart }) => {
                     <BsSearch />
                     <Link to={"/wishlist"} className='relative'>
                         <GiSelfLove />
-                        {wishListItemCount > 0 && (
+                        {/* {wishListItemCount > 0 && (
                             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                                 {wishListItemCount}
                             </span>
-                        )}
+                        )} */}
                     </Link>
                     <div onClick={() => toggleCart()} className='relative cursor-pointer'>
                         <BsCart4 className='text-[16px] sm:text-[26px]' />

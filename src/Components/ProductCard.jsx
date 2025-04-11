@@ -1,38 +1,38 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { useCart } from "../GlobalState/CartContext";
+// import { useCart } from "../GlobalState/CartContext";
 
 
 const ProductCard = ({ product }) => {
-    const { wishlistItems, setWishlistItems } = useCart();
+    // const { wishlistItems, setWishlistItems } = useCart();
 
     const [wishlisted, setWishlisted] = useState(false);
 
-    useEffect(() => {
-        const isWishlisted = wishlistItems.some((item) => item.id === product.id);
-        setWishlisted(isWishlisted);
-    }, [wishlistItems, product.id]);
+    // useEffect(() => {
+    //     const isWishlisted = wishlistItems.some((item) => item.id === product.id);
+    //     setWishlisted(isWishlisted);
+    // }, [wishlistItems, product.id]);
 
-    const toggleWishlist = () => {
-        if (wishlisted) {
-            // Remove from wishlist
-            const updatedWishlist = wishlistItems.filter(
-                (item) => item.id !== product.id
-            );
-            setWishlistItems(updatedWishlist);
-        } else {
-            // Add to wishlist
-            setWishlistItems([...wishlistItems, product]);
-        }
-        setWishlisted(!wishlisted);
-    };
+    // const toggleWishlist = () => {
+    //     if (wishlisted) {
+    //         // Remove from wishlist
+    //         const updatedWishlist = wishlistItems.filter(
+    //             (item) => item.id !== product.id
+    //         );
+    //         setWishlistItems(updatedWishlist);
+    //     } else {
+    //         // Add to wishlist
+    //         setWishlistItems([...wishlistItems, product]);
+    //     }
+    //     setWishlisted(!wishlisted);
+    // };
 
     return (
         <div className="relative group w-[90%] sm:min-w-[22%] sm:w-[300px] bg-white rounded-lg h-[55dvh] shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
             {/* Wishlist Icon */}
             <div
-                onClick={toggleWishlist}
+                // onClick={toggleWishlist}
                 className="absolute top-2 right-2 hover:bg-white rounded-full p-2 shadow-md cursor-pointer z-10"
             >
                 {wishlisted ? (
