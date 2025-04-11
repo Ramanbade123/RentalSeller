@@ -1,29 +1,22 @@
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-// import { useCart } from "../GlobalState/CartContext";
-
+import { useWishlist } from "../GlobalState/wishlistContext";
 
 const ProductCard = ({ product }) => {
-    // const { wishlistItems, setWishlistItems } = useCart();
-
-    const [wishlisted, setWishlisted] = useState(false);
+    const { wishlistItems, toggleWishlist, } = useWishlist();
+    const isWishlisted = wishlistItems.some((item) => item.productId === product.id);
 
     // useEffect(() => {
-    //     const isWishlisted = wishlistItems.some((item) => item.id === product.id);
+    //     const isWishlisted = wishlistItems.some((item) => item.productid === product.productid);
     //     setWishlisted(isWishlisted);
-    // }, [wishlistItems, product.id]);
+    // }, [wishlistItems, product.productid]);
 
-    // const toggleWishlist = () => {
+    // const handleToggleWishlist = () => {
     //     if (wishlisted) {
-    //         // Remove from wishlist
-    //         const updatedWishlist = wishlistItems.filter(
-    //             (item) => item.id !== product.id
-    //         );
-    //         setWishlistItems(updatedWishlist);
+    //         removeFromWishlist(product.productid);
     //     } else {
-    //         // Add to wishlist
-    //         setWishlistItems([...wishlistItems, product]);
+    //         addToWishlist(product);
     //     }
     //     setWishlisted(!wishlisted);
     // };
@@ -32,10 +25,10 @@ const ProductCard = ({ product }) => {
         <div className="relative group w-[90%] sm:min-w-[22%] sm:w-[300px] bg-white rounded-lg h-[55dvh] shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
             {/* Wishlist Icon */}
             <div
-                // onClick={toggleWishlist}
+                onClick={() => toggleWishlist(product.id)}
                 className="absolute top-2 right-2 hover:bg-white rounded-full p-2 shadow-md cursor-pointer z-10"
             >
-                {wishlisted ? (
+                {isWishlisted ? (
                     <FaHeart className="text-red-500" />
                 ) : (
                     <FaRegHeart className="text-black" />
@@ -55,7 +48,10 @@ const ProductCard = ({ product }) => {
                     <img
                         src={product.productAvatar}
                         alt={product.name}
-                        onError={(e) => { e.currentTarget.src = "/placeholder.png"; e.currentTarget.onerror = null; }}
+                        onError={(e) => {
+                            e.currentTarget.src = "/placeholder.png";
+                            e.currentTarget.onerror = null;
+                        }}
                         className="w-full h-full object-contain"
                     />
                 </Link>
@@ -69,14 +65,9 @@ const ProductCard = ({ product }) => {
                     </h2>
                 </Link>
                 <div className="flex items-center justify-center gap-x-4">
-                    <span className="text-red-500 line-through">
-                        ₹{product.originalPrice}
-                    </span>
-
+                    <span className="text-red-500 line-through">₹{product.originalPrice}</span>
                     {product.originalPrice > product.offeredPrice && (
-                        <span className="animate-pulse font-semibold">
-                            ₹{product.offeredPrice}
-                        </span>
+                        <span className="animate-pulse font-semibold">₹{product.offeredPrice}</span>
                     )}
                 </div>
             </div>

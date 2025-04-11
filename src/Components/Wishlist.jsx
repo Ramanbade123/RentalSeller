@@ -2,9 +2,11 @@ import React from "react";
 import { useCart } from "../GlobalState/CartContext";
 import WishlistCard from "./WishlistCard";
 import { Link } from "react-router-dom";
+import { useWishlist } from "../GlobalState/wishlistContext";
 
 const WishlistPage = () => {
-    const { wishlistItems, setWishlistItems, cartItems, setCartItems, isLoggedIn } = useCart();
+    const { cartItems, setCartItems } = useCart();
+    const { wishlistItems, setWishlistItems, isLoggedIn } = useWishlist()
 
     const addAllToCart = () => {
         const newItems = wishlistItems.filter(
@@ -17,7 +19,7 @@ const WishlistPage = () => {
     const clearWishlist = () => {
         setWishlistItems([]);
     };
-
+    console.log("isLoggedin value", isLoggedIn);
     return (
         <div className="p-6">
             <h2 className="text-2xl font-bold mb-4">Your Wishlist</h2>
@@ -49,8 +51,8 @@ const WishlistPage = () => {
                             </button>
                         </div>
                         <div className="grid gap-4">
-                            {wishlistItems.map((product) => (
-                                <WishlistCard key={product.id} product={product} />
+                            {wishlistItems.map((item) => (
+                                <WishlistCard key={item.productId} productId={item.productId} />
                             ))}
                         </div>
                     </>
