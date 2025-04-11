@@ -3,12 +3,36 @@ import { Link } from 'react-router-dom';
 
 const ProductCategory = () => {
     const productCategories = [
-        { name: "Mobiles", icon: "/featureproducts/mobile.svg", path: "/collections/mobiles" },
-        { name: "Laptops", icon: "/featureproducts/laptop.svg", path: "/collections/laptops" },
-        { name: "Cameras", icon: "/featureproducts/camera.svg", path: "/collections/cameras" },
-        { name: "iPads", icon: "/featureproducts/tablet.svg", path: "/collections/ipads" },
-        { name: "Headphones", icon: "/featureproducts/headphone.svg", path: "/collections/headphones" },
-        { name: "Drones", icon: "/featureproducts/drone.svg", path: "/collections/drones" },
+        {
+            name: "Mobiles",
+            // icon: "/featureproducts/mobile.svg",
+            path: "/collections/mobiles"
+        },
+        {
+            name: "Laptops",
+            // icon: "/featureproducts/laptop.svg",
+            path: "/collections/laptops"
+        },
+        {
+            name: "Cameras",
+            // icon: "/featureproducts/camera.svg",
+            path: "/collections/cameras"
+        },
+        {
+            name: "iPads",
+            // icon: "/featureproducts/tablet.svg",
+            path: "/collections/ipads"
+        },
+        {
+            name: "Headphones",
+            // icon: "/featureproducts/headphone.svg",
+            path: "/collections/headphones"
+        },
+        {
+            name: "Drones",
+            // icon: "/featureproducts/drone.svg",
+            path: "/collections/drones"
+        },
     ];
     return (
         <div className="h-full flex shrink-0 flex-wrap items-center justify-center w-full gap-x-4 sm:gap-x-7">
