@@ -1,28 +1,19 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
-import axiosInstance, { setAuthToken } from "../utils/axiosInstance";
+import { useAuth } from "./AuthContext";
+import axiosInstance from "../utils/axiosInstance";
 
 const WishlistContext = createContext();
 
 export const WishlistProvider = ({ children }) => {
+    const { isLoggedIn } = useAuth();
     const [wishlistItems, setWishlistItems] = useState(() => {
         const local = localStorage.getItem("wishlist");
         return local ? JSON.parse(local) : [];
     });
-    const [isLoggedIn, setIsLoggedIn] = useState(() => !!localStorage.getItem("authToken"));
-    console.log("islogged in value fro wishlist context: ", isLoggedIn)
-    useEffect(() => {
-        setIsLoggedIn(() => !!localStorage.getItem("authToken"));
-    }, [])
 
     useEffect(() => {
         localStorage.setItem("wishlist", JSON.stringify(wishlistItems));
     }, [wishlistItems]);
-
-    useEffect(() => {
-        const token = localStorage.getItem("authToken");
-        setIsLoggedIn(!!token);
-        if (token) setAuthToken(token);
-    }, []);
 
     const hasSynced = useRef(false);
 

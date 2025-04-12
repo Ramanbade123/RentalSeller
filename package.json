@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start:backend": "nodemon backend/server.js",
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
@@ -14,16 +13,9 @@
     "@hookform/resolvers": "^5.0.1",
     "@tailwindcss/vite": "^4.1.1",
     "axios": "^1.8.3",
-    "bcrypt": "^5.1.1",
-    "bcryptjs": "^3.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.482.0",
-    "nodemon": "^3.1.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.55.0",
@@ -34,7 +26,6 @@
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.1.1",
     "tailwindcss-animate": "^1.0.7",
-    "uuid": "^11.1.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {

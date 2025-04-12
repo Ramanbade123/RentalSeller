@@ -1,15 +1,16 @@
 import { createContext, useContext, useEffect, useState, useRef } from "react";
-import axiosInstance, { setAuthToken } from "../utils/axiosInstance";
+import axiosInstance from "../utils/axiosInstance";
+import { useAuth } from "./AuthContext";
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
+  const { isLoggedIn } = useAuth();
   const [cartItems, setCartItems] = useState(() => {
     const local = localStorage.getItem("cart");
     return local ? JSON.parse(local) : [];
   });
 
-  const [isLoggedIn, setIsLoggedIn] = useState(() => !!localStorage.getItem("authToken"));
 
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -22,13 +23,6 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
-
-  // Set auth token on mount
-  useEffect(() => {
-    const token = localStorage.getItem("authToken");
-    setIsLoggedIn(!!token);
-    if (token) setAuthToken(token);
-  }, []);
 
   const hasSynced = useRef(false);
 

@@ -7,6 +7,7 @@ import { z } from "zod";
 
 import { ToastContainer, toast } from 'react-toastify';
 import { setAuthToken } from "../utils/axiosInstance";
+import { useAuth } from "../GlobalState/AuthContext";
 
 const fullNameSchema = z.string()
     .min(5, "Full Name must include at least first and last name")
@@ -32,8 +33,9 @@ const signInSchema = z.object({
 });
 
 const AuthForm = () => {
-    const api = "http://localhost:5000/api/auth"
+    const api = `${import.meta.env.VITE_API_BASE_URL}/auth`
     const navigate = useNavigate();
+    const { isLoggedIn, setIsLoggedIn } = useAuth();
     const [isSignUp, setIsSignUp] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
@@ -93,9 +95,12 @@ const AuthForm = () => {
                 const endpoint = type === "Sign Up" ? `${api}/signup` : `${api}/login`;
                 const { data } = await axios.post(endpoint, dataToSend);
                 console.log(`Data received from server on ${type}`, data);
-                const authToken = data?.tokens?.access || data?.message;
+                const authToken = data?.tokens?.access;
+                const authUser = JSON.stringify(data?.user);
                 localStorage.setItem("authToken", authToken);
+                localStorage.setItem("authUser", authUser)
                 setAuthToken(authToken);
+                setIsLoggedIn(true)
                 navigate("/");
             } catch (error) {
                 const errorMessage = error?.response?.data?.username?.[0] ||
@@ -109,7 +114,7 @@ const AuthForm = () => {
         }
     };
 
-
+    if (isLoggedIn) return navigate("/");
     return (
         <>
             <div className="authbody">
