@@ -1,6 +1,6 @@
 import { AuthProvider } from "./AuthContext";
 import { CartProvider } from "./CartContext";
-import { WishlistProvider } from "./wishlistContext";
+import { WishlistProvider } from "./WishContext";
 
 const AppProvider = ({ children }) => {
     return (

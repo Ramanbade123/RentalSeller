@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { useWishlist } from "../GlobalState/wishlistContext";
+import { useWishlist } from "../GlobalState/WishContext";
 
 const ProductCard = ({ product }) => {
     const { wishlistItems, toggleWishlist, } = useWishlist();

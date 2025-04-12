@@ -6,7 +6,7 @@ import { FaUser } from 'react-icons/fa6';
 import { BsSearch } from "react-icons/bs";
 import { GiSelfLove } from "react-icons/gi";
 import { BsCart4 } from "react-icons/bs";
-import { useWishlist } from '../GlobalState/wishlistContext';
+import { useWishlist } from '../GlobalState/WishContext';
 import { useAuth } from '../GlobalState/AuthContext'; // Add this line based on your setup
 
 const NavBar = ({ toggleCart }) => {

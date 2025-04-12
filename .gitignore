@@ -25,3 +25,4 @@ dist-ssr
 
 prevContext.jsx
 src/GlobalState/prevContext
+.env

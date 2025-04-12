@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaTrashAlt, FaCartPlus } from "react-icons/fa";
 import { useCart } from "../GlobalState/CartContext";
 import axios from "axios";
-import { useWishlist } from "../GlobalState/wishlistContext";
+import { useWishlist } from "../GlobalState/WishContext";
 
 const WishlistCard = ({ productId }) => {
     const { addToCart } = useCart();

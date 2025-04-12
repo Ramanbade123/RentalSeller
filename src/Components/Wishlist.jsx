@@ -2,7 +2,7 @@ import React from "react";
 import { useCart } from "../GlobalState/CartContext";
 import WishlistCard from "./WishlistCard";
 import { Link } from "react-router-dom";
-import { useWishlist } from "../GlobalState/wishlistContext";
+import { useWishlist } from "../GlobalState/WishContext";
 
 const WishlistPage = () => {
     const { cartItems, setCartItems } = useCart();
