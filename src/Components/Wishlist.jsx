@@ -19,7 +19,6 @@ const WishlistPage = () => {
     const clearWishlist = () => {
         setWishlistItems([]);
     };
-    console.log("isLoggedin value", isLoggedIn);
     return (
         <div className="p-6">
             <h2 className="text-2xl font-bold mb-4">Your Wishlist</h2>

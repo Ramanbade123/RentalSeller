@@ -5,12 +5,10 @@ import axios from "axios";
 import { useWishlist } from "../GlobalState/wishlistContext";
 
 const WishlistCard = ({ productId }) => {
-    console.log("product id in wishlistCARd", productId)
     const { addToCart } = useCart();
     const { removeFromWishlist } = useWishlist();
 
     const [product, setProduct] = useState(null);
-    console.log("product fetched from backend:", product)
     // Fetch product details using the productId
     useEffect(() => {
         const fetchProduct = async () => {

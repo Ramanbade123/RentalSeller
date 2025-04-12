@@ -6,7 +6,6 @@ import { FaGooglePlusG, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/
 import { z } from "zod";
 
 import { ToastContainer, toast } from 'react-toastify';
-import { setAuthToken } from "../utils/axiosInstance";
 import { useAuth } from "../GlobalState/AuthContext";
 
 const fullNameSchema = z.string()
@@ -35,7 +34,7 @@ const signInSchema = z.object({
 const AuthForm = () => {
     const api = `${import.meta.env.VITE_API_BASE_URL}/auth`
     const navigate = useNavigate();
-    const { isLoggedIn, setIsLoggedIn } = useAuth();
+    const { isLoggedIn, login } = useAuth();
     const [isSignUp, setIsSignUp] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
@@ -77,7 +76,6 @@ const AuthForm = () => {
         e.preventDefault();
         const schema = type === "Sign Up" ? signUpSchema : signInSchema;
         const result = schema.safeParse(formData);
-        console.log("Check Result", result)
         if (!result.success) {
             const formattedErrors = result.error.format();
             setErrors({
@@ -91,16 +89,11 @@ const AuthForm = () => {
             setErrors({});
             try {
                 const dataToSend = formData
-                console.log("Data to be sent is:", dataToSend);
                 const endpoint = type === "Sign Up" ? `${api}/signup` : `${api}/login`;
                 const { data } = await axios.post(endpoint, dataToSend);
-                console.log(`Data received from server on ${type}`, data);
                 const authToken = data?.tokens?.access;
-                const authUser = JSON.stringify(data?.user);
-                localStorage.setItem("authToken", authToken);
-                localStorage.setItem("authUser", authUser)
-                setAuthToken(authToken);
-                setIsLoggedIn(true)
+                const authUser = data?.user;
+                login(authUser, authToken)
                 navigate("/");
             } catch (error) {
                 const errorMessage = error?.response?.data?.username?.[0] ||

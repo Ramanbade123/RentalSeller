@@ -28,24 +28,14 @@ export const AuthProvider = ({ children }) => {
         initializeAuth();
     }, [initializeAuth]);
 
-    // Handle redirection logic based on auth state
-    // useEffect(() => {
-    //     if (!isLoggedIn && !["/auth", "/"].includes(location.pathname)) {
-    //         redirect("/auth");
-    //     }
 
-    //     if (isLoggedIn && location.pathname === "/auth") {
-    //         redirect("/");
-    //     }
-    // }, [isLoggedIn, redirect]);
-
-    // const login = (userData, token) => {
-    //     localStorage.setItem("authUser", JSON.stringify(userData));
-    //     localStorage.setItem("authToken", token);
-    //     setAuthToken(token);
-    //     setUser(userData);
-    //     setIsLoggedIn(true);
-    // };
+    const login = (userData, token) => {
+        localStorage.setItem("authUser", JSON.stringify(userData));
+        localStorage.setItem("authToken", token);
+        setAuthToken(token);
+        setUser(userData);
+        setIsLoggedIn(true);
+    };
 
     const logout = () => {
         localStorage.removeItem("authUser");
@@ -57,7 +47,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, isLoggedIn, setIsLoggedIn, logout }}>
+        <AuthContext.Provider value={{ user, isLoggedIn, login, logout }}>
             {children}
         </AuthContext.Provider>
     );

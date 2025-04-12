@@ -13,7 +13,6 @@ const NavBar = ({ toggleCart }) => {
     const { cartItems } = useCart();
     const { wishlistItems } = useWishlist();
     const { user, logout, isLoggedIn } = useAuth(); // Assuming you expose these from your AuthContext
-    console.log("user info", user)
     const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
     const wishListItemCount = wishlistItems.length;
 
@@ -51,7 +50,11 @@ const NavBar = ({ toggleCart }) => {
                                 </button>
                                 {showUserMenu && (
                                     <div className="absolute right-0 mt-2 w-auto min-w-fit bg-white border rounded-lg shadow p-2 z-50">
-                                        <div className="font-medium px-2 py-1 flex items-center gap-1 flex-nowrap shrink-0 w-fit text-[12px] md:text-[16px]"><p>👋</p><p> {user?.username || user?.name || "user"}</p></div>
+                                        <div
+                                            className="font-medium px-2 py-1 flex items-center gap-1 flex-nowrap shrink-0 w-fit text-[12px] md:text-[16px]">
+                                            <p>👋</p>
+                                            <p> {user?.username || user?.name || "user"}</p>
+                                        </div>
                                         <hr className="my-1" />
                                         <button
                                             onClick={logout}
