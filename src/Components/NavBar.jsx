@@ -30,18 +30,18 @@ const NavBar = ({ toggleCart }) => {
     }, []);
 
     return (
-        <div className='w-full h-[25dvh] bg-white'>
-            <div className='bg-black text-white w-full h-[20%] text-[13px] !py-[5px] text-center'>
+        <div className='w-full h-[23dvh] sm:h-[25dvh] bg-white'>
+            <div className='bg-black text-white w-full h-fit sm:h-[20%] text-[11px] sm:text-[13px] !py-[5px] text-center'>
                 NEW ARRIVALS - SPRING-SUMMER 25 - PREMIUM LINEN SUMMER COLLECTIONS
             </div>
 
-            <div className='relative flex items-center w-full h-[50%]'>
+            <div className='relative flex items-center w-full h-[40%] sm:h-[50%]'>
                 <Link to="/" className='w-full z-1 flex items-center gap-2 sm:gap-4 px-[10px] justify-start md:justify-center'>
                     <img src="/logo.svg" alt="logo" className='h-full w-[30px] sm:w-[40px] md:w-[50px] object-cover ' />
                     <h1 className='lavishly-yours-regular text-3xl sm:text-5xl md:text-6xl font-bold'>RenTour</h1>
                 </Link>
 
-                <div className='absolute z-10 right-4 h-full flex top-[50%] -translate-y-[50%] items-center justify-end gap-4 sm:gap-x-8 text-[16px] sm:text-[24px]'>
+                <div className='absolute z-10 right-4 h-full flex top-[50%] -translate-y-[50%] items-center justify-end gap-5 sm:gap-x-8 text-[18px] sm:text-[24px]'>
                     <div className="relative" ref={userRef}>
                         {isLoggedIn ? (
                             <>

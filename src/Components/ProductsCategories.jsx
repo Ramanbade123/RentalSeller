@@ -35,11 +35,11 @@ const ProductCategory = () => {
         },
     ];
     return (
-        <div className="h-full flex shrink-0 flex-wrap items-center justify-center w-full gap-x-4 sm:gap-x-7">
+        <div className="h-fit sm:h-full flex shrink-0 flex-wrap items-center justify-center w-full gap-x-4 sm:gap-x-7">
             {productCategories.map((product, index) => (
                 <Link to={product.path} key={index} className="flex h-full flex-col items-center justify-center ">
                     {/* <img src={product.icon} alt={product.name} className="w-full h-[60%] object-contain" /> */}
-                    <h2 className="text-[16px] tracking-wide uppercase roboto-condensed-medium hover:text-gray-500">{product.name}</h2>
+                    <h2 className="text-[14px] sm:text-[16px] tracking-wide uppercase roboto-condensed-medium hover:text-gray-500">{product.name}</h2>
                 </Link>
             ))}
         </div>

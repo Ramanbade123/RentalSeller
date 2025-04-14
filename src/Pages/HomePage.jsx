@@ -9,7 +9,7 @@ const HomePage = () => {
             <VideoBox />
             <NewArrivals />
             <div className="flex flex-col w-full">
-                <h2 className="text-2xl underline text-center font-semibold mb-10"> COLLECTIONS</h2>
+                <h2 className="text-xl sm:text-3xl underline font-semibold mb-6 sm:mb-12 tracking-wider text-center"> COLLECTIONS</h2>
                 <CollectionCard />
             </div>
         </>

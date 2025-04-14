@@ -16,7 +16,7 @@ const VideoBox = () => {
 
     const VideoSrc = "/images/video/Footage1.mp4"
     return (
-        <div className="bg-blue-600 w-full h-[100dvh] flex items-center justify-center">
+        <div className="bg-gray-400 w-full h-[50dvh] sm:h-[100dvh] flex items-center justify-center">
             <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
                 {/* Show Loading Skeleton */}
                 {isLoading && !isError && (

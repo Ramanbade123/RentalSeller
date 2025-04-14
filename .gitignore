@@ -7,15 +7,22 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependency directories
+node_modules/
+
+# Vite build output
+dist/
+dist-ssr/
+.vite/
+
+# Local environment files
+.env*
+env/
 
 # Editor directories and files
-.vscode/*
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
@@ -23,8 +30,6 @@ dist-ssr
 *.sln
 *.sw?
 
+# Project-specific files
 prevContext.jsx
 src/GlobalState/prevContext
-.env
-env
-.vite
