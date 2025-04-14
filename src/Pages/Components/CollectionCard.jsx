@@ -33,7 +33,7 @@ const CollectionCard = () => {
     ));
 
     return (
-        <div className="w-full flex flex-row shrink-0 flex-nowrap overflow-x-scroll sm:flex-col gap-4 py-5 sm:gap-8 sm:py-10">
+        <div className="w-full flex flex-row shrink-0 flex-nowrap overflow-x-scroll snap-x md:overflow-hidden sm:flex-col gap-4 py-5 sm:gap-8 sm:py-10">
             {isLoading ? (
                 skeletonCards
             ) : (
@@ -45,7 +45,7 @@ const CollectionCard = () => {
                     return (
                         <div
                             key={index}
-                            className={`flex ${layoutClass} bg-white items-center p-3 shadow-xl rounded-2xl min-w-[450px] w-[450px] h-[200px] sm:w-[90%] sm:mx-auto lg:h-[70dvh] overflow-hidden transition-all`}
+                            className={`snap-start flex ${layoutClass} bg-white items-center p-3 shadow-xl rounded-2xl min-w-[450px] w-[450px] h-[200px] sm:w-[90%] sm:mx-auto lg:h-[70dvh] overflow-hidden transition-all`}
                         >
                             <div className="w-[350px] h-[150px] sm:h-[300px] lg:w-1/2">
                                 <img

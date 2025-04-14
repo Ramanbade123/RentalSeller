@@ -15,7 +15,7 @@ const NewArrivals = () => {
             try {
                 const baseUrl = import.meta.env.VITE_API_BASE_URL;
                 const res = await axios.get(`${baseUrl}/products/new-arrivals`, {
-                    timeout: 10000 // for slow networks
+                    timeout: 10000
                 });
                 setFilteredProducts(res.data);
             } catch (error) {
@@ -53,12 +53,14 @@ const NewArrivals = () => {
         setTypedText("");
     };
 
-    const skeletonCard = Array(4).fill(0).map((_, i) => (
-        <div
-            key={i}
-            className="bg-white animate-pulse w-[250px] h-[300px] sm:w-[250px] sm:h-[320px] rounded-xl shadow-md"
-        />
-    ));
+    const skeletonCard = Array(4)
+        .fill(0)
+        .map((_, i) => (
+            <div
+                key={i}
+                className="bg-white animate-pulse min-w-[250px] min-h-[250px] w-[250px] h-[250px] sm:w-[250px] sm:h-[320px] rounded-xl shadow-md"
+            />
+        ));
 
     return (
         <div className="flex flex-col items-center h-fit py-5 sm:py-14">
@@ -66,39 +68,42 @@ const NewArrivals = () => {
                 NEW ARRIVALS
             </h2>
 
-            <div className="flex shrink-0 sm:flex-wrap justify-center gap-2 px-4 overflow-x-auto">
-                {isLoading ? (
-                    skeletonCard
-                ) : (
-                    filteredProducts.map((product, index) => (
-                        <Link
-                            to={`${product.category}/${product.id}`}
-                            key={index}
-                            className="group bg-white relative w-[250px] h-[300px] sm:w-[250px] sm:h-[320px] rounded-xl overflow-hidden shadow-lg transition-all duration-[750ms] sm:ease-[cubic-bezier(0.25, 1, 0.5, 1)] sm:hover:w-[350px] sm:hover:h-[360px] hover:z-10"
-                            onMouseEnter={() => handleMouseEnter(product.description, index)}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            <img
-                                src={product.productAvatar}
-                                alt={product.name}
-                                loading="lazy"
-                                onError={(e) => {
-                                    e.currentTarget.src = "/fallback.png";
-                                }}
-                                className="w-full h-full object-contain transition-all !duration-[750ms] sm:ease-[cubic-bezier(0.25, 1, 0.5, 1)] sm:group-hover:scale-[1.1]"
-                            />
-                            <div className="absolute inset-0 flex items-end justify-center group-hover:bg-opacity-40 hover:bg-[rgba(0,0,0,0.2)] hover:backdrop-blur-[5px] transition-all duration-100 ease-[cubic-bezier(0.25, 1, 0.5, 1)]">
-                                <div className="p-3 text-white opacity-0 group-hover:animate-pulse
-                                     group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-700 ease-[cubic-bezier(0.25, 1, 0.5, 1)] text-center">
-                                    <h3 className="font-semibold text-lg mb-1">{product.title}</h3>
-                                    <p className="text-sm whitespace-pre-wrap">
-                                        {hoveredIndex === index ? typedText : ""}
-                                    </p>
-                                </div>
+            <div className="w-full overflow-x-scroll md:overflow-hidden">
+                {
+                    isLoading
+                        ? <div className="flex flex-row gap-3 px-4">{skeletonCard}</div>
+                        : (
+                            <div className="flex flex-row flex-nowrap gap-3 px-4 sm:px-0 sm:flex-wrap sm:justify-center scroll-smooth snap-x">
+                                {filteredProducts.map((product, index) => (
+                                    <Link
+                                        to={`${product.category}/${product.id}`}
+                                        key={index}
+                                        className="snap-start shrink-0 group bg-white relative min-w-[250px] min-h-[250px] w-[250px] h-[250px] p-5 sm:p-0 sm:w-[250px] sm:h-[320px] rounded-xl overflow-hidden shadow-lg transition-all duration-[750ms] sm:ease-[cubic-bezier(0.25, 1, 0.5, 1)] sm:hover:w-[350px] sm:hover:h-[360px] hover:z-10"
+                                        onMouseEnter={() => handleMouseEnter(product.description, index)}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        <img
+                                            src={product.productAvatar}
+                                            alt={product.name}
+                                            loading="lazy"
+                                            onError={(e) => {
+                                                e.currentTarget.src = "/fallback.png";
+                                            }}
+                                            className="w-full h-full object-contain transition-all !duration-[750ms] sm:ease-[cubic-bezier(0.25, 1, 0.5, 1)] sm:group-hover:scale-[1.1]"
+                                        />
+                                        <div className="absolute inset-0 flex items-end justify-center group-hover:bg-opacity-40 hover:bg-[rgba(0,0,0,0.2)] hover:backdrop-blur-[5px] transition-all duration-100 ease-[cubic-bezier(0.25, 1, 0.5, 1)]">
+                                            <div className="p-3 text-white opacity-0 group-hover:animate-pulse group-hover:opacity-100 transform translate-y-6 group-hover:translate-y-0 transition-all duration-700 ease-[cubic-bezier(0.25, 1, 0.5, 1)] text-center">
+                                                <h3 className="font-semibold text-lg mb-1">{product.title}</h3>
+                                                <p className="text-sm whitespace-pre-wrap">
+                                                    {hoveredIndex === index ? typedText : ""}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                ))}
                             </div>
-                        </Link>
-                    ))
-                )}
+                        )
+                }
             </div>
 
             <Link
