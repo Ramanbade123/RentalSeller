@@ -7,6 +7,10 @@ import { z } from "zod";
 
 import { ToastContainer, toast } from 'react-toastify';
 import { useAuth } from "../GlobalState/AuthContext";
+import { GoEye, GoEyeClosed } from "react-icons/go";
+import Login from "./Login";
+import SignUp from "./SignUp";
+import Signup from "./SignUp";
 
 const fullNameSchema = z.string()
     .min(5, "Full Name must include at least first and last name")
@@ -45,6 +49,9 @@ const AuthForm = () => {
 
     const [errors, setErrors] = useState({});
     const [touched, setTouched] = useState({});
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
     const notify = (error) => toast(`${error}`);
 
     const validateField = (name, value) => {
@@ -74,7 +81,25 @@ const AuthForm = () => {
 
     const handleSubmit = async (e, type) => {
         e.preventDefault();
+
         const schema = type === "Sign Up" ? signUpSchema : signInSchema;
+
+        // Clear previous confirm password error
+        setErrors((prev) => ({ ...prev, confirmPassword: "" }));
+
+        // Check password and confirmPassword match on Sign Up
+        if (type === "Sign Up" && formData.confirmPassword !== formData.password) {
+            setErrors((prev) => ({
+                ...prev,
+                confirmPassword: "Passwords do not match",
+            }));
+            setTouched((prev) => ({
+                ...prev,
+                confirmPassword: true,
+            }));
+            return; // Stop submission
+        }
+
         const result = schema.safeParse(formData);
         if (!result.success) {
             const formattedErrors = result.error.format();
@@ -88,15 +113,16 @@ const AuthForm = () => {
         } else {
             setErrors({});
             try {
-                const dataToSend = formData
+                const dataToSend = formData;
                 const endpoint = type === "Sign Up" ? `${api}/signup` : `${api}/login`;
                 const { data } = await axios.post(endpoint, dataToSend);
                 const authToken = data?.tokens?.access;
                 const authUser = data?.user;
-                login(authUser, authToken)
+                login(authUser, authToken);
                 navigate("/");
             } catch (error) {
-                const errorMessage = error?.response?.data?.username?.[0] ||
+                const errorMessage =
+                    error?.response?.data?.username?.[0] ||
                     error?.response?.data?.email?.[0] ||
                     error?.response?.data?.message ||
                     error?.message;
@@ -107,6 +133,8 @@ const AuthForm = () => {
         }
     };
 
+    const eyeclass = "text-[13px] sm:text-[15px]"
+
     useEffect(() => {
         if (isLoggedIn) {
             navigate("/");
@@ -116,61 +144,41 @@ const AuthForm = () => {
         <>
             <div className="authbody">
                 <div className={`container ${isSignUp ? "active" : ""}`}>
-                    <div className="form-container sign-up">
-                        <form onSubmit={(e) => handleSubmit(e, "Sign Up")}>
-                            <h1>Create Account</h1>
-                            <div className="social-icons">
-                                <a href="#" className="icon"><FaGooglePlusG /></a>
-                                <a href="#" className="icon"><FaFacebookF /></a>
-                                <a href="#" className="icon"><FaGithub /></a>
-                                <a href="#" className="icon"><FaLinkedinIn /></a>
-                            </div>
-                            <span>or use your email for registration</span>
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Full Name"
-                                value={formData.name}
-                                onChange={handleInputChange}
-                                onBlur={handleBlur}
+
+                    {/* SIGN UP FORM */}
+                    <div className="auth-container">
+                        {isSignUp ? (
+                            <Signup
+                                handleSubmit={handleSubmit}
+                                formData={formData}
+                                handleBlur={handleBlur}
+                                handleInputChange={handleInputChange}
+                                showPassword={showPassword}
+                                setShowPassword={setShowPassword}
+                                setIsSignUp={setIsSignUp}
+                                errors={errors}
+                                touched={touched}
+                                eyeclass={eyeclass}
+                                showConfirmPassword={showConfirmPassword}
+                                setShowConfirmPassword={setShowConfirmPassword}
                             />
-                            {touched.name && errors.name && <p className="error">{errors.name}</p>}
-
-                            {touched.fullName && errors.fullName && <p className="error">{errors.fullName}</p>}
-
-                            <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleInputChange} onBlur={handleBlur} />
-                            {touched.username && errors.username && <p className="error">{errors.username}</p>}
-
-                            <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleInputChange} onBlur={handleBlur} />
-                            {touched.email && errors.email && <p className="error">{errors.email}</p>}
-
-                            <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleInputChange} onBlur={handleBlur} />
-                            {touched.password && errors.password && <p className="error">{errors.password}</p>}
-
-                            <button type="submit" onClick={(e) => handleSubmit(e, "Sign Up")}>Sign Up</button>
-                        </form>
+                        ) : (
+                            <Login
+                                handleSubmit={handleSubmit}
+                                formData={formData}
+                                handleBlur={handleBlur}
+                                handleInputChange={handleInputChange}
+                                showPassword={showPassword}
+                                setShowPassword={setShowPassword}
+                                setIsSignUp={setIsSignUp}
+                                errors={errors}
+                                touched={touched}
+                                eyeclass={eyeclass}
+                            />
+                        )}
                     </div>
 
-                    <div className="form-container sign-in">
-                        <form onSubmit={(e) => handleSubmit(e, "Sign In")}>
-                            <h1>Sign In</h1>
-                            <div className="social-icons">
-                                <a href="#" className="icon"><FaGooglePlusG /></a>
-                                <a href="#" className="icon"><FaFacebookF /></a>
-                                <a href="#" className="icon"><FaGithub /></a>
-                                <a href="#" className="icon"><FaLinkedinIn /></a>
-                            </div>
-                            <span>or use your email and password</span>
-                            <input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleInputChange} onBlur={handleBlur} />
-                            {touched.username && errors.username && <p className="error">{errors.username}</p>}
-
-                            <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleInputChange} onBlur={handleBlur} />
-                            {touched.password && errors.password && <p className="error">{errors.password}</p>}
-                            <button type="submit" onClick={(e) => handleSubmit(e, "Sign In")}>Sign In</button>
-                        </form>
-                    </div>
-                    <ToastContainer />
-                    {/* Toggle Section */}
+                    {/* TOGGLE SECTION */}
                     <div className="toggle-container">
                         <div className="toggle">
                             <div className="toggle-panel toggle-left text-white">
@@ -187,7 +195,9 @@ const AuthForm = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </>
     );
+
 };
 export default AuthForm;

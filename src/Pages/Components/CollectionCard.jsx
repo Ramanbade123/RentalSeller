@@ -39,15 +39,15 @@ const CollectionCard = () => {
             ) : (
                 filteredProducts.map((product, index) => {
                     const isEven = index % 2 === 1;
-                    const layoutClass = isEven ? "lg:flex-row-reverse" : "lg:flex-row";
+                    const layoutClass = isEven ? "sm:flex-row-reverse" : "sm:flex-row";
                     const textAlign = isEven ? "items-end text-right" : "items-start text-left";
 
                     return (
                         <div
                             key={index}
-                            className={`snap-start flex ${layoutClass} bg-white items-center p-3 shadow-xl rounded-2xl min-w-[450px] w-[450px] h-[200px] sm:w-[90%] sm:mx-auto lg:h-[70dvh] overflow-hidden transition-all`}
+                            className={`snap-start flex ${layoutClass} bg-white items-center p-3 shadow-xl rounded-2xl min-w-[450px] w-[450px] h-[200px] sm:h-[300px] sm:w-[90%] sm:mx-auto lg:h-[70dvh] overflow-hidden transition-all`}
                         >
-                            <div className="w-[350px] h-[150px] sm:h-[190px] lg:w-1/2">
+                            <div className="w-1/2 h-[150px] sm:h-[190px] lg:h-[300px]">
                                 <img
                                     src={product.productAvatar}
                                     alt={product.name}
