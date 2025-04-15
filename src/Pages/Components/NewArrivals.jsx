@@ -71,7 +71,7 @@ const NewArrivals = () => {
             <div className="w-full overflow-x-scroll md:overflow-hidden">
                 {
                     isLoading
-                        ? <div className="flex flex-row gap-3 px-4">{skeletonCard}</div>
+                        ? <div className="flex flex-row flex-nowrap gap-3 px-4 sm:px-0 sm:flex-wrap sm:justify-center scroll-smooth snap-x">{skeletonCard}</div>
                         : (
                             <div className="flex flex-row flex-nowrap gap-3 px-4 sm:px-0 sm:flex-wrap sm:justify-center scroll-smooth snap-x">
                                 {filteredProducts.map((product, index) => (
