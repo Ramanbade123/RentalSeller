@@ -39,7 +39,7 @@ const AuthForm = () => {
     const api = `${import.meta.env.VITE_API_BASE_URL}/auth`
     const navigate = useNavigate();
     const { isLoggedIn, login } = useAuth();
-    const [isSignUp, setIsSignUp] = useState(false);
+    const [isSignUp, setIsSignUp] = useState(true);
     const [formData, setFormData] = useState({
         name: "",
         username: "",

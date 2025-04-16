@@ -6,7 +6,7 @@ const Login = ({ handleSubmit, formData, handleBlur, handleInputChange, showPass
     return (
         <div className="form-container sign-in">
             <form onSubmit={(e) => handleSubmit(e, 'Sign In')}>
-                <h1>Sign In</h1>
+                <h1 className='text-[14px] md:text-[18px] mt-[20px] sm:mt-[0px]'>Sign In</h1>
                 <div className="social-icons">
                     <a href="#" className="icon" aria-label="Sign in with Google"><FaGooglePlusG /></a>
                     <a href="#" className="icon" aria-label="Sign in with Facebook"><FaFacebookF /></a>
@@ -50,7 +50,7 @@ const Login = ({ handleSubmit, formData, handleBlur, handleInputChange, showPass
                 {touched.password && errors.password && <p className="error">{errors.password}</p>}
 
                 <button type="submit">Sign In</button>
-                <p className="md:hidden py-2">Don't have an Account yet?
+                <p className="md:hidden py-4">Don't have an Account yet?
                     <span
                         className='text-blue-500 underline cursor-pointer'
                         onClick={(e) => {

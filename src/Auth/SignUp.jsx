@@ -109,7 +109,7 @@ const Signup = ({
                 {touched.confirmPassword && errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
 
                 <button type="submit">Sign Up</button>
-                <p className="md:hidden py-2"> Already have an Account?
+                <p className="md:hidden py-4"> Already have an Account?
                     <span
                         className='text-blue-500 underline cursor-pointer'
                         onClick={(e) => {
@@ -121,7 +121,9 @@ const Signup = ({
                 </p>
             </form>
         </div>
-    );
-};
+    )
+
+}
+
 
 export default Signup;
