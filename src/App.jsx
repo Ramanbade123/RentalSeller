@@ -43,7 +43,6 @@ const App = () => {
           {/* <Route path="/register" element={<SellerRegister />} /> */}
           {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
 
-          {/* New Product Category Routes */}
           {/* <Route path="/products/smartphones" element={<SmartphonesPage />} />
           <Route path="/products/laptops" element={<LaptopsPage />} />
           <Route path="/products/cameras" element={<CamerasPage />} />
