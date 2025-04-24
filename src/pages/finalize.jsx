@@ -66,7 +66,7 @@ return (
   <div className="flex flex-col lg:flex-row min-h-screen">
     {/* Left Side - Information Panel with Background */}
     <div className="lg:w-1/3 bg-cover bg-center relative" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)' }}>
-      <div className="absolute inset-0 bg-indigo-900/80"></div>
+      <div className="absolute inset-0 bg-gray-900/80"></div>
       <div className="relative z-10 p-8 text-white h-full flex flex-col justify-center">
         <div className="max-w-md mx-auto">
           <h1 className="text-3xl font-bold mb-6">Finalize Your Listing</h1>
@@ -115,7 +115,7 @@ return (
           <h1 className="text-2xl font-bold text-gray-800 mb-4">Complete Your Listing</h1>
           <div className="flex items-center justify-between relative">
             <div className="absolute top-3 left-8 right-8 h-1 bg-gray-200 z-0">
-              <div className="h-full bg-indigo-600 w-full"></div>
+              <div className="h-full bg-gray-600 w-full"></div>
             </div>
             {['Description', 'Media', 'Finalize'].map((step, index) => (
               <div key={step} className="flex flex-col items-center z-10">
