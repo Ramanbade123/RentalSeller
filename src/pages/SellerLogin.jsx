@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const RentourLogin = () => {
   const [formData, setFormData] = React.useState({
-    email: "",
+    username: "",
     password: "",
   });
 
@@ -15,11 +15,38 @@ const RentourLogin = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Login data:", formData);
-    // API integration will go here
-  };
+
+    try {
+      // Fetch the list of users from the API
+      const response = await fetch("http://127.0.0.1:8000/api/people/");
+      if (!response.ok) {
+        throw new Error("Failed to fetch user data");
+      }
+
+      const users = await response.json();
+      console.log(response)
+
+      // Check if the entered username and password match any user
+      const authenticatedUser = users.find(
+        (user) =>
+          user.username === formData.username &&
+          user.password === formData.password
+      );
+
+      if (authenticatedUser) {
+        console.log("Login successful:", authenticatedUser);
+        // Perform actions upon successful login, e.g., redirecting the user or storing authentication tokens
+      } else {
+        alert("Invalid username or password");
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      alert("An error occurred. Please try again.");
+    }
+  }
+  
 
   return (
     <div className="min-h-screen bg-gray-50 flex font-sans">
@@ -124,22 +151,22 @@ const RentourLogin = () => {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
-                  htmlFor="email"
+                  htmlFor="userame"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Email address
+                 Username
                 </label>
                 <div className="mt-1">
                   <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
+                    id="username"
+                    name="username"
+                    type="username"
+                    autoComplete="username"
                     required
-                    value={formData.email}
+                    value={formData.username}
                     onChange={handleChange}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-gray-500 focus:border-gray-500"
-                    placeholder="your@email.com"
+                    placeholder="Username"
                   />
                 </div>
               </div>

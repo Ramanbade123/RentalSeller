@@ -1,11 +1,14 @@
 import React, { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; 
 
 const UploadImages = () => {
   const navigate = useNavigate();
   const [files, setFiles] = useState([]);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [totalSize, setTotalSize] = useState(0);
+  const [isUploading, setIsUploading] = useState(false);
+  const [uploadError, setUploadError] = useState(null);
 
   const handleFileChange = useCallback((e) => {
     const selectedFiles = Array.from(e.target.files);
@@ -35,11 +38,55 @@ const UploadImages = () => {
     setUploadProgress(Math.min(100, (newTotalSize / (25 * 1024 * 1024)) * 100));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Files to upload:', files);
-    navigate('/finalize');
+    if (files.length === 0) return;
+  
+    const itemId = localStorage.getItem('home_item_id');
+    if (!itemId) {
+      alert('No item ID found. Please go back and add product details.');
+      return;
+    }
+  
+    setIsUploading(true);
+    setUploadError(null);
+  
+    try {
+      const uploadPromises = files.map(async (file) => {
+        const formData = new FormData();
+        formData.append('item_photo', file);
+        formData.append('item_id', itemId); // Append item_id to the form data
+  
+        const response = await axios.post('http://127.0.0.1:8000/api/photo/', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          }
+        });
+        
+        return response.data;  // response.data contains item_id and item_name
+      });
+  
+      const results = await Promise.all(uploadPromises);
+      console.log('Upload results:', results);
+  
+      // If you want to display item_name or use it for further processing:
+      results.forEach(result => {
+        const { item_id, item_name } = result;
+        console.log(`Uploaded photo for item: ${item_name} (ID: ${item_id})`);
+      });
+  
+      navigate('/finalize');
+    } catch (error) {
+      console.error('Error uploading images:', error);
+      setUploadError(
+        error.response?.data?.message || 
+        'Failed to upload images. Please try again.'
+      );
+    } finally {
+      setIsUploading(false);
+    }
   };
+  
 
   const handlePrevious = () => {
     navigate('/productdetails');
@@ -141,6 +188,12 @@ const UploadImages = () => {
               </div>
             </div>
 
+            {uploadError && (
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-600 rounded-md text-sm">
+                {uploadError}
+              </div>
+            )}
+
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center mb-6">
               <div className="flex flex-col items-center justify-center">
                 <svg className="w-12 h-12 text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -200,19 +253,28 @@ const UploadImages = () => {
               <button
                 onClick={handlePrevious}
                 className="px-6 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-md hover:bg-gray-50 transition duration-150"
+                disabled={isUploading}
               >
                 Previous
               </button>
               <button
                 onClick={handleSubmit}
-                disabled={files.length === 0}
+                disabled={files.length === 0 || isUploading}
                 className={`px-6 py-2 text-sm font-medium rounded-md transition duration-150 ${
-                  files.length === 0 
+                  files.length === 0 || isUploading
                     ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
                     : 'bg-gray-700 text-white hover:bg-gray-800'
                 }`}
               >
-                Next
+                {isUploading ? (
+                  <span className="flex items-center">
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Uploading...
+                  </span>
+                ) : "Next"}
               </button>
             </div>
           </div>

@@ -70,7 +70,7 @@ const Homepage = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImage})` }}
           ></div>
-          <div className="absolute inset-0 bg-black-90 bg-opacity"></div>
+          <div className="absolute inset-0 bg-opacity"></div>
         </div>
 
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">

@@ -19,7 +19,7 @@ import {
 const SellerRegister = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    username: "",
     phone: "",
     password: "",
     confirmPassword: "",
@@ -166,23 +166,23 @@ const SellerRegister = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email address
+                <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-2">
+                  Username
                 </label>
                 <div className="relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <FaEnvelope className="h-5 w-5 text-gray-400" />
                   </div>
                   <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
+                    id="username"
+                    name="username"
+                    type="username"
+                    autoComplete="username"
                     required
-                    value={formData.email}
+                    value={formData.username}
                     onChange={handleChange}
                     className="pl-10 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
-                    placeholder="seller@example.com"
+                    placeholder="username"
                   />
                 </div>
               </div>
