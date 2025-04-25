@@ -79,7 +79,9 @@ const NavBar = ({ toggleCart }) => {
                         )}
                     </div>
 
-                    <BsSearch />
+                    <Link to={"/search"} className="">
+                        <BsSearch />
+                    </Link>
 
                     <Link to="/wishlist" className='relative'>
                         <GiSelfLove />

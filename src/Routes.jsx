@@ -33,6 +33,7 @@ const FAQs = lazy(() => import("./Pages/Legal/FAQs"));
 const Privacy = lazy(() => import("./Pages/Legal/Privacy"));
 const TermsService = lazy(() => import("./Pages/Legal/TermsServices"));
 
+const Search = lazy(() => import("./Pages/Info/Search"));
 const ContactUs = lazy(() => import("./Pages/Info/ContactUs"));
 const AboutUs = lazy(() => import("./Pages/Info/AboutUs"));
 
@@ -99,6 +100,7 @@ const Router = createBrowserRouter([
       { path: "terms-of-service", element: LazyLoad(TermsService), errorElement: <ErrorBoundary /> },
 
       // Info Pages
+      { path: "search", element: LazyLoad(Search), errorElement: <ErrorBoundary /> },
       { path: "contact-us", element: LazyLoad(ContactUs), errorElement: <ErrorBoundary /> },
       { path: "about-us", element: LazyLoad(AboutUs), errorElement: <ErrorBoundary /> },
     ],
