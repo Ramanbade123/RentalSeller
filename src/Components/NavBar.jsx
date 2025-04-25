@@ -8,7 +8,7 @@ import { GiSelfLove } from "react-icons/gi";
 import { BsCart4 } from "react-icons/bs";
 import { useWishlist } from '../GlobalState/WishContext';
 import { useAuth } from '../GlobalState/AuthContext'; // Add this line based on your setup
-
+import { SiSellfy } from "react-icons/si";
 const NavBar = ({ toggleCart }) => {
     const { cartItems } = useCart();
     const { wishlistItems } = useWishlist();
@@ -56,6 +56,13 @@ const NavBar = ({ toggleCart }) => {
                                             <p> {user?.username || user?.name || "user"}</p>
                                         </div>
                                         <hr className="my-1" />
+                                        <Link
+                                            to={"https://rentour-seller.vercel.app/"}
+                                            className="w-full flex items-center gap-2 cursor-pointer text-left px-2 py-1 text-[12px] md:text-[16px] hover:bg-red-100 rounded"
+                                        >
+                                            <SiSellfy className='bg-green-500' />
+                                            Seller
+                                        </Link>
                                         <button
                                             onClick={logout}
                                             className="w-full cursor-pointer text-left px-2 py-1 text-red-600 text-[12px] md:text-[16px] hover:bg-red-100 rounded"
