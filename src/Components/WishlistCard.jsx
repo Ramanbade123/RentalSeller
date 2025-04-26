@@ -7,13 +7,15 @@ import { useWishlist } from "../GlobalState/WishContext";
 const WishlistCard = ({ productId }) => {
     const { addToCart } = useCart();
     const { removeFromWishlist } = useWishlist();
-
     const [product, setProduct] = useState(null);
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
+
     // Fetch product details using the productId
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/products/${productId}`);
+                const res = await axios.get(`${baseUrl}/products/${productId}`);
                 setProduct(res.data);
             } catch (err) {
                 console.error("Failed to fetch product details:", err);
@@ -21,7 +23,7 @@ const WishlistCard = ({ productId }) => {
         };
 
         if (productId) fetchProduct();
-    }, [productId]);
+    }, [productId, baseUrl]);
 
     const handleRemove = () => {
         removeFromWishlist(productId);
@@ -32,7 +34,7 @@ const WishlistCard = ({ productId }) => {
     return (
         <div className="bg-white rounded-lg shadow p-4 flex gap-4 items-center justify-between">
             <img
-                src={product.productAvatar}
+                src={`${baseUrl}${product.productAvatar}`}
                 alt={product.name}
                 className="w-20 h-20 object-contain"
             />

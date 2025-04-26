@@ -5,12 +5,12 @@ import axios from "axios";
 const CollectionCard = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
     useEffect(() => {
         const fetchTopSold = async () => {
             setIsLoading(true);
             try {
-                const baseUrl = import.meta.env.VITE_API_BASE_URL;
                 const res = await axios.get(`${baseUrl}/products/top-sold`, {
                     timeout: 10000, // improve behavior on slow networks
                 });
@@ -49,7 +49,7 @@ const CollectionCard = () => {
                         >
                             <div className="w-1/2 h-[150px] sm:h-[190px] lg:h-[300px]">
                                 <img
-                                    src={product.productAvatar}
+                                    src={`${baseUrl}${product.productAvatar}`}
                                     alt={product.name}
                                     loading="lazy"
                                     onError={(e) => {

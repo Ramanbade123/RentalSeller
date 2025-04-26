@@ -6,6 +6,7 @@ import { useWishlist } from "../GlobalState/WishContext";
 const ProductCard = ({ product }) => {
     const { wishlistItems, toggleWishlist, } = useWishlist();
     const isWishlisted = wishlistItems.some((item) => item.productId === product.id);
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
     // useEffect(() => {
     //     const isWishlisted = wishlistItems.some((item) => item.productid === product.productid);
@@ -46,10 +47,10 @@ const ProductCard = ({ product }) => {
             <div className="h-[80%] aspect-auto bg-gray-100 w-full p-[2px]">
                 <Link to={`/${product.category}/${product.id}`} className="w-full h-full aspect-auto">
                     <img
-                        src={product.productAvatar}
+                        src={`${baseUrl}${product.productAvatar}`}
                         alt={product.name}
                         onError={(e) => {
-                            e.currentTarget.src = "/placeholder.png";
+                            e.currentTarget.src = "/fallback.png";
                             e.currentTarget.onerror = null;
                         }}
                         className="w-full h-full object-contain"

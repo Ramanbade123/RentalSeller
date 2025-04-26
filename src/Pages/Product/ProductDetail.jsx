@@ -9,9 +9,9 @@ const ProductDetail = () => {
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true); // track loading
     const { addToCart, } = useCart();
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
     // fetch the product detail 
     useEffect(() => {
-        const baseUrl = import.meta.env.VITE_API_BASE_URL;
         const fetchProduct = async () => {
             try {
                 const res = await axios.get(`${baseUrl}/products/${id}`);
@@ -35,7 +35,7 @@ const ProductDetail = () => {
             {/* Product Image + Thumbnails */}
             <div>
                 <img
-                    src={product.productAvatar}
+                    src={`${baseUrl}${product.productAvatar}`}
                     alt={product.name}
                     className="w-full h-96 object-contain rounded-lg shadow"
                 />
@@ -43,7 +43,7 @@ const ProductDetail = () => {
                     {product.images?.map((img, i) => (
                         <img
                             key={i}
-                            src={img}
+                            src={`${baseUrl}${img}`}
                             alt={`Product thumbnail ${i}`}
                             className="w-25 h-25 p-[1px] object-contain border-[1px] border-gray-400 rounded-sm"
                         />

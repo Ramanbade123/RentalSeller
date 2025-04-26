@@ -5,10 +5,11 @@ import { useCart } from "../GlobalState/CartContext";
 const CartCard = ({ productid, quantity, }) => {
     const { isCartOpen, updateQuantity, removeFromCart } = useCart();
     const [product, setProduct] = useState(null);
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/products/${productid}`);
+                const res = await axios.get(`${baseUrl}/products/${productid}`);
                 setProduct(res.data);
             } catch (err) {
                 console.error("Failed to fetch product:", err);
@@ -18,7 +19,7 @@ const CartCard = ({ productid, quantity, }) => {
         if (productid) {
             fetchProduct();
         }
-    }, [productid, isCartOpen]);
+    }, [productid, isCartOpen, baseUrl]);
 
     const isLoggedIn = !!localStorage.getItem("authToken");
 
@@ -33,7 +34,7 @@ const CartCard = ({ productid, quantity, }) => {
     return (
         <div className="flex items-center justify-between p-2 border-b">
             <img
-                src={product.productAvatar}
+                src={`${baseUrl}${product.productAvatar}`}
                 alt={product.name}
                 className="w-16 h-16 object-contain"
             />
