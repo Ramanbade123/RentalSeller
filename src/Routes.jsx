@@ -37,6 +37,10 @@ const Search = lazy(() => import("./Pages/Info/Search"));
 const ContactUs = lazy(() => import("./Pages/Info/ContactUs"));
 const AboutUs = lazy(() => import("./Pages/Info/AboutUs"));
 
+
+// Seller Page related
+const ProductForm = lazy(() => import("./Seller/ProductForm"));
+
 // Helper function to wrap lazy components in Suspense
 const LazyLoad = (Component) => (
   <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
@@ -103,6 +107,9 @@ const Router = createBrowserRouter([
       { path: "search", element: LazyLoad(Search), errorElement: <ErrorBoundary /> },
       { path: "contact-us", element: LazyLoad(ContactUs), errorElement: <ErrorBoundary /> },
       { path: "about-us", element: LazyLoad(AboutUs), errorElement: <ErrorBoundary /> },
+
+      // Seller Page Related
+      { path: "/seller", element: LazyLoad(ProductForm), errorElement: <ErrorBoundary /> },
     ],
   },
   { path: "*", element: <Notfound />, errorElement: <ErrorBoundary /> }, // Handle unknown routes

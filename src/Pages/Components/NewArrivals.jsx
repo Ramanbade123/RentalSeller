@@ -26,7 +26,7 @@ const NewArrivals = () => {
         };
 
         fetchNewArrivals();
-    }, []);
+    }, [baseUrl]);
 
     const handleMouseEnter = (desc, index) => {
         clearInterval(typingInterval.current);

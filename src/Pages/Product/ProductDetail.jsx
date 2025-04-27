@@ -25,7 +25,7 @@ const ProductDetail = () => {
         };
 
         fetchProduct();
-    }, [id]);
+    }, [id, baseUrl]);
 
     if (loading) return <div className="p-6 text-center">Loading product...</div>;
     if (!product) return <div className="p-6 text-center text-red-500">Product not found.</div>;

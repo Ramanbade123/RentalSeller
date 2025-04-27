@@ -23,7 +23,7 @@ const CollectionCard = () => {
         };
 
         fetchTopSold();
-    }, []);
+    }, [baseUrl]);
 
     const skeletonCards = Array(3).fill(0).map((_, i) => (
         <div
