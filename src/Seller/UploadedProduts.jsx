@@ -9,12 +9,9 @@ const UploadProduts = () => {
     // Fetch products when the component mounts
     useEffect(() => {
         const fetchSellerData = async () => {
-            console.log("went to fetch data")
             try {
-                console.log("fetching info ")
                 // Use axiosInstance to get products for the logged-in seller
                 const productsResponse = await axiosInstance.get("/product/my-products");
-                console.log("Got response", productsResponse.data)
                 setProducts(productsResponse.data); // Response data will contain the products array
             } catch (error) {
                 console.error(error)

@@ -44,35 +44,37 @@ const NavBar = ({ toggleCart }) => {
                 <div className='absolute z-10 right-4 h-full flex top-[50%] -translate-y-[50%] items-center justify-end gap-5 sm:gap-x-8 text-[18px] sm:text-[24px]'>
                     <div className="relative" ref={userRef}>
                         {isLoggedIn ? (
-                            <>
-                                <button onClick={() => setShowUserMenu(!showUserMenu)} className='cursor-pointer'>
-                                    <FaUser />
-                                </button>
-                                {showUserMenu && (
-                                    <div className="absolute right-0 mt-2 w-auto min-w-fit bg-white border rounded-lg shadow p-2 z-50">
-                                        <div
-                                            className="font-medium px-2 py-1 flex items-center gap-1 flex-nowrap shrink-0 w-fit text-[12px] md:text-[16px]">
-                                            <p>👋</p>
-                                            <p> {user?.username || user?.name || "user"}</p>
-                                        </div>
-                                        <hr className="my-1" />
-                                        <Link
-                                            to={"/seller"}
-                                            // to={"https://rentour-seller-ruddy.vercel.app/"}
-                                            className="w-full flex items-center gap-2 cursor-pointer text-left px-2 py-1 text-[12px] md:text-[16px] hover:bg-red-100 rounded"
-                                        >
-                                            <SiSellfy className='bg-green-500' />
-                                            Seller
-                                        </Link>
-                                        <button
-                                            onClick={logout}
-                                            className="w-full cursor-pointer text-left px-2 py-1 text-red-600 text-[12px] md:text-[16px] hover:bg-red-100 rounded"
-                                        >
-                                            Logout
-                                        </button>
-                                    </div>
-                                )}
-                            </>
+                            <Link to={"/seller"}>
+                                <FaUser />
+                            </Link>
+                            // <>
+                            //     <button onClick={() => setShowUserMenu(!showUserMenu)} className='cursor-pointer'>
+                            //         <FaUser />
+                            //     </button>
+                            //     {showUserMenu && (
+                            //         <div className="absolute right-0 mt-2 w-auto min-w-fit bg-white border rounded-lg shadow p-2 z-50">
+                            //             <div
+                            //                 className="font-medium px-2 py-1 flex items-center gap-1 flex-nowrap shrink-0 w-fit text-[12px] md:text-[16px]">
+                            //                 <p>👋</p>
+                            //                 <p> {user?.username || user?.name || "user"}</p>
+                            //             </div>
+                            //             <hr className="my-1" />
+                            //             <Link
+                            //                 to={"https://rentour-seller-ruddy.vercel.app/"}
+                            //                 className="w-full flex items-center gap-2 cursor-pointer text-left px-2 py-1 text-[12px] md:text-[16px] hover:bg-red-100 rounded"
+                            //             >
+                            //                 <SiSellfy className='bg-green-500' />
+                            //                 Seller
+                            //             </Link>
+                            //             <button
+                            //                 onClick={logout}
+                            //                 className="w-full cursor-pointer text-left px-2 py-1 text-red-600 text-[12px] md:text-[16px] hover:bg-red-100 rounded"
+                            //             >
+                            //                 Logout
+                            //             </button>
+                            //         </div>
+                            //     )}
+                            // </>
                         ) : (
                             <Link to="/auth">
                                 <FaUser />
@@ -107,7 +109,7 @@ const NavBar = ({ toggleCart }) => {
             <div className='w-full h-[30%]'>
                 <ProductCategory />
             </div>
-        </div>
+        </div >
     );
 };
 

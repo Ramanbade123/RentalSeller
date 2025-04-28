@@ -1,17 +1,27 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useAuth } from "../GlobalState/AuthContext";
 
 const SellerDashboard = () => {
+    const { user, logout, isLoggedIn } = useAuth();
+    const navigate = useNavigate();
 
-    const { user, logout } = useAuth();
+    useEffect(() => {
+        if (!isLoggedIn) {
+            navigate("/auth");
+        }
+    }, [isLoggedIn, navigate]);
 
+    if (!isLoggedIn) return null;
     return (
-        <div className="bg-gray-100 min-h-screen">
+
+        <div className="bg-gray-100 min-h-screen" >
             {/* Navbar */}
-            <nav className="bg-blue-600 text-white p-4">
+            <nav nav className="bg-blue-600 text-white p-4" >
                 <div className="flex justify-between items-center">
-                    <Link to={"/seller"}> <h2 className="text-2xl font-bold">Seller Dashboard</h2></Link>
+                    <Link to={"/seller"}>
+                        <h2 className="text-2xl font-bold">Seller Dashboard</h2>
+                    </Link>
                     <div>
                         <span className="mr-4">Hello, {user?.username || user?.name || "user"}</span>
                         <button
@@ -22,10 +32,10 @@ const SellerDashboard = () => {
                         </button>
                     </div>
                 </div>
-            </nav>
+            </nav >
 
             {/* Dashboard Content */}
-            <div className="container mx-auto p-6">
+            <div div className="container mx-auto p-6" >
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-xl font-semibold">Your Posted Products</h3>
                     {/* Button to Add a New Product */}
@@ -36,8 +46,9 @@ const SellerDashboard = () => {
                     </Link>
                 </div>
                 <Outlet />
-            </div>
-        </div>
+            </div >
+        </div >
+
     );
 };
 

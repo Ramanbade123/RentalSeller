@@ -3,6 +3,7 @@ import axiosInstance, { setAuthToken } from "../utils/axiosInstance";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const CreateForm = () => {
     const [productData, setProductData] = useState({
@@ -18,7 +19,7 @@ const CreateForm = () => {
     });
     const [avatarPreview, setAvatarPreview] = useState(null);
     const [imagePreviews, setImagePreviews] = useState([]);
-
+    const navigate = useNavigate();
     const token = localStorage.getItem("authToken");
 
     const handleChange = (e) => {
@@ -108,6 +109,7 @@ const CreateForm = () => {
                 });
                 setAvatarPreview(null);
                 setImagePreviews([]);
+                navigate("/seller")
             } else {
                 toast.error(response.data.message || "Something went wrong");
             }
