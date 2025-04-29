@@ -51,13 +51,13 @@ const App = () => {
          </Route>
 
         <Route element={<DashboardLayout />}>
-          <Route path="/listings" element={<ListingsPage />} />
+
           <Route path="/productdetails" element={<ProductDetails />} />
           <Route path="/upload-images" element={<Uploadimage />} />
           <Route path="/finalize" element={<Finalize />} />
           <Route path="/confirmation" element={<Confirmation />} />
         </Route>
-
+        <Route path="/listings" element={<ListingsPage />} />
         <Route path="/analytics" element={<AnalyticsPage/>}/>
         {/* Default route - redirect to landing page */}
         <Route path="/" element={<Navigate to="/dashboard" replace />} />

@@ -1,18 +1,25 @@
-import React from "react";
-import { 
-  FiPieChart, 
-  FiBarChart2, 
-  FiTrendingUp, 
+import React, { useState } from "react";
+import {
+  FiPieChart,
+  FiBarChart2,
+  FiTrendingUp,
   FiDownload,
   FiDollarSign,
-  FiArrowLeft // Added back arrow icon
+  FiHome,
+  FiBox,
+  FiUsers,
+  FiArrowLeft,
+  FiChevronLeft,
+  FiChevronRight,
+  FiPlus,
 } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 export default function AnalyticsPage() {
   const navigate = useNavigate();
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [activeTab, setActiveTab] = useState("analytics");
 
-  // Mock data for charts
   const rentalTrends = [
     { month: "Jan", rentals: 45 },
     { month: "Feb", rentals: 52 },
@@ -37,16 +44,73 @@ export default function AnalyticsPage() {
 
   return (
     <div className="flex h-screen bg-gray-50 font-sans antialiased">
-      {/* Sidebar would be here if you're reusing the same layout */}
-      
+      {/* Sidebar */}
+      <div className={`${sidebarOpen ? "w-64" : "w-20"} bg-white shadow-sm transition-all duration-200 border-r border-gray-200 flex flex-col`}>
+        <div className="p-4 flex items-center justify-between border-b border-gray-200">
+          {sidebarOpen ? (
+            <div className="flex items-center space-x-2">
+              <div className="h-8 w-8 bg-gray-800 rounded-md flex items-center justify-center text-white font-medium">
+                RT
+              </div>
+              <span className="font-bold text-gray-800">RenTour</span>
+            </div>
+          ) : (
+            <div className="h-8 w-8 bg-gray-800 rounded-md mx-auto flex items-center justify-center text-white font-medium">
+              RT
+            </div>
+          )}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="text-gray-500 hover:text-gray-700 p-1 rounded hover:bg-gray-100"
+          >
+            {sidebarOpen ? <FiChevronLeft size={18} /> : <FiChevronRight size={18} />}
+          </button>
+        </div>
+
+        <nav className="mt-6 flex-1">
+          {[
+            { name: "Dashboard", icon: <FiHome size={18} />, id: "dashboard", route: "/dashboard" },
+            { name: "Analytics", icon: <FiPieChart size={18} />, id: "analytics", route: "/analytics" },
+            { name: "Listings", icon: <FiBox size={18} />, id: "listings", route: "/listings" },
+            { name: "Customers", icon: <FiUsers size={18} />, id: "customers", route: "/customers" },
+          ].map((item) => (
+            <button
+              key={item.id}
+              onClick={() => {
+                setActiveTab(item.id);
+                navigate(item.route);
+              }}
+              className={`flex items-center w-full px-4 py-3 text-sm transition-colors ${
+                activeTab === item.id
+                  ? "bg-gray-100 text-gray-900 font-medium border-l-4 border-gray-800"
+                  : "text-gray-600 hover:bg-gray-50 font-medium"
+              }`}
+            >
+              <span className={`${sidebarOpen ? "mr-3" : "mx-auto"}`}>{item.icon}</span>
+              {sidebarOpen && item.name}
+            </button>
+          ))}
+        </nav>
+
+        {/* Create Listing Button */}
+        <div className="p-4 border-t border-gray-200 mt-auto">
+          <button
+            onClick={() => navigate("/productdetails")}
+            className="flex items-center w-full px-4 py-3 text-sm bg-gray-800 text-white rounded-md hover:bg-gray-700"
+          >
+            <FiPlus className={sidebarOpen ? "mr-3" : "mx-auto"} />
+            {sidebarOpen && "Create Listing"}
+          </button>
+        </div>
+      </div>
+
       {/* Main Content Area */}
       <div className="flex-1 overflow-auto">
         <header className="bg-white shadow-xs p-4 border-b border-gray-200">
           <div className="flex justify-between items-center max-w-7xl mx-auto">
             <div className="flex items-center space-x-4">
-              {/* Back Button */}
-              <button 
-                onClick={() => navigate(-1)} // Go back to previous page
+              <button
+                onClick={() => navigate(-1)}
                 className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full"
               >
                 <FiArrowLeft size={18} />
@@ -62,54 +126,56 @@ export default function AnalyticsPage() {
           </div>
         </header>
 
-        {/* Rest of your existing content remains the same */}
+        {/* Main Content */}
         <main className="p-6 max-w-7xl mx-auto">
           {/* Overview Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-            <div className="bg-white p-5 rounded-lg shadow-xs border border-gray-200">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-500">Total Rentals</p>
-                  <p className="text-2xl font-semibold mt-1 text-gray-800">342</p>
-                  <p className="text-xs font-medium mt-2 text-green-600 flex items-center">
-                    <FiTrendingUp className="mr-1" /> 12% from last month
-                  </p>
-                </div>
-                <div className="h-12 w-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center">
-                  <FiBarChart2 size={20} />
+            {/* Cards */}
+            {[
+              {
+                label: "Total Rentals",
+                value: "342",
+                change: "12%",
+                icon: <FiBarChart2 size={20} />,
+                iconBg: "bg-blue-100",
+                iconColor: "text-blue-600",
+                trendColor: "text-green-600",
+              },
+              {
+                label: "Total Revenue",
+                value: "$24,580",
+                change: "18%",
+                icon: <FiDollarSign size={20} />,
+                iconBg: "bg-green-100",
+                iconColor: "text-green-600",
+                trendColor: "text-green-600",
+              },
+              {
+                label: "Avg. Rental Duration",
+                value: "7.2 days",
+                change: "5% decrease",
+                icon: <FiPieChart size={20} />,
+                iconBg: "bg-purple-100",
+                iconColor: "text-purple-600",
+                trendColor: "text-red-600",
+                decrease: true,
+              },
+            ].map((card, index) => (
+              <div key={index} className="bg-white p-5 rounded-lg shadow-xs border border-gray-200">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-gray-500">{card.label}</p>
+                    <p className="text-2xl font-semibold mt-1 text-gray-800">{card.value}</p>
+                    <p className={`text-xs font-medium mt-2 flex items-center ${card.trendColor}`}>
+                      <FiTrendingUp className={`mr-1 ${card.decrease ? "transform rotate-180" : ""}`} /> {card.change}
+                    </p>
+                  </div>
+                  <div className={`h-12 w-12 rounded-lg ${card.iconBg} ${card.iconColor} flex items-center justify-center`}>
+                    {card.icon}
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg shadow-xs border border-gray-200">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-500">Total Revenue</p>
-                  <p className="text-2xl font-semibold mt-1 text-gray-800">$24,580</p>
-                  <p className="text-xs font-medium mt-2 text-green-600 flex items-center">
-                    <FiTrendingUp className="mr-1" /> 18% from last month
-                  </p>
-                </div>
-                <div className="h-12 w-12 rounded-lg bg-green-100 text-green-600 flex items-center justify-center">
-                  <FiDollarSign size={20} />
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg shadow-xs border border-gray-200">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-500">Avg. Rental Duration</p>
-                  <p className="text-2xl font-semibold mt-1 text-gray-800">7.2 days</p>
-                  <p className="text-xs font-medium mt-2 text-red-600 flex items-center">
-                    <FiTrendingUp className="mr-1 transform rotate-180" /> 5% decrease
-                  </p>
-                </div>
-                <div className="h-12 w-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center">
-                  <FiPieChart size={20} />
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Rental Trends Chart */}
@@ -117,27 +183,20 @@ export default function AnalyticsPage() {
             <div className="flex justify-between items-center mb-5">
               <h2 className="text-lg font-semibold text-gray-800">Rental Trends</h2>
               <div className="flex space-x-2">
-                <button className="px-3 py-1 text-xs bg-gray-800 text-white rounded-md">
-                  Monthly
-                </button>
-                <button className="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200">
-                  Weekly
-                </button>
+                <button className="px-3 py-1 text-xs bg-gray-800 text-white rounded-md">Monthly</button>
+                <button className="px-3 py-1 text-xs bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200">Weekly</button>
               </div>
             </div>
-            <div className="h-64">
-              {/* This would be replaced with an actual chart library like Chart.js */}
-              <div className="flex h-full items-end space-x-2">
-                {rentalTrends.map((item, index) => (
-                  <div key={index} className="flex-1 flex flex-col items-center">
-                    <div
-                      className="w-full bg-blue-500 rounded-t-sm"
-                      style={{ height: `${(item.rentals / 100) * 100}%` }}
-                    />
-                    <span className="text-xs text-gray-500 mt-1">{item.month}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="h-64 flex items-end space-x-2">
+              {rentalTrends.map((item, index) => (
+                <div key={index} className="flex-1 flex flex-col items-center">
+                  <div
+                    className="w-full bg-blue-500 rounded-t-sm"
+                    style={{ height: `${(item.rentals / 100) * 100}%` }}
+                  />
+                  <span className="text-xs text-gray-500 mt-1">{item.month}</span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -177,8 +236,8 @@ export default function AnalyticsPage() {
                     <div className="w-full bg-gray-100 rounded-full h-2">
                       <div
                         className="bg-green-500 h-2 rounded-full"
-                        style={{ 
-                          width: `${(item.amount / Math.max(...revenueData.map(r => r.amount))) * 100}%` 
+                        style={{
+                          width: `${(item.amount / Math.max(...revenueData.map(r => r.amount))) * 100}%`,
                         }}
                       />
                     </div>
@@ -198,14 +257,14 @@ export default function AnalyticsPage() {
                 <p className="text-xs text-blue-500 mt-1">Most active segment</p>
               </div>
               <div className="bg-purple-50 p-4 rounded-lg">
-                <h3 className="font-medium text-purple-800">Professionals</h3>
-                <p className="text-2xl font-semibold mt-2 text-purple-600">35%</p>
-                <p className="text-xs text-purple-500 mt-1">Highest revenue</p>
+                <h3 className="font-medium text-purple-800">Freelancers</h3>
+                <p className="text-2xl font-semibold mt-2 text-purple-600">30%</p>
+                <p className="text-xs text-purple-500 mt-1">Growing customer base</p>
               </div>
               <div className="bg-green-50 p-4 rounded-lg">
-                <h3 className="font-medium text-green-800">Businesses</h3>
-                <p className="text-2xl font-semibold mt-2 text-green-600">23%</p>
-                <p className="text-xs text-green-500 mt-1">Longest rentals</p>
+                <h3 className="font-medium text-green-800">Corporate</h3>
+                <p className="text-2xl font-semibold mt-2 text-green-600">28%</p>
+                <p className="text-xs text-green-500 mt-1">High revenue clients</p>
               </div>
             </div>
           </div>
