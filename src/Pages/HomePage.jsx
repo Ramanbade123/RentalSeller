@@ -87,8 +87,8 @@ const HomePage = () => {
             </div>
 
             {/* CollectionCard component with scroll animation */}
-            <div data-aos="fade-up" data-aos-delay="400">
-                <div className="flex flex-col w-full">
+            <div className="py-16 px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-delay="400">
+                <div className="max-w-7xl mx-auto flex flex-col w-full">
                     <h2 className="text-xl sm:text-3xl underline font-semibold mb-6 sm:mb-12 tracking-wider text-center">COLLECTIONS</h2>
                     <CollectionCard />
                 </div>
