@@ -2,12 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import App from "./App";
 import { Notfound } from "./Components/NotFound";
-import ErrorBoundary from "./Components/ErrorBoundary"; // Import the Error Boundary
+import ErrorBoundary from "./Components/ErrorBoundary";
 import HomePage from "./Pages/HomePage";
+import Payment from "./Pages/Payment";
 
 // Auth Forms
 const AuthForm = lazy(() => import("./Auth/AuthForm"));
-
 
 // Wishlist page
 const Wishlist = lazy(() => import('./Components/Wishlist'));
@@ -37,12 +37,12 @@ const Search = lazy(() => import("./Pages/Info/Search"));
 const ContactUs = lazy(() => import("./Pages/Info/ContactUs"));
 const AboutUs = lazy(() => import("./Pages/Info/AboutUs"));
 
-
 // Seller Page related
 const SellerDashboard = lazy(() => import("./Seller/SellerDashboard"));
 const UploadProduts = lazy(() => import("./Seller/UploadedProduts"));
 const CreateForm = lazy(() => import("./Seller/CreateForm"));
 const UpdateForm = lazy(() => import("./Seller/UpdateFrom"));
+
 // Helper function to wrap lazy components in Suspense
 const LazyLoad = (Component) => (
   <Suspense fallback={<div className="text-center p-4">Loading...</div>}>
@@ -68,23 +68,23 @@ const dynamicProductRoutes = productRoutes.map((path) => ({
   errorElement: <ErrorBoundary />,
 }));
 
-
-
 // Define router
 const Router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorBoundary />, // Added Error Boundary
+    errorElement: <ErrorBoundary />,
     children: [
       { index: true, element: <HomePage /> },
       { path: "wishlist", element: LazyLoad(Wishlist) },
       { path: "auth", element: LazyLoad(AuthForm) },
+      { path: "payment", element: <Payment /> }, // Added Payment route
+      
       // Collections & Products Routes
       {
         path: "collections",
         element: LazyLoad(Collections),
-        errorElement: <ErrorBoundary />, // Error handling for collections
+        errorElement: <ErrorBoundary />,
         children: [
           { index: true, element: LazyLoad(BestSeller) },
           { path: "new-arrivals", element: LazyLoad(NewArrivals) },
@@ -123,7 +123,7 @@ const Router = createBrowserRouter([
       },
     ],
   },
-  { path: "*", element: <Notfound />, errorElement: <ErrorBoundary /> }, // Handle unknown routes
+  { path: "*", element: <Notfound />, errorElement: <ErrorBoundary /> },
 ]);
 
 export default Router;

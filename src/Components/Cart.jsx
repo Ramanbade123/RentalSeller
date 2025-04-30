@@ -1,17 +1,23 @@
 import React from "react";
 import { LuPanelRightClose } from "react-icons/lu";
 import { useCart } from "../GlobalState/CartContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CartCard from "./CartCard";
 
 const Cart = ({ isOpen, toggleCart }) => {
   const { cartItems } = useCart();
   const isLoggedIn = !!localStorage.getItem("authToken");
+  const navigate = useNavigate(); // 👈 initialize navigate
 
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.offeredPrice * item.quantity,
     0
   );
+
+  const handleCheckout = () => {
+    toggleCart(); // Optional: close cart before navigating
+    navigate("/payment"); // 👈 navigate to payment page
+  };
 
   return (
     <div
@@ -21,7 +27,6 @@ const Cart = ({ isOpen, toggleCart }) => {
         transform transition-transform duration-500 ease-in-out 
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
     >
-      {/* Close Button */}
       <LuPanelRightClose
         className="text-black font-bold text-xl absolute top-4 right-4 cursor-pointer"
         onClick={toggleCart}
@@ -49,10 +54,12 @@ const Cart = ({ isOpen, toggleCart }) => {
             />
           ))}
 
-          {/* Total & Checkout */}
           <div className="mt-4">
             <p className="text-lg font-bold">Total: ₹{totalPrice.toFixed(2)}</p>
-            <button className="w-full mt-2 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+            <button
+              onClick={handleCheckout}
+              className="w-full mt-2 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+            >
               Checkout
             </button>
           </div>
