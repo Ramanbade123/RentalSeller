@@ -33,3 +33,4 @@ env/
 # Project-specific files
 prevContext.jsx
 src/GlobalState/prevContext
+

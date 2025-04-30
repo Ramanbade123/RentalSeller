@@ -1,8 +1,37 @@
 import React from 'react';
 import { FaFacebookF, FaGithub, FaGooglePlusG, FaLinkedinIn } from 'react-icons/fa';
 import { GoEye, GoEyeClosed } from 'react-icons/go';
+import axios from 'axios';
 
-const Login = ({ handleSubmit, formData, handleBlur, handleInputChange, showPassword, setShowPassword, setIsSignUp, errors, touched, eyeclass }) => {
+const Login = ({ 
+    formData, 
+    handleBlur, 
+    handleInputChange, 
+    showPassword, 
+    setShowPassword, 
+    setIsSignUp, 
+    errors, 
+    touched, 
+    eyeclass 
+
+}) => {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          const response = await axios.post('http://127.0.0.1:8000/auth/login/', {
+            username: formData.username,
+            password: formData.password
+          });
+          console.log('Login successful:', response.data);
+          alert("Login Successful");
+        } catch (error) {
+          console.error('Login failed:', error.response?.data || error.message);
+          alert("Something went wrong please try again!")
+        }
+      };
+
+    
     return (
         <div className="form-container sign-in">
             <form onSubmit={(e) => handleSubmit(e, 'Sign In')}>
