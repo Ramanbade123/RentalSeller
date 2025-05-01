@@ -72,9 +72,12 @@ const ProductDetails = () => {
       if (response.ok) {
         const responseData = await response.json();
         const itemId = responseData.item_id;
+        console.log(itemId);
 
         localStorage.setItem('home_item_id', itemId);
         console.log('Item registered. ID:', itemId);
+        console.log("Post response:", response);
+        console.log("Item ID received:", response.data.item_id);
 
         navigate('/upload-images');
       } else {
