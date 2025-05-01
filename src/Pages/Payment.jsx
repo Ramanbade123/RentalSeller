@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiCheck, FiLock, FiShield, FiCreditCard, FiDollarSign } from 'react-icons/fi';
+import { FiCheck, FiLock, FiShield, FiCreditCard, FiDollarSign, FiX, FiCheckCircle } from 'react-icons/fi';
 
 const Payment = () => {
   const [selectedPayment, setSelectedPayment] = useState('esewa');
@@ -8,6 +8,9 @@ const Payment = () => {
   const [cartItems, setCartItems] = useState([]);
   const [loading, setLoading] = useState(false); // Changed to false since we're using mock data
   const [error, setError] = useState(null);
+  // Added payment status states
+  const [paymentStatus, setPaymentStatus] = useState(null);
+  const [paymentError, setPaymentError] = useState('');
 
   // Mock data for cart items(delete this side this is mock data)
   const mockCartItems = [
@@ -46,12 +49,48 @@ const Payment = () => {
   //not to delete this from here
   const subtotal = cartItems.reduce((sum, item) => sum + item.price, 0);
 
+  // Added payment handler function
+  const handlePayment = () => {
+    // Validate eSewa credentials
+    if (selectedPayment === 'sewa') {
+      if (!esewaId || !pin) {
+        setPaymentStatus('error');
+        setPaymentError('Please enter both eSewa ID and PIN');
+        return;
+      }
+      
+      // Simple validation - for demo purposes
+      const isValidEsewaId = esewaId.length >= 5;
+      const isValidPin = pin.length === 6 && /^\d+$/.test(pin);
+      
+      if (!isValidEsewaId || !isValidPin) {
+        setPaymentStatus('error');
+        setPaymentError('Invalid eSewa ID or PIN. Please check your credentials.');
+        return;
+      }
+    }
+
+    setLoading(true);
+    
+    // Simulate payment processing
+    setTimeout(() => {
+      setLoading(false);
+      // For demo, consider payment successful if credentials are provided
+      if (selectedPayment === 'sewa' && esewaId && pin) {
+        setPaymentStatus('success');
+      } else {
+        setPaymentStatus('error');
+        setPaymentError('Payment failed. Please try again.');
+      }
+    }, 1500);
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-800 mx-auto"></div>
-          <p className="mt-4 text-gray-700">Loading payment details...</p>
+          <p className="mt-4 text-gray-700">Processing payment...</p>
         </div>
       </div>
     );
@@ -67,6 +106,53 @@ const Payment = () => {
             className="mt-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700"
           >
             Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Payment success screen
+  if (paymentStatus === 'success') {
+    return (
+      <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
+        <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center">
+          <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+            <FiCheckCircle className="h-6 w-6 text-green-600" />
+          </div>
+          <h2 className="text-lg font-medium text-gray-900 mb-2">Payment Successful!</h2>
+          <p className="text-gray-600 mb-6">Your payment of ¥ {subtotal.toFixed(2)} has been processed successfully.</p>
+          <button
+            onClick={() => {
+              setPaymentStatus(null);
+              setEsewaId('');
+              setPin('');
+            }}
+            className="w-full bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-md font-medium"
+          >
+            Make Another Payment
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Payment error screen
+  if (paymentStatus === 'error') {
+    return (
+      <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
+        <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center">
+          <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mb-4">
+            <FiX className="h-6 w-6 text-red-600" />
+          </div>
+          <h2 className="text-lg font-medium text-gray-900 mb-2">Payment Failed</h2>
+          <p className="text-gray-600 mb-2">{paymentError}</p>
+          <p className="text-sm text-gray-500 mb-6">Please check your details and try again.</p>
+          <button
+            onClick={() => setPaymentStatus(null)}
+            className="w-full bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-md font-medium"
+          >
+            Try Again
           </button>
         </div>
       </div>
@@ -177,6 +263,7 @@ const Payment = () => {
             <button 
               className="w-full bg-gray-800 hover:bg-gray-700 text-white py-3 px-4 rounded-md font-medium flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-700"
               disabled={loading}
+              onClick={handlePayment}
             >
               <FiShield className="mr-2" />
               {loading ? 'Processing...' : 'Pay Now'}
