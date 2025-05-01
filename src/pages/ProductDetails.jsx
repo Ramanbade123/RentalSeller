@@ -71,6 +71,8 @@ const ProductDetails = () => {
 
       if (response.ok) {
         const responseData = await response.json();
+        console.log(response)
+        console.log(responseData)
         const itemId = responseData.item_id;
 
         localStorage.setItem('home_item_id', itemId);
