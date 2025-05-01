@@ -47,7 +47,7 @@ const ProductDetails = () => {
       alert("Please fill all the required fields.");
       return;
     }
-
+  
     const dataToSend = new FormData();
     dataToSend.append('item_name', formData.title);
     dataToSend.append(
@@ -62,24 +62,28 @@ const ProductDetails = () => {
     dataToSend.append('width', formData.dimensions.width);
     dataToSend.append('height', formData.dimensions.height);
     dataToSend.append('weight', formData.dimensions.weight);
-
+  
     try {
       const response = await fetch('http://127.0.0.1:8000/api/postitems/', {
         method: 'POST',
-        body: dataToSend,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-
+  
       if (response.ok) {
         const responseData = await response.json();
-        const itemId = responseData.item_id;
-        console.log(itemId);
-
-        localStorage.setItem('home_item_id', itemId);
-        console.log('Item registered. ID:', itemId);
-        console.log("Post response:", response);
-        console.log("Item ID received:", response.data.item_id);
-
-        navigate('/upload-images');
+        if (responseData && responseData.item_id) {
+          const itemId = responseData.item_id;
+          console.log('Item registered. ID:', itemId);
+          localStorage.setItem('home_item_id', itemId);
+  
+          console.log("Post response:", response);
+          navigate('/upload-images');
+        } else {
+          console.error('Item ID not received in the response');
+        }
       } else {
         const errorText = await response.text();
         console.error('Failed to post data:', response.statusText, errorText);
