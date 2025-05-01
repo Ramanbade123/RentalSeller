@@ -5,7 +5,8 @@ const ProductDetails = () => {
   const [formData, setFormData] = useState({
     title: '',
     quantity: '',
-    price: '',
+    originalprice: '',
+    offeredprice: '',
     dimensions: { length: '', width: '', height: '', weight: '' },
     description: '',
     category: '',
@@ -35,24 +36,35 @@ const ProductDetails = () => {
     }));
   };
 
-  const handleNextClick = async () => {
-    const dataToSend = new FormData();
+  const handlePriceChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
+  const handleNextClick = async () => {
+    // Basic validation
+    if (!formData.title || !formData.offeredprice || !formData.originalprice || !formData.quantity || !formData.description) {
+      alert("Please fill all the required fields.");
+      return;
+    }
+
+    const dataToSend = new FormData();
     dataToSend.append('item_name', formData.title);
     dataToSend.append(
       'item_category',
       formData.category === 'Other (Specify)' ? formData.customCategory : formData.category
     );
     dataToSend.append('item_description', formData.description);
-    dataToSend.append('item_price', formData.price);
-    dataToSend.append('Quantity', formData.quantity); 
+    dataToSend.append('offered_item_price', formData.offeredprice);
+    dataToSend.append('final_item_price', formData.originalprice);
+    dataToSend.append('Quantity', formData.quantity);
     dataToSend.append('length', formData.dimensions.length);
     dataToSend.append('width', formData.dimensions.width);
     dataToSend.append('height', formData.dimensions.height);
     dataToSend.append('weight', formData.dimensions.weight);
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/post/', {
+      const response = await fetch('http://127.0.0.1:8000/api/postitems/', {
         method: 'POST',
         body: dataToSend,
       });
@@ -61,7 +73,6 @@ const ProductDetails = () => {
         const responseData = await response.json();
         const itemId = responseData.item_id;
 
-        
         localStorage.setItem('home_item_id', itemId);
         console.log('Item registered. ID:', itemId);
 
@@ -178,16 +189,16 @@ const ProductDetails = () => {
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Pricing & Stock</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Price*</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Offered Price*</label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <span className="text-gray-500">Rs.</span>
                     </div>
                     <input
                       type="number"
-                      name="price"
-                      value={formData.price}
-                      onChange={handleChange}
+                      name="offeredprice"
+                      value={formData.offeredprice}
+                      onChange={handlePriceChange}
                       className="pl-8 w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
                       placeholder="0.00"
                       step="0.01"
@@ -195,6 +206,26 @@ const ProductDetails = () => {
                     />
                   </div>
                 </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Final Price*</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <span className="text-gray-500">Rs.</span>
+                    </div>
+                    <input
+                      type="number"
+                      name="originalprice"
+                      value={formData.originalprice}
+                      onChange={handlePriceChange}
+                      className="pl-8 w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
+                      placeholder="0.00"
+                      step="0.01"
+                      required
+                    />
+                  </div>
+                </div>
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Available Quantity*</label>
                   <input
@@ -213,19 +244,20 @@ const ProductDetails = () => {
 
             {/* Dimensions */}
             <section className="bg-white p-5 rounded-lg border border-gray-200">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Dimensions (Optional)</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {[{ name: 'length', label: 'Length (mm)' }, { name: 'width', label: 'Width (mm)' }, { name: 'height', label: 'Height (mm)' }, { name: 'weight', label: 'Weight (kg)' }].map((dim) => (
-                  <div key={dim.name}>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">{dim.label}</label>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">Dimensions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {['length', 'width', 'height', 'weight'].map((field) => (
+                  <div key={field}>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      {field.charAt(0).toUpperCase() + field.slice(1)} (cm or kg)
+                    </label>
                     <input
                       type="number"
-                      name={dim.name}
-                      value={formData.dimensions[dim.name]}
+                      name={field}
+                      value={formData.dimensions[field]}
                       onChange={handleDimensionChange}
                       className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
-                      placeholder="0"
-                      step={dim.name === 'weight' ? "0.01" : "1"}
+                      step="0.01"
                     />
                   </div>
                 ))}
@@ -234,38 +266,28 @@ const ProductDetails = () => {
 
             {/* Description */}
             <section className="bg-white p-5 rounded-lg border border-gray-200">
-              <div className="flex justify-between items-center mb-3">
-                <h2 className="text-lg font-semibold text-gray-900">Description*</h2>
-                <span className="text-sm text-gray-500">
-                  {formData.description.length}/1200
-                </span>
-              </div>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">Product Description*</h2>
               <textarea
                 name="description"
                 value={formData.description}
                 onChange={handleChange}
-                className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400 min-h-[120px]"
-                placeholder="Describe your product features, specifications, etc..."
-                maxLength="1200"
+                className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-gray-400 focus:border-gray-400"
+                placeholder="Detailed description of your product"
+                rows="4"
                 required
               />
-              <p className="text-xs text-gray-500 mt-1">
-                Include key features, condition, and any relevant details about the product.
-              </p>
             </section>
-          </div>
 
-          {/* Next Button */}
-          <div className="mt-8 flex justify-end">
-            <button
-              className="flex items-center px-5 py-2.5 bg-gray-800 text-white rounded text-sm font-medium hover:bg-gray-700 transition-colors"
-              onClick={handleNextClick}
-            >
-              Next
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </button>
+            {/* Submit Button */}
+            <div className="mt-6 flex justify-end">
+              <button
+                type="button"
+                onClick={handleNextClick}
+                className="px-6 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
       </div>
