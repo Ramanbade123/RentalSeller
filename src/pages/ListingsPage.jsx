@@ -1,92 +1,44 @@
-import React, { useState } from 'react';
-import { FiEdit, FiTrash2, FiPlus, FiChevronLeft, FiChevronRight, FiHome, FiPieChart, FiBox, FiUsers } from 'react-icons/fi';
+import React, { useState, useEffect } from 'react';
+import {
+  FiEdit, FiTrash2, FiPlus, FiChevronLeft, FiChevronRight,
+  FiHome, FiPieChart, FiBox, FiUsers
+} from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
-const ListingsPage = () => {
-  const initialListings = [
-    { 
-      id: 1, 
-      name: 'Samsung S24', 
-      price: '250000', 
-      description: 'Great for photography', 
-      status: 'Active',
-      category: 'Mobile',
-      location: 'Lalitpur'
-    },
-    { 
-      id: 2, 
-      name: 'Canon', 
-      price: '350000', 
-      description: 'Videography camera', 
-      status: 'Active',
-      category: 'Camera',
-      location: 'Kathmandu'
-    },
-  ];
+const Listings = () => {
+  const [listings, setListings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const navigate = useNavigate();
-  const [listings, setListings] = useState(initialListings);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentListing, setCurrentListing] = useState({
-    id: null,
-    name: '',
-    price: '',
-    description: '',
-    status: 'Active',
-    category: '',
-    location: ''
-  });
-  const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState('listings');
+  useEffect(() => {
+    const fetchListings = async () => {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/getitems/');
+        console.log(response);
+        
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        
+        const data = await response.json();
+        setListings(data);
+        setLoading(false);
+      } catch (error) {
+        setError(error.message);
+        setLoading(false);
+      }
+    };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setCurrentListing(prev => ({ ...prev, [name]: value }));
-  };
+    fetchListings();
+  }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    if (currentListing.id) {
-      setListings(listings.map(listing => 
-        listing.id === currentListing.id ? currentListing : listing
-      ));
-    } else {
-      const newId = Math.max(...listings.map(l => l.id), 0) + 1;
-      setListings([...listings, { ...currentListing, id: newId }]);
-    }
-    
-    resetForm();
-  };
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  const handleEdit = (listing) => {
-    setCurrentListing(listing);
-    setIsModalOpen(true);
-  };
-
-  const handleDelete = (id) => {
-    if (window.confirm('Are you sure you want to delete this listing?')) {
-      setListings(listings.filter(listing => listing.id !== id));
-    }
-  };
-
-  const resetForm = () => {
-    setCurrentListing({
-      id: null,
-      name: '',
-      price: '',
-      description: '',
-      status: 'Active',
-      category: '',
-      location: ''
-    });
-    setIsModalOpen(false);
-  };
-
-  const openNewListingModal = () => {
-    resetForm();
-    setIsModalOpen(true);
-  };
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
