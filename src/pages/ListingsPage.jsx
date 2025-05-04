@@ -1,33 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiEdit, FiTrash2, FiPlus } from 'react-icons/fi';
 import DashboardLayout from '../Layout/DashboardLayout';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const ListingsPage = () => {
-  const initialListings = [
-    { 
-      id: 1, 
-      name: 'Samsung S24', 
-      price: '250000', 
-      description: 'Great for photography', 
-      status: 'Active',
-      category: 'Mobile',
-      location: 'Lalitpur'
-    },
-    { 
-      id: 2, 
-      name: 'Canon', 
-      price: '350000', 
-      description: 'Videography camera', 
-      status: 'Active',
-      category: 'Camera',
-      location: 'Kathmandu'
-    },
-
-  ];
-
   const navigate = useNavigate();
-  const [listings, setListings] = useState(initialListings);
+  const [listings, setListings] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentListing, setCurrentListing] = useState({
     id: null,
@@ -39,6 +18,36 @@ const ListingsPage = () => {
     location: ''
   });
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [itemsRes, deliveryRes] = await Promise.all([
+          axios.get('http://127.0.0.1:8000/api/getitems/'),
+          axios.get('http://127.0.0.1:8000/api/del/')
+        ]);
+  
+        const items = itemsRes.data;
+        const delivery = deliveryRes.data;
+  
+        const mergedListings = items.map(item => {
+          const deliveryInfo = delivery.find(d => d.item === item.id); // <-- Corrected key match
+          return {
+            ...item,
+            street_address: deliveryInfo?.street_address || 'N/A',
+            city: deliveryInfo?.city || 'N/A',
+          };
+        });
+  
+        setListings(mergedListings);
+  
+      } catch (error) {
+        console.error('Failed to fetch listings:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setCurrentListing(prev => ({ ...prev, [name]: value }));
@@ -46,16 +55,14 @@ const ListingsPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     if (currentListing.id) {
-      setListings(listings.map(listing => 
+      setListings(listings.map(listing =>
         listing.id === currentListing.id ? currentListing : listing
       ));
     } else {
       const newId = Math.max(...listings.map(l => l.id), 0) + 1;
       setListings([...listings, { ...currentListing, id: newId }]);
     }
-    
     resetForm();
   };
 
@@ -83,16 +90,10 @@ const ListingsPage = () => {
     setIsModalOpen(false);
   };
 
-  const openNewListingModal = () => {
-    resetForm();
-    setIsModalOpen(true);
-  };
-
   return (
     <div className="container mx-auto px-4 py-8 font-sans">
-      {/* Header with Add New button */}
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-800">My Listings</h1>
+        <h1 className="text-3xl font-bold text-gray-800">Latest Listing</h1>
         <button
           onClick={() => navigate("/productdetails")}
           className="flex items-center bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-colors"
@@ -102,7 +103,6 @@ const ListingsPage = () => {
         </button>
       </div>
 
-      {/* Listings Table */}
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
@@ -121,22 +121,22 @@ const ListingsPage = () => {
                 listings.map((listing) => (
                   <tr key={listing.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="font-medium text-gray-900">{listing.name}</div>
-                      <div className="text-sm text-gray-600">{listing.description}</div>
+                      <div className="font-medium text-gray-900">{listing.item_name}</div>
+                      {/* <div className="text-sm text-gray-600">{listing.item_description}</div> */}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-gray-700">
-                      ${listing.price}
+                      ${listing.final_item_price}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-gray-700">
-                      {listing.category}
+                      {listing.item_category}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-gray-700">
-                      {listing.location}
+                      {listing.street_address}, {listing.city}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                        listing.status === 'Active' 
-                          ? 'bg-gray-200 text-gray-800' 
+                        listing.status === 'Active'
+                          ? 'bg-gray-200 text-gray-800'
                           : 'bg-gray-100 text-gray-600'
                       }`}>
                         {listing.status}
@@ -163,7 +163,7 @@ const ListingsPage = () => {
               ) : (
                 <tr>
                   <td colSpan="6" className="px-6 py-4 text-center text-gray-600">
-                    No listings found. Create your first listing!
+                    No listings found.
                   </td>
                 </tr>
               )}
@@ -171,112 +171,9 @@ const ListingsPage = () => {
           </table>
         </div>
       </div>
-
-      {/* Add/Edit Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg shadow-xl w-full max-w-md">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                {currentListing.id ? 'Edit Listing' : 'Add New Listing'}
-              </h2>
-              
-              <form onSubmit={handleSubmit}>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Product Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={currentListing.name}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Price ($)</label>
-                    <input
-                      type="number"
-                      name="price"
-                      value={currentListing.price}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                    <textarea
-                      name="description"
-                      value={currentListing.description}
-                      onChange={handleInputChange}
-                      rows="3"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                    />
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
-                      <input
-                        type="text"
-                        name="category"
-                        value={currentListing.category}
-                        onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
-                      <input
-                        type="text"
-                        name="location"
-                        value={currentListing.location}
-                        onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
-                    <select
-                      name="status"
-                      value={currentListing.status}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                    >
-                      <option value="Active">Active</option>
-                      <option value="Inactive">Inactive</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div className="mt-6 flex justify-end space-x-3">
-                  <button
-                    type="button"
-                    onClick={resetForm}
-                    className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-800"
-                  >
-                    {currentListing.id ? 'Update Listing' : 'Create Listing'}
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      )}
+      <hr />
     </div>
+    
   );
 };
 
